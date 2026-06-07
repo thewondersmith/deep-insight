@@ -19,7 +19,7 @@
   --tide:#5b9be0;--steel:#8fb0ef;--beam:#ffeec9;
   --ink:#f3eeff;--muted:#c3b6df;--line:rgba(170,150,255,.2);
   --card:rgba(48,28,84,.42);
-  --band-blue:rgba(16,30,62,.55);--band-plum:rgba(34,16,52,.52);--band-night:rgba(7,4,18,.72);
+  --band-blue:rgba(18,34,70,.62);--band-plum:rgba(50,18,72,.6);--band-night:rgba(6,3,16,.84);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -101,7 +101,9 @@ h1.title .two{background:linear-gradient(180deg,#bcd2ff,#5d77c9);-webkit-backgro
 
 section{padding:92px 0;position:relative}
 section.divided::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(900px,86%);height:1px;
-  background:linear-gradient(90deg,transparent,var(--line) 28%,var(--line) 72%,transparent)}
+  background:linear-gradient(90deg,transparent,var(--line) 24%,rgba(170,150,255,.5) 50%,var(--line) 76%,transparent)}
+section.divided::after{content:"";position:absolute;top:0;left:50%;width:11px;height:11px;transform:translate(-50%,-50%) rotate(45deg);background:var(--tide);box-shadow:0 0 14px var(--tide);border-radius:1px}
+section.s-plum.divided::after,section.capture.divided::after{background:var(--glow);box-shadow:0 0 14px var(--glow)}
 .s-blue{background:var(--band-blue)}
 .s-plum{background:var(--band-plum)}
 .s-night{background:var(--band-night)}
@@ -132,7 +134,9 @@ h2{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;line-
 .out-list{list-style:none;display:flex;flex-direction:column;gap:2px}
 .out-list li{display:grid;grid-template-columns:auto 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);font-size:1.05rem;color:var(--ink)}
 .out-list li:last-child{border-bottom:none}
-.out-list .mk{font-family:'Space Mono',monospace;color:var(--glow);font-weight:700;font-size:.95rem;padding-top:2px}
+.out-list .mk{width:42px;height:42px;border-radius:10px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--tide);background:rgba(91,155,224,.09)}
+.out-list .mk svg{width:21px;height:21px}
+.out-list li:nth-child(even) .mk{color:var(--glow);background:rgba(184,92,214,.10)}
 .out-list li span.t b{color:var(--ink);font-weight:600}
 .out-side{position:sticky;top:90px;margin-top:30px}
 .out-side .quotemark{font-family:'Anton',sans-serif;font-size:4rem;color:var(--glow);line-height:.5;opacity:.5}
@@ -306,14 +310,14 @@ footer a:hover{color:#fff}
       </div>
     </div>
     <ul class="out-list reveal">
-      <li><span class="mk">01</span><span class="t"><b>Map your own workflow</b> and pinpoint exactly where AI saves you the most time.</span></li>
-      <li><span class="mk">02</span><span class="t"><b>Automate collection and triage</b> so you analyze instead of gather.</span></li>
-      <li><span class="mk">03</span><span class="t"><b>Use NLP</b> to pull entities, sentiment, and themes from oceans of text in minutes.</span></li>
-      <li><span class="mk">04</span><span class="t"><b>Write prompts that return usable intelligence</b>, not vague, generic summaries.</span></li>
-      <li><span class="mk">05</span><span class="t"><b>Run predictive analysis</b> to flag threats before they fully surface.</span></li>
-      <li><span class="mk">06</span><span class="t"><b>Interrogate bias and the black box</b> so you can defend a finding in a briefing, or a courtroom.</span></li>
-      <li><span class="mk">07</span><span class="t"><b>Validate AI output</b> and trust nothing until it&rsquo;s proven.</span></li>
-      <li><span class="mk">08</span><span class="t"><b>Read the horizon</b>, from agentic to multimodal AI, before adversaries exploit it.</span></li>
+      <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z"/><path d="M9 4v14M15 6v14"/></svg></span><span class="t"><b>Map your own workflow</b> and pinpoint exactly where AI saves you the most time.</span></li>
+      <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v2.4M12 18.6V21M21 12h-2.4M5.4 12H3M18 6l-1.7 1.7M7.7 16.3 6 18M18 18l-1.7-1.7M7.7 7.7 6 6"/></svg></span><span class="t"><b>Automate collection and triage</b> so you analyze instead of gather.</span></li>
+      <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5h14M5 10h14M5 15h9"/></svg></span><span class="t"><b>Use NLP</b> to pull entities, sentiment, and themes from oceans of text in minutes.</span></li>
+      <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v10H8l-4 4V5Z"/><path d="M8 9h8M8 12h5"/></svg></span><span class="t"><b>Write prompts that return usable intelligence</b>, not vague, generic summaries.</span></li>
+      <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 3 8-8"/><path d="M16 7h5v5"/></svg></span><span class="t"><b>Run predictive analysis</b> to flag threats before they fully surface.</span></li>
+      <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M6 8h12"/><path d="M6 8 3.6 14h4.8L6 8Zm12 0-2.4 6h4.8L18 8Z"/><path d="M9 20h6"/></svg></span><span class="t"><b>Interrogate bias and the black box</b> so you can defend a finding in a briefing, or a courtroom.</span></li>
+      <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="t"><b>Validate AI output</b> and trust nothing until it&rsquo;s proven.</span></li>
+      <li><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h18M6 18a6 6 0 0 1 12 0"/><path d="M12 5v3M5 9.5 6.6 11M19 9.5 17.4 11"/></svg></span><span class="t"><b>Read the horizon</b>, from agentic to multimodal AI, before adversaries exploit it.</span></li>
     </ul>
   </div>
 </section>
