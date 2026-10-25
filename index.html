@@ -152,10 +152,12 @@ h2{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;line-
 .crew .more{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.1em;color:var(--steel);margin-top:14px;display:flex;align-items:center;gap:6px;opacity:.8}
 .crew:hover .more{color:var(--glow)}
 
-.trust .wrap{display:flex;flex-wrap:wrap;gap:14px 38px;align-items:center;justify-content:center;padding-top:42px;padding-bottom:42px}
-.trust .ti{font-family:'Space Mono',monospace;font-size:.82rem;letter-spacing:.06em;color:var(--muted);display:flex;align-items:center;gap:10px}
+section.trust{padding:0}
+.trust .wrap{display:flex;flex-wrap:wrap;gap:12px 40px;align-items:center;justify-content:center;padding-top:40px;padding-bottom:40px}
+@media(max-width:880px){.trust .wrap{flex-direction:column;gap:12px}}
+.trust .ti{font-family:'Space Mono',monospace;font-size:.82rem;letter-spacing:.06em;color:var(--muted);display:block;text-align:center;line-height:1.6}
 .trust .ti b{color:var(--ink);font-weight:700}
-.trust .ti::before{content:"\25C6";color:var(--tide);font-size:.6rem}
+.trust .ti::before{content:"\25C6";color:var(--tide);font-size:.6rem;margin-right:10px;vertical-align:2px}
 
 .log{border-top:1px solid var(--line)}
 .log-row{display:grid;grid-template-columns:78px 1fr auto;gap:22px;align-items:center;padding:18px 8px;border-bottom:1px solid var(--line);transition:.3s}
@@ -237,6 +239,42 @@ footer a:hover{color:#fff}
   *{animation:none!important;transition:none!important}
   .reveal{opacity:1;transform:none}
   .kicker,.badge,.promise,.byline,.cta-row,.cover-stage{opacity:1!important}
+}
+
+/* ---------- mobile polish ---------- */
+@media(max-width:600px){
+  html{-webkit-text-size-adjust:100%}
+  a,button{-webkit-tap-highlight-color:rgba(184,92,214,.25)}
+  .wrap{padding:0 18px}
+  section{padding:60px 0}
+  section.trust{padding:0}
+  header.hero{min-height:auto;padding:84px 0 48px}
+  .hero-grid{gap:26px}
+  .cover-stage img{max-width:210px;animation:none}
+  h1.title{font-size:clamp(3rem,15vw,4.2rem)}
+  .promise{font-size:1.05rem}
+  .cta-row{flex-direction:column;align-items:stretch;gap:12px}
+  .cta-row .btn,.capture .btn,#resources .btn,.dd-card .btn{justify-content:center;width:100%;min-height:48px}
+  .eyebrow{letter-spacing:.18em;font-size:.74rem}
+  .kicker{letter-spacing:.22em;font-size:.74rem}
+  .badge{font-size:.7rem;letter-spacing:.12em}
+  .stat .lab{font-size:.74rem;letter-spacing:.1em}
+  .crew{padding:18px 18px}
+  .crew .role{font-size:.72rem;letter-spacing:.12em}
+  .crew .more{font-size:.74rem;margin-top:10px}
+  .crew .name{font-size:1.2rem}
+  .depth{font-size:.74rem}
+  .log-row{grid-template-columns:52px 1fr;gap:12px;padding:16px 4px}
+  .res-tags span{font-size:.74rem;letter-spacing:.06em}
+  .stores{flex-direction:column;align-items:stretch;gap:10px}
+  .store{min-width:0;width:100%;padding:14px 18px;min-height:56px}
+  .meta-line{font-size:.74rem;line-height:1.7}
+  .foot-meta{font-size:.72rem}
+  footer a{display:inline-block;padding:10px 6px}
+  a.txt{display:inline-block;padding:10px 0}
+  .nav-toggle{width:46px;height:46px;justify-content:center;align-items:center}
+  .beam{display:none}
+  .modal-box{max-height:85vh;overflow-y:auto}
 }
 </style>
 </head>
@@ -326,9 +364,7 @@ footer a:hover{color:#fff}
   <div class="wrap reveal">
     <div class="ti"><b>Manager, Cyber Defense and Resilience</b> &middot; Deloitte</div>
     <div class="ti">Author of Wiley&rsquo;s <b>Deep Dive</b></div>
-    <div class="ti">Speaker &middot; <b>DEF CON</b></div>
-    <div class="ti"><b>ShmooCon</b></div>
-    <div class="ti"><b>SANS OSINT Summit</b></div>
+    <div class="ti">Speaker &middot; <b>DEF CON, ShmooCon, SANS OSINT Summit</b></div>
     <div class="ti">Licensed <b>Private Investigator</b></div>
   </div>
 </section>
@@ -417,7 +453,7 @@ footer a:hover{color:#fff}
       <a class="store" href="https://www.barnesandnoble.com/w/deep-insight-rae-l-baker/1149903634" target="_blank" rel="noopener"><small>Pre-order at</small><b>Barnes &amp; Noble</b></a>
       <a class="store" href="https://www.wiley.com/en-us/Deep+Insight%3A+AI+for+the+Intelligence+Analyst-p-9781394345045" target="_blank" rel="noopener"><small>Pre-order at</small><b>Wiley</b></a>
     </div>
-    <p class="meta-line">Paperback and eBook editions &nbsp;&middot;&nbsp; ISBN 978 1 394 34504 5</p>
+    <p class="meta-line">Paperback, eBook, and audio editions &nbsp;&middot;&nbsp; ISBN 978 1 394 34504 5</p>
   </div>
 </section>
 
@@ -448,7 +484,8 @@ tg.addEventListener('click',()=>{const o=mn.classList.toggle('open');tg.classLis
 mn.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mn.classList.remove('open');tg.classList.remove('open');tg.setAttribute('aria-expanded','false');}));
 
 const bc=document.getElementById('bubbles');
-for(let i=0;i<26;i++){const b=document.createElement('div');b.className='bubble';
+const NB=window.innerWidth<700?10:26;
+for(let i=0;i<NB;i++){const b=document.createElement('div');b.className='bubble';
   const s=4+Math.random()*22;b.style.width=s+'px';b.style.height=s+'px';
   b.style.left=Math.random()*100+'vw';b.style.setProperty('--drift',(Math.random()*80-40)+'px');
   b.style.animationDuration=(10+Math.random()*16)+'s';b.style.animationDelay=(-Math.random()*18)+'s';bc.appendChild(b);}
