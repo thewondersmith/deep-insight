@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Workflow Development Template | Deep Insight</title>
+<meta name="description" content="Map the process, find the friction, then decide if AI belongs there.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anton&family=Libre+Franklin:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#121014;--body:#38323d;--muted:#6f6875;--rule:#cfc8d4;--hair:#e6e1ea;
+--plum:#5b2a6e;--plum-2:#7a3d91;--tint:#f1ebf4;--field:#faf8fb;--bg:#f4f1f6;--paper:#ffffff;
+--ok:#2f6b3a;--radius:6px}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--body);font:16px/1.55 "Libre Franklin",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--plum)}
+.topband{background:var(--ink);color:#fff;font:700 12px/1 "Space Mono",ui-monospace,monospace;letter-spacing:.08em;
+ text-transform:uppercase;padding:12px 16px;display:flex;justify-content:space-between;gap:12px;border-bottom:3px solid var(--plum)}
+.topband a{color:#fff;text-decoration:none;opacity:.85}.topband a:hover{opacity:1;text-decoration:underline}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+.sheet{background:var(--paper);margin:24px auto 40px;border:1px solid var(--hair);border-radius:10px;padding:36px 44px 44px;box-shadow:0 1px 2px rgba(30,10,40,.04),0 8px 30px rgba(30,10,40,.06)}
+.kicker{font:700 12px/1.3 "Space Mono",ui-monospace,monospace;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;margin:0 0 10px}
+h1{font-family:Anton,Impact,"Arial Narrow Bold",sans-serif;font-weight:400;color:var(--ink);font-size:clamp(34px,6vw,52px);line-height:1.02;letter-spacing:.01em;margin:0 0 10px;text-transform:uppercase}
+.subtitle{font-style:italic;color:var(--body);margin:0 0 18px;font-size:17px}
+.titlerule{border:0;border-top:2px solid var(--ink);margin:0 0 6px}
+.toolbar{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:8px;align-items:center;
+ padding:10px 0;margin:0 0 18px;border-bottom:1px solid var(--hair)}
+.toolbar .status{font:12px/1.2 "Space Mono",ui-monospace,monospace;color:var(--muted);margin-right:auto}
+.toolbar .status.ok{color:var(--ok)}
+.btn{font:600 14px/1 "Libre Franklin",system-ui,sans-serif;border:1.5px solid var(--ink);background:#fff;color:var(--ink);padding:9px 14px;border-radius:999px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.btn:hover{background:var(--tint)}
+.btn.primary{background:var(--plum);border-color:var(--plum);color:#fff}.btn.primary:hover{background:var(--plum-2)}
+.btn.ghost{border-color:var(--rule);color:var(--muted)}
+.btn:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #c9a6d8;outline-offset:2px}
+p{margin:0 0 12px}
+.hint{font-size:13px;color:var(--muted);font-style:italic;margin:-4px 0 12px}
+.small{font-size:14.5px}
+.section{display:flex;align-items:center;gap:12px;margin:34px 0 14px}
+.section .tag{background:var(--ink);color:#fff;font:700 12px/1 "Space Mono",ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;padding:6px 8px;border-radius:3px;white-space:nowrap}
+.section h2{font:700 20px/1.2 "Libre Franklin",system-ui,sans-serif;color:var(--ink);margin:0}
+.section .line{flex:1;border-top:1px solid var(--rule);min-width:20px}
+.lbl{display:block;font-weight:700;color:var(--ink);font-size:15px;margin:0 0 6px}
+.grp{font-weight:700;color:var(--ink);margin:14px 0 8px}
+.grp.accent{font-family:"Space Mono",ui-monospace,monospace;color:var(--plum);text-transform:uppercase;letter-spacing:.05em;font-size:13.5px}
+.f{margin:0 0 16px}
+input[type=text],textarea{width:100%;font:15px/1.45 "Libre Franklin",system-ui,sans-serif;color:var(--ink);background:var(--field);
+ border:1px solid var(--rule);border-radius:var(--radius);padding:9px 11px}
+textarea{resize:vertical;min-height:42px;overflow:hidden}
+input[type=text]:hover,textarea:hover{border-color:#b3a8bb}
+.row{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 16px}
+.row .f{margin:0;min-width:140px}
+.checks{display:grid;gap:8px 18px;margin:0 0 16px;grid-template-columns:repeat(var(--cols,1),minmax(0,1fr))}
+.chk,.rad{display:flex;gap:9px;align-items:flex-start;cursor:pointer;font-size:15px;line-height:1.4}
+.chk input,.rad input{width:18px;height:18px;margin:2px 0 0;accent-color:var(--plum);flex:none}
+fieldset.radios{border:0;padding:0;margin:0 0 16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px}
+fieldset.radios legend{font-weight:700;color:var(--ink);padding:0;margin:0 0 6px;width:100%;font-size:15px}
+.callout{background:var(--tint);border-left:4px solid var(--plum);padding:14px 18px;border-radius:0 var(--radius) var(--radius) 0;margin:6px 0 18px;color:var(--ink);font-size:15px}
+.callout .ct{font:700 12px/1.2 "Space Mono",ui-monospace,monospace;letter-spacing:.07em;color:var(--plum);text-transform:uppercase;margin:0 0 6px}
+.brief{border:1.5px solid var(--ink);border-top:6px solid var(--ink);border-radius:4px;padding:18px 22px;margin:4px 0 22px;background:#fff;position:relative}
+.brief .hdr{font:700 13px/1.6 "Space Mono",ui-monospace,monospace;color:var(--ink);border-bottom:1px solid var(--hair);padding:0 0 10px;margin:0 0 12px}
+.brief .stamp{position:absolute;top:14px;right:16px;font:700 11px/1 "Space Mono",ui-monospace,monospace;letter-spacing:.1em;color:#a1262b;border:2px solid #a1262b;padding:5px 7px;transform:rotate(3deg)}
+.brief p{color:var(--ink);font-size:15px}
+.brief .sig{font:13px/1.6 "Space Mono",ui-monospace,monospace;color:var(--body);margin-top:12px}
+ul.b,ol.n{margin:0 0 14px;padding-left:22px}ul.b li,ol.n li{margin:0 0 5px}ul.b li::marker{color:var(--plum)}ol.n li::marker{color:var(--plum);font-family:"Space Mono",monospace;font-weight:700}
+.tablewrap{overflow-x:auto;margin:0 0 18px}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th{background:var(--ink);color:#fff;text-align:left;font:700 12.5px/1.25 "Libre Franklin",system-ui,sans-serif;padding:8px 8px;vertical-align:bottom}
+td{border-bottom:1px solid var(--hair);padding:6px;vertical-align:top}
+tbody tr:nth-child(even) td{background:#fbfafc}
+td.rowlab{font-weight:700;color:var(--ink);padding-top:10px}
+td textarea{min-height:38px;padding:7px 8px;font-size:14px}
+table.static td{padding:8px}
+.cards{display:grid;gap:12px;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));margin:0 0 18px}
+.card{border:1px solid var(--rule);border-radius:8px;padding:14px}
+.card .ch{font:700 13px/1 "Space Mono",ui-monospace,monospace;color:var(--plum);letter-spacing:.06em;text-transform:uppercase;margin:0 0 12px}
+.card .f{margin-bottom:12px}.card .lbl{font-size:13.5px}
+.card fieldset.radios legend{font-size:13.5px}
+.card fieldset.radios{gap:6px 12px}
+.flow{display:grid;grid-template-columns:repeat(var(--cols,4),minmax(0,1fr));gap:22px;margin:0 0 18px;counter-reset:s}
+.box{position:relative}
+.box:not(:last-child)::after{content:"\2192";position:absolute;right:-18px;top:44px;color:var(--ink);font-weight:700}
+.box .bl{font:700 12px/1 "Space Mono",monospace;color:var(--plum);margin:0 0 6px;text-transform:uppercase}
+.box textarea{min-height:84px}
+.box .chk{font-size:13px;margin-top:6px}
+.dl{display:flex;flex-direction:column;gap:10px;margin:0 0 18px}
+.dl a{display:flex;gap:14px;align-items:center;border:1px solid var(--rule);border-radius:8px;padding:12px 14px;text-decoration:none;color:var(--ink);background:#fff}
+.dl a:hover{border-color:var(--plum);background:var(--tint)}
+.dl .ico{font:700 12px/1 "Space Mono",monospace;background:var(--ink);color:#fff;padding:8px 7px;border-radius:4px}
+.dl .t{font-weight:700}.dl .d{font-size:14px;color:var(--muted)}
+.pb{border:1px solid var(--rule);border-radius:8px;background:#f7f6f8;margin:0 0 16px;overflow:hidden}
+.pb .pbh{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 12px;border-bottom:1px solid var(--hair);background:#fff}
+.pb .pbt{font:700 12.5px/1.2 "Space Mono",ui-monospace,monospace;color:var(--plum);text-transform:uppercase;letter-spacing:.05em}
+.pb pre{margin:0;padding:12px 14px;white-space:pre-wrap;word-break:break-word;font:13.5px/1.55 "Space Mono",ui-monospace,monospace;color:var(--ink)}
+.pb .pbn{padding:0 14px 12px;font-size:13.5px;color:var(--muted);font-style:italic}
+.copy{font:600 13px/1 "Libre Franklin",system-ui,sans-serif;border:1.5px solid var(--plum);color:var(--plum);background:#fff;border-radius:999px;padding:7px 12px;cursor:pointer}
+.copy:hover{background:var(--tint)}.copy.done{background:var(--plum);color:#fff}
+.signoff{border-top:1px solid var(--hair);margin:28px 0 0;padding:14px 0 0;color:var(--muted);font-style:italic;font-size:14.5px}
+.foot{max-width:860px;margin:0 auto 40px;padding:0 16px;color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between}
+.rich b{color:var(--ink)}
+@media (max-width:700px){
+ .sheet{padding:22px 16px 28px;border-radius:0;margin:0 -16px 24px;border-left:0;border-right:0}
+ .cards,.flow{grid-template-columns:1fr}.box::after{display:none}
+ .checks{grid-template-columns:1fr}
+ .row .f{flex:1 1 100% !important}
+ table.grid thead{display:none}
+ table.grid,table.grid tbody,table.grid tr,table.grid td{display:block;width:100%}
+ table.grid tr{border:1px solid var(--rule);border-radius:8px;margin:0 0 10px;padding:6px}
+ table.grid td{border:0;padding:4px 4px}
+ table.grid td::before{content:attr(data-col);display:block;font-size:12px;font-weight:700;color:var(--muted);margin:0 0 3px}
+ table.grid td.rowlab::before{display:none}
+ .toolbar .status{width:100%}
+}
+@media print{
+ @page{size:letter;margin:.55in}
+ body{background:#fff;font-size:11pt}
+ .toolbar,.topband a.back,.noprint{display:none !important}
+ .topband{background:#000 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .sheet{border:0;box-shadow:none;margin:0;padding:0}
+ .section,.brief,.callout,.card,tr,.f,fieldset{break-inside:avoid}
+ th,.section .tag,.callout,.dl .ico{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ input[type=text],textarea{background:#fff;border-color:#888}
+ .wrap{max-width:none}
+ .foot{margin:12px 0 0}
+}
+</style></head>
+<body data-sheet="appendix-a-workflow-development-template">
+<div class="topband"><span>Deep Insight // Appendix worksheet</span><span><a class="back" href="index.html">All worksheets</a> &nbsp;/&nbsp; Appendix A</span></div>
+<div class="wrap"><main class="sheet">
+<p class="kicker">Appendix A  |  Companion to Chapter 1: Setting Sail</p>
+<h1>Workflow Development Template</h1>
+<p class="subtitle">Map the process, find the friction, then decide if AI belongs there.</p>
+<hr class="titlerule">
+<div class="toolbar"><span class="status" id="status" aria-live="polite">Autosaves on this device</span>
+<button type="button" class="btn primary" id="download">Download my answers</button>
+<button type="button" class="btn" id="print">Print / Save PDF</button>
+<a class="btn ghost" href="pdf/DeepInsight_Appendix_A_Workflow_Development_Template.pdf" download>PDF version</a>
+<button type="button" class="btn ghost" id="clear">Clear</button></div>
+<form id="ws" autocomplete="off" onsubmit="return false">
+<p class="">Before AI can help you, you need to know exactly where your process breaks down. Map the workflow you actually run (not the one in the SOP binder), find the step eating your week, then decide whether AI is the right fix. One worksheet per workflow.</p><div class="row"><div class="f" style="flex:0.5 1 0"><label class="lbl" for="q1">Workflow name</label><input type="text" id="q1" name="workflow_name" data-q="Workflow name"></div><div class="f" style="flex:0.3 1 0"><label class="lbl" for="q2">Analyst</label><input type="text" id="q2" name="analyst" data-q="Analyst"></div><div class="f" style="flex:0.2 1 0"><label class="lbl" for="q3">Date</label><input type="text" id="q3" name="date" data-q="Date"></div></div><div class="section" data-h="Step 1: Document your current process"><span class="tag">Step 1</span><h2>Document your current process</h2><span class="line"></span></div><p class="small">List every task in order, from first input to finished product. Don&#x27;t skip the boring steps. They are usually where the friction lives.</p><div class="tablewrap"><table class="grid"><thead><tr><th style="width:5.0%">#</th><th style="width:22.0%">Task (plain words)</th><th style="width:16.0%">Inputs: what you receive</th><th style="width:16.0%">Outputs: what you hand off</th><th style="width:10.0%">Time spent</th><th style="width:20.0%">Friction (errors, delays, rage)</th><th style="width:11.0%">AI? Y / N / Mix</th></tr></thead><tbody><tr><td class="rowlab" data-col="#">1</td><td data-col="Task (plain words)"><textarea name="map_r1_c2" rows="1" aria-label="1 / Task (plain words)" data-q="1 / Task (plain words)"></textarea></td><td data-col="Inputs: what you receive"><textarea name="map_r1_c3" rows="1" aria-label="1 / Inputs: what you receive" data-q="1 / Inputs: what you receive"></textarea></td><td data-col="Outputs: what you hand off"><textarea name="map_r1_c4" rows="1" aria-label="1 / Outputs: what you hand off" data-q="1 / Outputs: what you hand off"></textarea></td><td data-col="Time spent"><textarea name="map_r1_c5" rows="1" aria-label="1 / Time spent" data-q="1 / Time spent"></textarea></td><td data-col="Friction (errors, delays, rage)"><textarea name="map_r1_c6" rows="1" aria-label="1 / Friction (errors, delays, rage)" data-q="1 / Friction (errors, delays, rage)"></textarea></td><td data-col="AI? Y / N / Mix"><textarea name="map_r1_c7" rows="1" aria-label="1 / AI? Y / N / Mix" data-q="1 / AI? Y / N / Mix"></textarea></td></tr><tr><td class="rowlab" data-col="#">2</td><td data-col="Task (plain words)"><textarea name="map_r2_c2" rows="1" aria-label="2 / Task (plain words)" data-q="2 / Task (plain words)"></textarea></td><td data-col="Inputs: what you receive"><textarea name="map_r2_c3" rows="1" aria-label="2 / Inputs: what you receive" data-q="2 / Inputs: what you receive"></textarea></td><td data-col="Outputs: what you hand off"><textarea name="map_r2_c4" rows="1" aria-label="2 / Outputs: what you hand off" data-q="2 / Outputs: what you hand off"></textarea></td><td data-col="Time spent"><textarea name="map_r2_c5" rows="1" aria-label="2 / Time spent" data-q="2 / Time spent"></textarea></td><td data-col="Friction (errors, delays, rage)"><textarea name="map_r2_c6" rows="1" aria-label="2 / Friction (errors, delays, rage)" data-q="2 / Friction (errors, delays, rage)"></textarea></td><td data-col="AI? Y / N / Mix"><textarea name="map_r2_c7" rows="1" aria-label="2 / AI? Y / N / Mix" data-q="2 / AI? Y / N / Mix"></textarea></td></tr><tr><td class="rowlab" data-col="#">3</td><td data-col="Task (plain words)"><textarea name="map_r3_c2" rows="1" aria-label="3 / Task (plain words)" data-q="3 / Task (plain words)"></textarea></td><td data-col="Inputs: what you receive"><textarea name="map_r3_c3" rows="1" aria-label="3 / Inputs: what you receive" data-q="3 / Inputs: what you receive"></textarea></td><td data-col="Outputs: what you hand off"><textarea name="map_r3_c4" rows="1" aria-label="3 / Outputs: what you hand off" data-q="3 / Outputs: what you hand off"></textarea></td><td data-col="Time spent"><textarea name="map_r3_c5" rows="1" aria-label="3 / Time spent" data-q="3 / Time spent"></textarea></td><td data-col="Friction (errors, delays, rage)"><textarea name="map_r3_c6" rows="1" aria-label="3 / Friction (errors, delays, rage)" data-q="3 / Friction (errors, delays, rage)"></textarea></td><td data-col="AI? Y / N / Mix"><textarea name="map_r3_c7" rows="1" aria-label="3 / AI? Y / N / Mix" data-q="3 / AI? Y / N / Mix"></textarea></td></tr><tr><td class="rowlab" data-col="#">4</td><td data-col="Task (plain words)"><textarea name="map_r4_c2" rows="1" aria-label="4 / Task (plain words)" data-q="4 / Task (plain words)"></textarea></td><td data-col="Inputs: what you receive"><textarea name="map_r4_c3" rows="1" aria-label="4 / Inputs: what you receive" data-q="4 / Inputs: what you receive"></textarea></td><td data-col="Outputs: what you hand off"><textarea name="map_r4_c4" rows="1" aria-label="4 / Outputs: what you hand off" data-q="4 / Outputs: what you hand off"></textarea></td><td data-col="Time spent"><textarea name="map_r4_c5" rows="1" aria-label="4 / Time spent" data-q="4 / Time spent"></textarea></td><td data-col="Friction (errors, delays, rage)"><textarea name="map_r4_c6" rows="1" aria-label="4 / Friction (errors, delays, rage)" data-q="4 / Friction (errors, delays, rage)"></textarea></td><td data-col="AI? Y / N / Mix"><textarea name="map_r4_c7" rows="1" aria-label="4 / AI? Y / N / Mix" data-q="4 / AI? Y / N / Mix"></textarea></td></tr><tr><td class="rowlab" data-col="#">5</td><td data-col="Task (plain words)"><textarea name="map_r5_c2" rows="1" aria-label="5 / Task (plain words)" data-q="5 / Task (plain words)"></textarea></td><td data-col="Inputs: what you receive"><textarea name="map_r5_c3" rows="1" aria-label="5 / Inputs: what you receive" data-q="5 / Inputs: what you receive"></textarea></td><td data-col="Outputs: what you hand off"><textarea name="map_r5_c4" rows="1" aria-label="5 / Outputs: what you hand off" data-q="5 / Outputs: what you hand off"></textarea></td><td data-col="Time spent"><textarea name="map_r5_c5" rows="1" aria-label="5 / Time spent" data-q="5 / Time spent"></textarea></td><td data-col="Friction (errors, delays, rage)"><textarea name="map_r5_c6" rows="1" aria-label="5 / Friction (errors, delays, rage)" data-q="5 / Friction (errors, delays, rage)"></textarea></td><td data-col="AI? Y / N / Mix"><textarea name="map_r5_c7" rows="1" aria-label="5 / AI? Y / N / Mix" data-q="5 / AI? Y / N / Mix"></textarea></td></tr><tr><td class="rowlab" data-col="#">6</td><td data-col="Task (plain words)"><textarea name="map_r6_c2" rows="1" aria-label="6 / Task (plain words)" data-q="6 / Task (plain words)"></textarea></td><td data-col="Inputs: what you receive"><textarea name="map_r6_c3" rows="1" aria-label="6 / Inputs: what you receive" data-q="6 / Inputs: what you receive"></textarea></td><td data-col="Outputs: what you hand off"><textarea name="map_r6_c4" rows="1" aria-label="6 / Outputs: what you hand off" data-q="6 / Outputs: what you hand off"></textarea></td><td data-col="Time spent"><textarea name="map_r6_c5" rows="1" aria-label="6 / Time spent" data-q="6 / Time spent"></textarea></td><td data-col="Friction (errors, delays, rage)"><textarea name="map_r6_c6" rows="1" aria-label="6 / Friction (errors, delays, rage)" data-q="6 / Friction (errors, delays, rage)"></textarea></td><td data-col="AI? Y / N / Mix"><textarea name="map_r6_c7" rows="1" aria-label="6 / AI? Y / N / Mix" data-q="6 / AI? Y / N / Mix"></textarea></td></tr><tr><td class="rowlab" data-col="#">7</td><td data-col="Task (plain words)"><textarea name="map_r7_c2" rows="1" aria-label="7 / Task (plain words)" data-q="7 / Task (plain words)"></textarea></td><td data-col="Inputs: what you receive"><textarea name="map_r7_c3" rows="1" aria-label="7 / Inputs: what you receive" data-q="7 / Inputs: what you receive"></textarea></td><td data-col="Outputs: what you hand off"><textarea name="map_r7_c4" rows="1" aria-label="7 / Outputs: what you hand off" data-q="7 / Outputs: what you hand off"></textarea></td><td data-col="Time spent"><textarea name="map_r7_c5" rows="1" aria-label="7 / Time spent" data-q="7 / Time spent"></textarea></td><td data-col="Friction (errors, delays, rage)"><textarea name="map_r7_c6" rows="1" aria-label="7 / Friction (errors, delays, rage)" data-q="7 / Friction (errors, delays, rage)"></textarea></td><td data-col="AI? Y / N / Mix"><textarea name="map_r7_c7" rows="1" aria-label="7 / AI? Y / N / Mix" data-q="7 / AI? Y / N / Mix"></textarea></td></tr><tr><td class="rowlab" data-col="#">8</td><td data-col="Task (plain words)"><textarea name="map_r8_c2" rows="1" aria-label="8 / Task (plain words)" data-q="8 / Task (plain words)"></textarea></td><td data-col="Inputs: what you receive"><textarea name="map_r8_c3" rows="1" aria-label="8 / Inputs: what you receive" data-q="8 / Inputs: what you receive"></textarea></td><td data-col="Outputs: what you hand off"><textarea name="map_r8_c4" rows="1" aria-label="8 / Outputs: what you hand off" data-q="8 / Outputs: what you hand off"></textarea></td><td data-col="Time spent"><textarea name="map_r8_c5" rows="1" aria-label="8 / Time spent" data-q="8 / Time spent"></textarea></td><td data-col="Friction (errors, delays, rage)"><textarea name="map_r8_c6" rows="1" aria-label="8 / Friction (errors, delays, rage)" data-q="8 / Friction (errors, delays, rage)"></textarea></td><td data-col="AI? Y / N / Mix"><textarea name="map_r8_c7" rows="1" aria-label="8 / AI? Y / N / Mix" data-q="8 / AI? Y / N / Mix"></textarea></td></tr></tbody></table></div><div class="callout"><div class="ct">How to flag AI candidates</div>Y = repetitive, structured, rule based.   N = needs human judgment, context, or sensitive handling.   Mix = AI can help, but a human reviews it. Once this is filled in, the Y and Mix rows show where to test AI first, and the Friction column shows your best return.</div><div class="section" data-h="Step 2: Find your biggest friction point"><span class="tag">Step 2</span><h2>Find your biggest friction point</h2><span class="line"></span></div><div class="row"><div class="f" style="flex:0.3 1 0"><label class="lbl" for="q4">Friction point (step #)</label><input type="text" id="q4" name="friction_point_step" data-q="Friction point (step #)"></div><div class="f" style="flex:0.35 1 0"><label class="lbl" for="q5">Hours lost per week (est.)</label><input type="text" id="q5" name="hours_lost_per_week_est" data-q="Hours lost per week (est.)"></div><div class="f" style="flex:0.35 1 0"><label class="lbl" for="q6">Errors it causes per week (est.)</label><input type="text" id="q6" name="errors_it_causes_per_wee" data-q="Errors it causes per week (est.)"></div></div><div class="f"><label class="lbl" for="q7">Describe it in one sentence.</label><textarea id="q7" name="friction_desc" rows="1" data-q="Describe it in one sentence."></textarea></div><div class="grp">Why does this step hurt? (check all that apply)</div><div class="checks" style="--cols:2"><label class="chk"><input type="checkbox" name="why_manual_repetitive_wo" data-q="Manual, repetitive work"><span>Manual, repetitive work</span></label><label class="chk"><input type="checkbox" name="why_volume_too_big_to_do" data-q="Volume too big to do by hand"><span>Volume too big to do by hand</span></label><label class="chk"><input type="checkbox" name="why_cross_referencing_mu" data-q="Cross-referencing multiple sources"><span>Cross-referencing multiple sources</span></label><label class="chk"><input type="checkbox" name="why_language_translation" data-q="Language, translation, or format barriers"><span>Language, translation, or format barriers</span></label><label class="chk"><input type="checkbox" name="why_messy_data_handed_to" data-q="Messy data handed to me"><span>Messy data handed to me</span></label><label class="chk"><input type="checkbox" name="why_waiting_on_people_or" data-q="Waiting on people or systems"><span>Waiting on people or systems</span></label></div><div class="row"><div class="f" style="flex:1.0 1 0"><label class="lbl" for="q8">Other</label><input type="text" id="q8" name="other" data-q="Other"></div></div><div class="section" data-h="Step 3: Decide whether AI is actually the fix"><span class="tag">Step 3</span><h2>Decide whether AI is actually the fix</h2><span class="line"></span></div><div class="f"><label class="lbl" for="q9">One sentence: how could AI help with this friction point?</label><textarea id="q9" name="ai_help" rows="1" data-q="One sentence: how could AI help with this friction point?"></textarea></div><div class="f"><label class="lbl" for="q10">One sentence: what could go wrong if this step were automated?</label><textarea id="q10" name="ai_risk" rows="1" data-q="One sentence: what could go wrong if this step were automated?"></textarea></div><fieldset class="radios"><legend>Risk level if this step goes to AI:</legend><label class="rad"><input type="radio" name="risk" value="low" data-opt="Low" data-q="Risk level if this step goes to AI:"><span>Low</span></label><label class="rad"><input type="radio" name="risk" value="medium" data-opt="Medium" data-q="Risk level if this step goes to AI:"><span>Medium</span></label><label class="rad"><input type="radio" name="risk" value="high" data-opt="High" data-q="Risk level if this step goes to AI:"><span>High</span></label></fieldset><div class="f"><label class="lbl" for="q11">If Medium or High, what human checkpoint stays in place?</label><textarea id="q11" name="checkpoint" rows="1" data-q="If Medium or High, what human checkpoint stays in place?"></textarea></div><div class="section" data-h="Step 4: Pick your first test"><span class="tag">Step 4</span><h2>Pick your first test</h2><span class="line"></span></div><p class="small">Run this checklist against the step you picked. If you can&#x27;t tick most of these boxes, pick a different step.</p><div class="checks" style="--cols:1"><label class="chk"><input type="checkbox" name="firsttest_it_matches_the" data-q="It matches the roadblock I identified"><span>It matches the roadblock I identified</span></label><label class="chk"><input type="checkbox" name="firsttest_it_is_low_stak" data-q="It is low stakes, mistakes would be easy to spot"><span>It is low stakes, mistakes would be easy to spot</span></label><label class="chk"><input type="checkbox" name="firsttest_it_doesn_t_bre" data-q="It doesn&#x27;t break the bank (check built-in AI features first)"><span>It doesn&#x27;t break the bank (check built-in AI features first)</span></label><label class="chk"><input type="checkbox" name="firsttest_it_takes_less_" data-q="It takes less time to learn than the process takes to do"><span>It takes less time to learn than the process takes to do</span></label><label class="chk"><input type="checkbox" name="firsttest_i_can_measure_" data-q="I can measure the process before and after"><span>I can measure the process before and after</span></label><label class="chk"><input type="checkbox" name="firsttest_the_tool_is_ap" data-q="The tool is approved by my organization"><span>The tool is approved by my organization</span></label></div><div class="row"><div class="f" style="flex:0.6 1 0"><label class="lbl" for="q12">Tool I will test</label><input type="text" id="q12" name="tool_i_will_test" data-q="Tool I will test"></div><div class="f" style="flex:0.4 1 0"><label class="lbl" for="q13">Baseline time for this step</label><input type="text" id="q13" name="baseline_time_for_this_s" data-q="Baseline time for this step"></div></div><div class="section" data-h="Step 5: Your first 30 days"><span class="tag">Step 5</span><h2>Your first 30 days</h2><span class="line"></span></div><div class="tablewrap"><table class="grid"><thead><tr><th style="width:12.0%">Week</th><th style="width:30.0%">Goal</th><th style="width:33.0%">What I did</th><th style="width:25.0%">Time saved / result</th></tr></thead><tbody><tr><td class="rowlab" data-col="Week">Week 1</td><td data-col="Goal">Choose the task and the AI tool</td><td data-col="What I did"><textarea name="days30_r1_c3" rows="1" aria-label="Week 1 / What I did" data-q="Week 1 / What I did"></textarea></td><td data-col="Time saved / result"><textarea name="days30_r1_c4" rows="1" aria-label="Week 1 / Time saved / result" data-q="Week 1 / Time saved / result"></textarea></td></tr><tr><td class="rowlab" data-col="Week">Week 2</td><td data-col="Goal">Run the old process and the AI process side by side</td><td data-col="What I did"><textarea name="days30_r2_c3" rows="1" aria-label="Week 2 / What I did" data-q="Week 2 / What I did"></textarea></td><td data-col="Time saved / result"><textarea name="days30_r2_c4" rows="1" aria-label="Week 2 / Time saved / result" data-q="Week 2 / Time saved / result"></textarea></td></tr><tr><td class="rowlab" data-col="Week">Week 3</td><td data-col="Goal">Compare outputs, track the time saved</td><td data-col="What I did"><textarea name="days30_r3_c3" rows="1" aria-label="Week 3 / What I did" data-q="Week 3 / What I did"></textarea></td><td data-col="Time saved / result"><textarea name="days30_r3_c4" rows="1" aria-label="Week 3 / Time saved / result" data-q="Week 3 / Time saved / result"></textarea></td></tr><tr><td class="rowlab" data-col="Week">Week 4</td><td data-col="Goal">Review the results, decide to keep it or kill it</td><td data-col="What I did"><textarea name="days30_r4_c3" rows="1" aria-label="Week 4 / What I did" data-q="Week 4 / What I did"></textarea></td><td data-col="Time saved / result"><textarea name="days30_r4_c4" rows="1" aria-label="Week 4 / Time saved / result" data-q="Week 4 / Time saved / result"></textarea></td></tr></tbody></table></div><fieldset class="radios"><legend>Decision at day 30:</legend><label class="rad"><input type="radio" name="decision" value="keep_it" data-opt="Keep it" data-q="Decision at day 30:"><span>Keep it</span></label><label class="rad"><input type="radio" name="decision" value="adjust_and_retest" data-opt="Adjust and retest" data-q="Decision at day 30:"><span>Adjust and retest</span></label><label class="rad"><input type="radio" name="decision" value="kill_it" data-opt="Kill it" data-q="Decision at day 30:"><span>Kill it</span></label></fieldset><div class="f"><label class="lbl" for="q14">Why?</label><textarea id="q14" name="decision_why" rows="2" data-q="Why?"></textarea></div><p class="signoff">Reminder: duct tape AI to a broken process and you just get a faster broken process. Carry your friction point into Appendix B.</p>
+</form>
+</main></div>
+<div class="foot"><span>Deep Insight: AI for the Intelligence Analyst by Rae Baker</span><span><a href="https://deepinsightbook.com">deepinsightbook.com</a></span></div>
+<script>
+(function(){
+ var KEY='deepinsight-ws:'+document.body.dataset.sheet;
+ var form=document.getElementById('ws');
+ var status=document.getElementById('status');
+ var store=null;
+ try{var t='__t';localStorage.setItem(t,t);localStorage.removeItem(t);store=localStorage;}catch(e){store=null;}
+ function grow(el){if(el.tagName==='TEXTAREA'){el.style.height='auto';el.style.height=(el.scrollHeight+2)+'px';}}
+ function collect(){var d={};form.querySelectorAll('input,textarea').forEach(function(el){
+   if(el.type==='checkbox'){d[el.name]=el.checked;}else if(el.type==='radio'){if(el.checked)d[el.name]=el.value;}
+   else{d[el.name]=el.value;}});return d;}
+ function restore(){if(!store)return;var raw;try{raw=store.getItem(KEY);}catch(e){return;}
+   if(!raw)return;var d;try{d=JSON.parse(raw);}catch(e){return;}
+   form.querySelectorAll('input,textarea').forEach(function(el){if(!(el.name in d))return;
+     if(el.type==='checkbox'){el.checked=!!d[el.name];}else if(el.type==='radio'){el.checked=(d[el.name]===el.value);}
+     else{el.value=d[el.name];grow(el);}});
+   setStatus('Restored your saved answers',true);}
+ var timer=null;
+ function setStatus(msg,ok){status.textContent=msg;status.classList.toggle('ok',!!ok);}
+ function save(){if(!store){setStatus('Autosave is off in this browser. Download your answers before leaving.');return;}
+   try{store.setItem(KEY,JSON.stringify(collect()));setStatus('Saved on this device ✓',true);}
+   catch(e){setStatus('Could not autosave. Download your answers before leaving.');}}
+ form.addEventListener('input',function(e){grow(e.target);clearTimeout(timer);setStatus('Saving...');timer=setTimeout(save,400);});
+ form.addEventListener('change',function(){clearTimeout(timer);timer=setTimeout(save,150);});
+ document.querySelectorAll('textarea').forEach(grow);
+ window.addEventListener('resize',function(){document.querySelectorAll('textarea').forEach(grow);});
+ if(store){setStatus('Autosaves on this device',false);}else{setStatus('Autosave is off in this browser. Download your answers before leaving.');}
+ restore();
+ document.getElementById('print').addEventListener('click',function(){document.querySelectorAll('textarea').forEach(grow);window.print();});
+ document.getElementById('clear').addEventListener('click',function(){
+   if(!confirm('Clear every answer on this worksheet? This cannot be undone.'))return;
+   form.reset();form.querySelectorAll('textarea,input[type=text]').forEach(function(el){el.value='';grow(el);});
+   try{store&&store.removeItem(KEY);}catch(e){}setStatus('Cleared',false);});
+ document.getElementById('download').addEventListener('click',function(){
+   var out=[];var title=document.querySelector('h1').textContent.trim();
+   out.push(title.toUpperCase());out.push(document.querySelector('.kicker').textContent.trim());
+   out.push('Exported '+new Date().toLocaleString());out.push('');
+   var seenRadio={};
+   form.querySelectorAll('[data-h],input,textarea').forEach(function(el){
+     if(el.dataset.h){out.push('');out.push('== '+el.dataset.h+' ==');return;}
+     var q=(el.dataset.q||el.getAttribute('aria-label')||el.name).replace(/[:\s]+$/,'');
+     if(el.type==='checkbox'){out.push((el.checked?'[x] ':'[ ] ')+q);return;}
+     if(el.type==='radio'){if(seenRadio[el.name])return;seenRadio[el.name]=1;
+       var c=form.querySelector('input[name="'+el.name+'"]:checked');
+       out.push(q+': '+(c?c.dataset.opt:'(no answer)'));return;}
+     var v=(el.value||'').trim();if(!v)return;
+     out.push(q+':');v.split('\n').forEach(function(l){out.push('    '+l);});});
+   var blob=new Blob([out.join('\r\n')],{type:'text/plain'});
+   var a=document.createElement('a');a.href=URL.createObjectURL(blob);
+   a.download=document.body.dataset.sheet+'-my-answers.txt';document.body.appendChild(a);a.click();
+   setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},500);});
+ document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
+   var t=b.closest('.pb').querySelector('pre').textContent;
+   function ok(){b.textContent='Copied';b.classList.add('done');setTimeout(function(){b.textContent='Copy prompt';b.classList.remove('done');},1600);}
+   function fallback(){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();
+     try{document.execCommand('copy');ok();}catch(e){b.textContent='Select and copy';}ta.remove();}
+   if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(ok,fallback);}else{fallback();}});});
+})();
+</script>
+</body></html>

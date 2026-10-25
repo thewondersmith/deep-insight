@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Know Your Data | Deep Insight</title>
+<meta name="description" content="Find the baggage in your data before you automate it.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anton&family=Libre+Franklin:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#121014;--body:#38323d;--muted:#6f6875;--rule:#cfc8d4;--hair:#e6e1ea;
+--plum:#5b2a6e;--plum-2:#7a3d91;--tint:#f1ebf4;--field:#faf8fb;--bg:#f4f1f6;--paper:#ffffff;
+--ok:#2f6b3a;--radius:6px}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--body);font:16px/1.55 "Libre Franklin",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--plum)}
+.topband{background:var(--ink);color:#fff;font:700 12px/1 "Space Mono",ui-monospace,monospace;letter-spacing:.08em;
+ text-transform:uppercase;padding:12px 16px;display:flex;justify-content:space-between;gap:12px;border-bottom:3px solid var(--plum)}
+.topband a{color:#fff;text-decoration:none;opacity:.85}.topband a:hover{opacity:1;text-decoration:underline}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+.sheet{background:var(--paper);margin:24px auto 40px;border:1px solid var(--hair);border-radius:10px;padding:36px 44px 44px;box-shadow:0 1px 2px rgba(30,10,40,.04),0 8px 30px rgba(30,10,40,.06)}
+.kicker{font:700 12px/1.3 "Space Mono",ui-monospace,monospace;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;margin:0 0 10px}
+h1{font-family:Anton,Impact,"Arial Narrow Bold",sans-serif;font-weight:400;color:var(--ink);font-size:clamp(34px,6vw,52px);line-height:1.02;letter-spacing:.01em;margin:0 0 10px;text-transform:uppercase}
+.subtitle{font-style:italic;color:var(--body);margin:0 0 18px;font-size:17px}
+.titlerule{border:0;border-top:2px solid var(--ink);margin:0 0 6px}
+.toolbar{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:8px;align-items:center;
+ padding:10px 0;margin:0 0 18px;border-bottom:1px solid var(--hair)}
+.toolbar .status{font:12px/1.2 "Space Mono",ui-monospace,monospace;color:var(--muted);margin-right:auto}
+.toolbar .status.ok{color:var(--ok)}
+.btn{font:600 14px/1 "Libre Franklin",system-ui,sans-serif;border:1.5px solid var(--ink);background:#fff;color:var(--ink);padding:9px 14px;border-radius:999px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.btn:hover{background:var(--tint)}
+.btn.primary{background:var(--plum);border-color:var(--plum);color:#fff}.btn.primary:hover{background:var(--plum-2)}
+.btn.ghost{border-color:var(--rule);color:var(--muted)}
+.btn:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #c9a6d8;outline-offset:2px}
+p{margin:0 0 12px}
+.hint{font-size:13px;color:var(--muted);font-style:italic;margin:-4px 0 12px}
+.small{font-size:14.5px}
+.section{display:flex;align-items:center;gap:12px;margin:34px 0 14px}
+.section .tag{background:var(--ink);color:#fff;font:700 12px/1 "Space Mono",ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;padding:6px 8px;border-radius:3px;white-space:nowrap}
+.section h2{font:700 20px/1.2 "Libre Franklin",system-ui,sans-serif;color:var(--ink);margin:0}
+.section .line{flex:1;border-top:1px solid var(--rule);min-width:20px}
+.lbl{display:block;font-weight:700;color:var(--ink);font-size:15px;margin:0 0 6px}
+.grp{font-weight:700;color:var(--ink);margin:14px 0 8px}
+.grp.accent{font-family:"Space Mono",ui-monospace,monospace;color:var(--plum);text-transform:uppercase;letter-spacing:.05em;font-size:13.5px}
+.f{margin:0 0 16px}
+input[type=text],textarea{width:100%;font:15px/1.45 "Libre Franklin",system-ui,sans-serif;color:var(--ink);background:var(--field);
+ border:1px solid var(--rule);border-radius:var(--radius);padding:9px 11px}
+textarea{resize:vertical;min-height:42px;overflow:hidden}
+input[type=text]:hover,textarea:hover{border-color:#b3a8bb}
+.row{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 16px}
+.row .f{margin:0;min-width:140px}
+.checks{display:grid;gap:8px 18px;margin:0 0 16px;grid-template-columns:repeat(var(--cols,1),minmax(0,1fr))}
+.chk,.rad{display:flex;gap:9px;align-items:flex-start;cursor:pointer;font-size:15px;line-height:1.4}
+.chk input,.rad input{width:18px;height:18px;margin:2px 0 0;accent-color:var(--plum);flex:none}
+fieldset.radios{border:0;padding:0;margin:0 0 16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px}
+fieldset.radios legend{font-weight:700;color:var(--ink);padding:0;margin:0 0 6px;width:100%;font-size:15px}
+.callout{background:var(--tint);border-left:4px solid var(--plum);padding:14px 18px;border-radius:0 var(--radius) var(--radius) 0;margin:6px 0 18px;color:var(--ink);font-size:15px}
+.callout .ct{font:700 12px/1.2 "Space Mono",ui-monospace,monospace;letter-spacing:.07em;color:var(--plum);text-transform:uppercase;margin:0 0 6px}
+.brief{border:1.5px solid var(--ink);border-top:6px solid var(--ink);border-radius:4px;padding:18px 22px;margin:4px 0 22px;background:#fff;position:relative}
+.brief .hdr{font:700 13px/1.6 "Space Mono",ui-monospace,monospace;color:var(--ink);border-bottom:1px solid var(--hair);padding:0 0 10px;margin:0 0 12px}
+.brief .stamp{position:absolute;top:14px;right:16px;font:700 11px/1 "Space Mono",ui-monospace,monospace;letter-spacing:.1em;color:#a1262b;border:2px solid #a1262b;padding:5px 7px;transform:rotate(3deg)}
+.brief p{color:var(--ink);font-size:15px}
+.brief .sig{font:13px/1.6 "Space Mono",ui-monospace,monospace;color:var(--body);margin-top:12px}
+ul.b,ol.n{margin:0 0 14px;padding-left:22px}ul.b li,ol.n li{margin:0 0 5px}ul.b li::marker{color:var(--plum)}ol.n li::marker{color:var(--plum);font-family:"Space Mono",monospace;font-weight:700}
+.tablewrap{overflow-x:auto;margin:0 0 18px}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th{background:var(--ink);color:#fff;text-align:left;font:700 12.5px/1.25 "Libre Franklin",system-ui,sans-serif;padding:8px 8px;vertical-align:bottom}
+td{border-bottom:1px solid var(--hair);padding:6px;vertical-align:top}
+tbody tr:nth-child(even) td{background:#fbfafc}
+td.rowlab{font-weight:700;color:var(--ink);padding-top:10px}
+td textarea{min-height:38px;padding:7px 8px;font-size:14px}
+table.static td{padding:8px}
+.cards{display:grid;gap:12px;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));margin:0 0 18px}
+.card{border:1px solid var(--rule);border-radius:8px;padding:14px}
+.card .ch{font:700 13px/1 "Space Mono",ui-monospace,monospace;color:var(--plum);letter-spacing:.06em;text-transform:uppercase;margin:0 0 12px}
+.card .f{margin-bottom:12px}.card .lbl{font-size:13.5px}
+.card fieldset.radios legend{font-size:13.5px}
+.card fieldset.radios{gap:6px 12px}
+.flow{display:grid;grid-template-columns:repeat(var(--cols,4),minmax(0,1fr));gap:22px;margin:0 0 18px;counter-reset:s}
+.box{position:relative}
+.box:not(:last-child)::after{content:"\2192";position:absolute;right:-18px;top:44px;color:var(--ink);font-weight:700}
+.box .bl{font:700 12px/1 "Space Mono",monospace;color:var(--plum);margin:0 0 6px;text-transform:uppercase}
+.box textarea{min-height:84px}
+.box .chk{font-size:13px;margin-top:6px}
+.dl{display:flex;flex-direction:column;gap:10px;margin:0 0 18px}
+.dl a{display:flex;gap:14px;align-items:center;border:1px solid var(--rule);border-radius:8px;padding:12px 14px;text-decoration:none;color:var(--ink);background:#fff}
+.dl a:hover{border-color:var(--plum);background:var(--tint)}
+.dl .ico{font:700 12px/1 "Space Mono",monospace;background:var(--ink);color:#fff;padding:8px 7px;border-radius:4px}
+.dl .t{font-weight:700}.dl .d{font-size:14px;color:var(--muted)}
+.pb{border:1px solid var(--rule);border-radius:8px;background:#f7f6f8;margin:0 0 16px;overflow:hidden}
+.pb .pbh{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 12px;border-bottom:1px solid var(--hair);background:#fff}
+.pb .pbt{font:700 12.5px/1.2 "Space Mono",ui-monospace,monospace;color:var(--plum);text-transform:uppercase;letter-spacing:.05em}
+.pb pre{margin:0;padding:12px 14px;white-space:pre-wrap;word-break:break-word;font:13.5px/1.55 "Space Mono",ui-monospace,monospace;color:var(--ink)}
+.pb .pbn{padding:0 14px 12px;font-size:13.5px;color:var(--muted);font-style:italic}
+.copy{font:600 13px/1 "Libre Franklin",system-ui,sans-serif;border:1.5px solid var(--plum);color:var(--plum);background:#fff;border-radius:999px;padding:7px 12px;cursor:pointer}
+.copy:hover{background:var(--tint)}.copy.done{background:var(--plum);color:#fff}
+.signoff{border-top:1px solid var(--hair);margin:28px 0 0;padding:14px 0 0;color:var(--muted);font-style:italic;font-size:14.5px}
+.foot{max-width:860px;margin:0 auto 40px;padding:0 16px;color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between}
+.rich b{color:var(--ink)}
+@media (max-width:700px){
+ .sheet{padding:22px 16px 28px;border-radius:0;margin:0 -16px 24px;border-left:0;border-right:0}
+ .cards,.flow{grid-template-columns:1fr}.box::after{display:none}
+ .checks{grid-template-columns:1fr}
+ .row .f{flex:1 1 100% !important}
+ table.grid thead{display:none}
+ table.grid,table.grid tbody,table.grid tr,table.grid td{display:block;width:100%}
+ table.grid tr{border:1px solid var(--rule);border-radius:8px;margin:0 0 10px;padding:6px}
+ table.grid td{border:0;padding:4px 4px}
+ table.grid td::before{content:attr(data-col);display:block;font-size:12px;font-weight:700;color:var(--muted);margin:0 0 3px}
+ table.grid td.rowlab::before{display:none}
+ .toolbar .status{width:100%}
+}
+@media print{
+ @page{size:letter;margin:.55in}
+ body{background:#fff;font-size:11pt}
+ .toolbar,.topband a.back,.noprint{display:none !important}
+ .topband{background:#000 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .sheet{border:0;box-shadow:none;margin:0;padding:0}
+ .section,.brief,.callout,.card,tr,.f,fieldset{break-inside:avoid}
+ th,.section .tag,.callout,.dl .ico{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ input[type=text],textarea{background:#fff;border-color:#888}
+ .wrap{max-width:none}
+ .foot{margin:12px 0 0}
+}
+</style></head>
+<body data-sheet="trythis-ch03-know-your-data">
+<div class="topband"><span>Deep Insight // Try this</span><span><a class="back" href="index.html">All worksheets</a> &nbsp;/&nbsp; Chapter 3</span></div>
+<div class="wrap"><main class="sheet">
+<p class="kicker">Chapter 3: Casting the Nets  |  Try This Now</p>
+<h1>Know Your Data</h1>
+<p class="subtitle">Find the baggage in your data before you automate it.</p>
+<hr class="titlerule">
+<div class="toolbar"><span class="status" id="status" aria-live="polite">Autosaves on this device</span>
+<button type="button" class="btn primary" id="download">Download my answers</button>
+<button type="button" class="btn" id="print">Print / Save PDF</button>
+<a class="btn ghost" href="pdf/DeepInsight_TryThis_Ch03_Know_Your_Data.pdf" download>PDF version</a>
+<button type="button" class="btn ghost" id="clear">Clear</button></div>
+<form id="ws" autocomplete="off" onsubmit="return false">
+<p class="">Two quick ones from Chapter 3. Data shows up with baggage. These help you see it before you automate anything.</p><div class="section" data-h="Try 1: Who decided what your tool can see?"><span class="tag">Try 1</span><h2>Who decided what your tool can see?</h2><span class="line"></span></div><p class="small">Look at a database or tool you use regularly.</p><div class="row"><div class="f" style="flex:1.0 1 0"><label class="lbl" for="q1">Database or tool</label><input type="text" id="q1" name="database_or_tool" data-q="Database or tool"></div></div><div class="f"><label class="lbl" for="q2">What fields or categories does it force you to use?</label><textarea id="q2" name="forced" rows="3" data-q="What fields or categories does it force you to use?"></textarea></div><div class="f"><label class="lbl" for="q3">What can&#x27;t you track because there is no field for it?</label><textarea id="q3" name="missing" rows="3" data-q="What can&#x27;t you track because there is no field for it?"></textarea></div><div class="f"><label class="lbl" for="q4">Who decided those categories were important, and what might they use them for that is different from what you need?</label><textarea id="q4" name="who" rows="3" data-q="Who decided those categories were important, and what might they use them for that is different from what you need?"></textarea></div><div class="section" data-h="Try 2: Sort your recent data"><span class="tag">Try 2</span><h2>Sort your recent data</h2><span class="line"></span></div><p class="small">Grab data you collected recently: a report, imagery, social media posts, anything. Sort each item. Note anything that doesn&#x27;t fit neatly in one box.</p><div class="tablewrap"><table class="grid"><thead><tr><th style="width:30.0%">Item</th><th style="width:12.0%">Structured</th><th style="width:14.0%">Semi-structured</th><th style="width:13.0%">Unstructured</th><th style="width:31.0%">Doesn&#x27;t fit cleanly? Why?</th></tr></thead><tbody><tr><td data-col="Item"><textarea name="sort_r1_c1" rows="1" aria-label="Row 1 / Item" data-q="Row 1 / Item"></textarea></td><td data-col="Structured"><textarea name="sort_r1_c2" rows="1" aria-label="Row 1 / Structured" data-q="Row 1 / Structured"></textarea></td><td data-col="Semi-structured"><textarea name="sort_r1_c3" rows="1" aria-label="Row 1 / Semi-structured" data-q="Row 1 / Semi-structured"></textarea></td><td data-col="Unstructured"><textarea name="sort_r1_c4" rows="1" aria-label="Row 1 / Unstructured" data-q="Row 1 / Unstructured"></textarea></td><td data-col="Doesn&#x27;t fit cleanly? Why?"><textarea name="sort_r1_c5" rows="1" aria-label="Row 1 / Doesn&#x27;t fit cleanly? Why?" data-q="Row 1 / Doesn&#x27;t fit cleanly? Why?"></textarea></td></tr><tr><td data-col="Item"><textarea name="sort_r2_c1" rows="1" aria-label="Row 2 / Item" data-q="Row 2 / Item"></textarea></td><td data-col="Structured"><textarea name="sort_r2_c2" rows="1" aria-label="Row 2 / Structured" data-q="Row 2 / Structured"></textarea></td><td data-col="Semi-structured"><textarea name="sort_r2_c3" rows="1" aria-label="Row 2 / Semi-structured" data-q="Row 2 / Semi-structured"></textarea></td><td data-col="Unstructured"><textarea name="sort_r2_c4" rows="1" aria-label="Row 2 / Unstructured" data-q="Row 2 / Unstructured"></textarea></td><td data-col="Doesn&#x27;t fit cleanly? Why?"><textarea name="sort_r2_c5" rows="1" aria-label="Row 2 / Doesn&#x27;t fit cleanly? Why?" data-q="Row 2 / Doesn&#x27;t fit cleanly? Why?"></textarea></td></tr><tr><td data-col="Item"><textarea name="sort_r3_c1" rows="1" aria-label="Row 3 / Item" data-q="Row 3 / Item"></textarea></td><td data-col="Structured"><textarea name="sort_r3_c2" rows="1" aria-label="Row 3 / Structured" data-q="Row 3 / Structured"></textarea></td><td data-col="Semi-structured"><textarea name="sort_r3_c3" rows="1" aria-label="Row 3 / Semi-structured" data-q="Row 3 / Semi-structured"></textarea></td><td data-col="Unstructured"><textarea name="sort_r3_c4" rows="1" aria-label="Row 3 / Unstructured" data-q="Row 3 / Unstructured"></textarea></td><td data-col="Doesn&#x27;t fit cleanly? Why?"><textarea name="sort_r3_c5" rows="1" aria-label="Row 3 / Doesn&#x27;t fit cleanly? Why?" data-q="Row 3 / Doesn&#x27;t fit cleanly? Why?"></textarea></td></tr><tr><td data-col="Item"><textarea name="sort_r4_c1" rows="1" aria-label="Row 4 / Item" data-q="Row 4 / Item"></textarea></td><td data-col="Structured"><textarea name="sort_r4_c2" rows="1" aria-label="Row 4 / Structured" data-q="Row 4 / Structured"></textarea></td><td data-col="Semi-structured"><textarea name="sort_r4_c3" rows="1" aria-label="Row 4 / Semi-structured" data-q="Row 4 / Semi-structured"></textarea></td><td data-col="Unstructured"><textarea name="sort_r4_c4" rows="1" aria-label="Row 4 / Unstructured" data-q="Row 4 / Unstructured"></textarea></td><td data-col="Doesn&#x27;t fit cleanly? Why?"><textarea name="sort_r4_c5" rows="1" aria-label="Row 4 / Doesn&#x27;t fit cleanly? Why?" data-q="Row 4 / Doesn&#x27;t fit cleanly? Why?"></textarea></td></tr><tr><td data-col="Item"><textarea name="sort_r5_c1" rows="1" aria-label="Row 5 / Item" data-q="Row 5 / Item"></textarea></td><td data-col="Structured"><textarea name="sort_r5_c2" rows="1" aria-label="Row 5 / Structured" data-q="Row 5 / Structured"></textarea></td><td data-col="Semi-structured"><textarea name="sort_r5_c3" rows="1" aria-label="Row 5 / Semi-structured" data-q="Row 5 / Semi-structured"></textarea></td><td data-col="Unstructured"><textarea name="sort_r5_c4" rows="1" aria-label="Row 5 / Unstructured" data-q="Row 5 / Unstructured"></textarea></td><td data-col="Doesn&#x27;t fit cleanly? Why?"><textarea name="sort_r5_c5" rows="1" aria-label="Row 5 / Doesn&#x27;t fit cleanly? Why?" data-q="Row 5 / Doesn&#x27;t fit cleanly? Why?"></textarea></td></tr><tr><td data-col="Item"><textarea name="sort_r6_c1" rows="1" aria-label="Row 6 / Item" data-q="Row 6 / Item"></textarea></td><td data-col="Structured"><textarea name="sort_r6_c2" rows="1" aria-label="Row 6 / Structured" data-q="Row 6 / Structured"></textarea></td><td data-col="Semi-structured"><textarea name="sort_r6_c3" rows="1" aria-label="Row 6 / Semi-structured" data-q="Row 6 / Semi-structured"></textarea></td><td data-col="Unstructured"><textarea name="sort_r6_c4" rows="1" aria-label="Row 6 / Unstructured" data-q="Row 6 / Unstructured"></textarea></td><td data-col="Doesn&#x27;t fit cleanly? Why?"><textarea name="sort_r6_c5" rows="1" aria-label="Row 6 / Doesn&#x27;t fit cleanly? Why?" data-q="Row 6 / Doesn&#x27;t fit cleanly? Why?"></textarea></td></tr><tr><td data-col="Item"><textarea name="sort_r7_c1" rows="1" aria-label="Row 7 / Item" data-q="Row 7 / Item"></textarea></td><td data-col="Structured"><textarea name="sort_r7_c2" rows="1" aria-label="Row 7 / Structured" data-q="Row 7 / Structured"></textarea></td><td data-col="Semi-structured"><textarea name="sort_r7_c3" rows="1" aria-label="Row 7 / Semi-structured" data-q="Row 7 / Semi-structured"></textarea></td><td data-col="Unstructured"><textarea name="sort_r7_c4" rows="1" aria-label="Row 7 / Unstructured" data-q="Row 7 / Unstructured"></textarea></td><td data-col="Doesn&#x27;t fit cleanly? Why?"><textarea name="sort_r7_c5" rows="1" aria-label="Row 7 / Doesn&#x27;t fit cleanly? Why?" data-q="Row 7 / Doesn&#x27;t fit cleanly? Why?"></textarea></td></tr><tr><td data-col="Item"><textarea name="sort_r8_c1" rows="1" aria-label="Row 8 / Item" data-q="Row 8 / Item"></textarea></td><td data-col="Structured"><textarea name="sort_r8_c2" rows="1" aria-label="Row 8 / Structured" data-q="Row 8 / Structured"></textarea></td><td data-col="Semi-structured"><textarea name="sort_r8_c3" rows="1" aria-label="Row 8 / Semi-structured" data-q="Row 8 / Semi-structured"></textarea></td><td data-col="Unstructured"><textarea name="sort_r8_c4" rows="1" aria-label="Row 8 / Unstructured" data-q="Row 8 / Unstructured"></textarea></td><td data-col="Doesn&#x27;t fit cleanly? Why?"><textarea name="sort_r8_c5" rows="1" aria-label="Row 8 / Doesn&#x27;t fit cleanly? Why?" data-q="Row 8 / Doesn&#x27;t fit cleanly? Why?"></textarea></td></tr></tbody></table></div><p class="hint">Mark the column with an X. Structured = rows and columns with fixed rules. Semi-structured = tags and metadata, like JSON or API feeds. Unstructured = posts, imagery, audio, PDFs.</p><div class="f"><label class="lbl" for="q5">What surprised you?</label><textarea id="q5" name="surprise" rows="2" data-q="What surprised you?"></textarea></div><div class="section" data-h="Bonus: Provenance spot check (Table 3.1)"><span class="tag">Bonus</span><h2>Provenance spot check (Table 3.1)</h2><span class="line"></span></div><p class="small">Pick one random data point from your workflow and see if you can answer all three.</p><div class="tablewrap"><table class="grid"><thead><tr><th style="width:30.0%">Provenance question</th><th style="width:52.0%">My answer for this data point</th><th style="width:18.0%">Can I answer it?</th></tr></thead><tbody><tr><td class="rowlab" data-col="Provenance question">Origin: where did this come from? (URL, timestamp, collection method)</td><td data-col="My answer for this data point"><textarea name="prov_r1_c2" rows="2" aria-label="Origin: where did this come from? (URL, timestamp, collection method) / My answer for this data point" data-q="Origin: where did this come from? (URL, timestamp, collection method) / My answer for this data point"></textarea></td><td data-col="Can I answer it?"><textarea name="prov_r1_c3" rows="2" aria-label="Origin: where did this come from? (URL, timestamp, collection method) / Can I answer it?" data-q="Origin: where did this come from? (URL, timestamp, collection method) / Can I answer it?"></textarea></td></tr><tr><td class="rowlab" data-col="Provenance question">Transformation: what happened to it? (cleaning, renaming, AI preprocessing)</td><td data-col="My answer for this data point"><textarea name="prov_r2_c2" rows="2" aria-label="Transformation: what happened to it? (cleaning, renaming, AI preprocessing) / My answer for this data point" data-q="Transformation: what happened to it? (cleaning, renaming, AI preprocessing) / My answer for this data point"></textarea></td><td data-col="Can I answer it?"><textarea name="prov_r2_c3" rows="2" aria-label="Transformation: what happened to it? (cleaning, renaming, AI preprocessing) / Can I answer it?" data-q="Transformation: what happened to it? (cleaning, renaming, AI preprocessing) / Can I answer it?"></textarea></td></tr><tr><td class="rowlab" data-col="Provenance question">Custody: who handled it? (tools, versions, models, human checkpoints)</td><td data-col="My answer for this data point"><textarea name="prov_r3_c2" rows="2" aria-label="Custody: who handled it? (tools, versions, models, human checkpoints) / My answer for this data point" data-q="Custody: who handled it? (tools, versions, models, human checkpoints) / My answer for this data point"></textarea></td><td data-col="Can I answer it?"><textarea name="prov_r3_c3" rows="2" aria-label="Custody: who handled it? (tools, versions, models, human checkpoints) / Can I answer it?" data-q="Custody: who handled it? (tools, versions, models, human checkpoints) / Can I answer it?"></textarea></td></tr></tbody></table></div><p class="signoff">If you can&#x27;t fill in that last table, you don&#x27;t have provenance, and you can&#x27;t lean on analysis built from that data.</p>
+</form>
+</main></div>
+<div class="foot"><span>Deep Insight: AI for the Intelligence Analyst by Rae Baker</span><span><a href="https://deepinsightbook.com">deepinsightbook.com</a></span></div>
+<script>
+(function(){
+ var KEY='deepinsight-ws:'+document.body.dataset.sheet;
+ var form=document.getElementById('ws');
+ var status=document.getElementById('status');
+ var store=null;
+ try{var t='__t';localStorage.setItem(t,t);localStorage.removeItem(t);store=localStorage;}catch(e){store=null;}
+ function grow(el){if(el.tagName==='TEXTAREA'){el.style.height='auto';el.style.height=(el.scrollHeight+2)+'px';}}
+ function collect(){var d={};form.querySelectorAll('input,textarea').forEach(function(el){
+   if(el.type==='checkbox'){d[el.name]=el.checked;}else if(el.type==='radio'){if(el.checked)d[el.name]=el.value;}
+   else{d[el.name]=el.value;}});return d;}
+ function restore(){if(!store)return;var raw;try{raw=store.getItem(KEY);}catch(e){return;}
+   if(!raw)return;var d;try{d=JSON.parse(raw);}catch(e){return;}
+   form.querySelectorAll('input,textarea').forEach(function(el){if(!(el.name in d))return;
+     if(el.type==='checkbox'){el.checked=!!d[el.name];}else if(el.type==='radio'){el.checked=(d[el.name]===el.value);}
+     else{el.value=d[el.name];grow(el);}});
+   setStatus('Restored your saved answers',true);}
+ var timer=null;
+ function setStatus(msg,ok){status.textContent=msg;status.classList.toggle('ok',!!ok);}
+ function save(){if(!store){setStatus('Autosave is off in this browser. Download your answers before leaving.');return;}
+   try{store.setItem(KEY,JSON.stringify(collect()));setStatus('Saved on this device ✓',true);}
+   catch(e){setStatus('Could not autosave. Download your answers before leaving.');}}
+ form.addEventListener('input',function(e){grow(e.target);clearTimeout(timer);setStatus('Saving...');timer=setTimeout(save,400);});
+ form.addEventListener('change',function(){clearTimeout(timer);timer=setTimeout(save,150);});
+ document.querySelectorAll('textarea').forEach(grow);
+ window.addEventListener('resize',function(){document.querySelectorAll('textarea').forEach(grow);});
+ if(store){setStatus('Autosaves on this device',false);}else{setStatus('Autosave is off in this browser. Download your answers before leaving.');}
+ restore();
+ document.getElementById('print').addEventListener('click',function(){document.querySelectorAll('textarea').forEach(grow);window.print();});
+ document.getElementById('clear').addEventListener('click',function(){
+   if(!confirm('Clear every answer on this worksheet? This cannot be undone.'))return;
+   form.reset();form.querySelectorAll('textarea,input[type=text]').forEach(function(el){el.value='';grow(el);});
+   try{store&&store.removeItem(KEY);}catch(e){}setStatus('Cleared',false);});
+ document.getElementById('download').addEventListener('click',function(){
+   var out=[];var title=document.querySelector('h1').textContent.trim();
+   out.push(title.toUpperCase());out.push(document.querySelector('.kicker').textContent.trim());
+   out.push('Exported '+new Date().toLocaleString());out.push('');
+   var seenRadio={};
+   form.querySelectorAll('[data-h],input,textarea').forEach(function(el){
+     if(el.dataset.h){out.push('');out.push('== '+el.dataset.h+' ==');return;}
+     var q=(el.dataset.q||el.getAttribute('aria-label')||el.name).replace(/[:\s]+$/,'');
+     if(el.type==='checkbox'){out.push((el.checked?'[x] ':'[ ] ')+q);return;}
+     if(el.type==='radio'){if(seenRadio[el.name])return;seenRadio[el.name]=1;
+       var c=form.querySelector('input[name="'+el.name+'"]:checked');
+       out.push(q+': '+(c?c.dataset.opt:'(no answer)'));return;}
+     var v=(el.value||'').trim();if(!v)return;
+     out.push(q+':');v.split('\n').forEach(function(l){out.push('    '+l);});});
+   var blob=new Blob([out.join('\r\n')],{type:'text/plain'});
+   var a=document.createElement('a');a.href=URL.createObjectURL(blob);
+   a.download=document.body.dataset.sheet+'-my-answers.txt';document.body.appendChild(a);a.click();
+   setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},500);});
+ document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
+   var t=b.closest('.pb').querySelector('pre').textContent;
+   function ok(){b.textContent='Copied';b.classList.add('done');setTimeout(function(){b.textContent='Copy prompt';b.classList.remove('done');},1600);}
+   function fallback(){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();
+     try{document.execCommand('copy');ok();}catch(e){b.textContent='Select and copy';}ta.remove();}
+   if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(ok,fallback);}else{fallback();}});});
+})();
+</script>
+</body></html>

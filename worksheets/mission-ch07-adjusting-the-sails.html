@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mission 7: Predict the Next Strike | Deep Insight</title>
+<meta name="description" content="Chapter 7: Adjusting the Sails">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anton&family=Libre+Franklin:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#121014;--body:#38323d;--muted:#6f6875;--rule:#cfc8d4;--hair:#e6e1ea;
+--plum:#5b2a6e;--plum-2:#7a3d91;--tint:#f1ebf4;--field:#faf8fb;--bg:#f4f1f6;--paper:#ffffff;
+--ok:#2f6b3a;--radius:6px}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--body);font:16px/1.55 "Libre Franklin",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--plum)}
+.topband{background:var(--ink);color:#fff;font:700 12px/1 "Space Mono",ui-monospace,monospace;letter-spacing:.08em;
+ text-transform:uppercase;padding:12px 16px;display:flex;justify-content:space-between;gap:12px;border-bottom:3px solid var(--plum)}
+.topband a{color:#fff;text-decoration:none;opacity:.85}.topband a:hover{opacity:1;text-decoration:underline}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+.sheet{background:var(--paper);margin:24px auto 40px;border:1px solid var(--hair);border-radius:10px;padding:36px 44px 44px;box-shadow:0 1px 2px rgba(30,10,40,.04),0 8px 30px rgba(30,10,40,.06)}
+.kicker{font:700 12px/1.3 "Space Mono",ui-monospace,monospace;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;margin:0 0 10px}
+h1{font-family:Anton,Impact,"Arial Narrow Bold",sans-serif;font-weight:400;color:var(--ink);font-size:clamp(34px,6vw,52px);line-height:1.02;letter-spacing:.01em;margin:0 0 10px;text-transform:uppercase}
+.subtitle{font-style:italic;color:var(--body);margin:0 0 18px;font-size:17px}
+.titlerule{border:0;border-top:2px solid var(--ink);margin:0 0 6px}
+.toolbar{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:8px;align-items:center;
+ padding:10px 0;margin:0 0 18px;border-bottom:1px solid var(--hair)}
+.toolbar .status{font:12px/1.2 "Space Mono",ui-monospace,monospace;color:var(--muted);margin-right:auto}
+.toolbar .status.ok{color:var(--ok)}
+.btn{font:600 14px/1 "Libre Franklin",system-ui,sans-serif;border:1.5px solid var(--ink);background:#fff;color:var(--ink);padding:9px 14px;border-radius:999px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.btn:hover{background:var(--tint)}
+.btn.primary{background:var(--plum);border-color:var(--plum);color:#fff}.btn.primary:hover{background:var(--plum-2)}
+.btn.ghost{border-color:var(--rule);color:var(--muted)}
+.btn:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #c9a6d8;outline-offset:2px}
+p{margin:0 0 12px}
+.hint{font-size:13px;color:var(--muted);font-style:italic;margin:-4px 0 12px}
+.small{font-size:14.5px}
+.section{display:flex;align-items:center;gap:12px;margin:34px 0 14px}
+.section .tag{background:var(--ink);color:#fff;font:700 12px/1 "Space Mono",ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;padding:6px 8px;border-radius:3px;white-space:nowrap}
+.section h2{font:700 20px/1.2 "Libre Franklin",system-ui,sans-serif;color:var(--ink);margin:0}
+.section .line{flex:1;border-top:1px solid var(--rule);min-width:20px}
+.lbl{display:block;font-weight:700;color:var(--ink);font-size:15px;margin:0 0 6px}
+.grp{font-weight:700;color:var(--ink);margin:14px 0 8px}
+.grp.accent{font-family:"Space Mono",ui-monospace,monospace;color:var(--plum);text-transform:uppercase;letter-spacing:.05em;font-size:13.5px}
+.f{margin:0 0 16px}
+input[type=text],textarea{width:100%;font:15px/1.45 "Libre Franklin",system-ui,sans-serif;color:var(--ink);background:var(--field);
+ border:1px solid var(--rule);border-radius:var(--radius);padding:9px 11px}
+textarea{resize:vertical;min-height:42px;overflow:hidden}
+input[type=text]:hover,textarea:hover{border-color:#b3a8bb}
+.row{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 16px}
+.row .f{margin:0;min-width:140px}
+.checks{display:grid;gap:8px 18px;margin:0 0 16px;grid-template-columns:repeat(var(--cols,1),minmax(0,1fr))}
+.chk,.rad{display:flex;gap:9px;align-items:flex-start;cursor:pointer;font-size:15px;line-height:1.4}
+.chk input,.rad input{width:18px;height:18px;margin:2px 0 0;accent-color:var(--plum);flex:none}
+fieldset.radios{border:0;padding:0;margin:0 0 16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px}
+fieldset.radios legend{font-weight:700;color:var(--ink);padding:0;margin:0 0 6px;width:100%;font-size:15px}
+.callout{background:var(--tint);border-left:4px solid var(--plum);padding:14px 18px;border-radius:0 var(--radius) var(--radius) 0;margin:6px 0 18px;color:var(--ink);font-size:15px}
+.callout .ct{font:700 12px/1.2 "Space Mono",ui-monospace,monospace;letter-spacing:.07em;color:var(--plum);text-transform:uppercase;margin:0 0 6px}
+.brief{border:1.5px solid var(--ink);border-top:6px solid var(--ink);border-radius:4px;padding:18px 22px;margin:4px 0 22px;background:#fff;position:relative}
+.brief .hdr{font:700 13px/1.6 "Space Mono",ui-monospace,monospace;color:var(--ink);border-bottom:1px solid var(--hair);padding:0 0 10px;margin:0 0 12px}
+.brief .stamp{position:absolute;top:14px;right:16px;font:700 11px/1 "Space Mono",ui-monospace,monospace;letter-spacing:.1em;color:#a1262b;border:2px solid #a1262b;padding:5px 7px;transform:rotate(3deg)}
+.brief p{color:var(--ink);font-size:15px}
+.brief .sig{font:13px/1.6 "Space Mono",ui-monospace,monospace;color:var(--body);margin-top:12px}
+ul.b,ol.n{margin:0 0 14px;padding-left:22px}ul.b li,ol.n li{margin:0 0 5px}ul.b li::marker{color:var(--plum)}ol.n li::marker{color:var(--plum);font-family:"Space Mono",monospace;font-weight:700}
+.tablewrap{overflow-x:auto;margin:0 0 18px}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th{background:var(--ink);color:#fff;text-align:left;font:700 12.5px/1.25 "Libre Franklin",system-ui,sans-serif;padding:8px 8px;vertical-align:bottom}
+td{border-bottom:1px solid var(--hair);padding:6px;vertical-align:top}
+tbody tr:nth-child(even) td{background:#fbfafc}
+td.rowlab{font-weight:700;color:var(--ink);padding-top:10px}
+td textarea{min-height:38px;padding:7px 8px;font-size:14px}
+table.static td{padding:8px}
+.cards{display:grid;gap:12px;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));margin:0 0 18px}
+.card{border:1px solid var(--rule);border-radius:8px;padding:14px}
+.card .ch{font:700 13px/1 "Space Mono",ui-monospace,monospace;color:var(--plum);letter-spacing:.06em;text-transform:uppercase;margin:0 0 12px}
+.card .f{margin-bottom:12px}.card .lbl{font-size:13.5px}
+.card fieldset.radios legend{font-size:13.5px}
+.card fieldset.radios{gap:6px 12px}
+.flow{display:grid;grid-template-columns:repeat(var(--cols,4),minmax(0,1fr));gap:22px;margin:0 0 18px;counter-reset:s}
+.box{position:relative}
+.box:not(:last-child)::after{content:"\2192";position:absolute;right:-18px;top:44px;color:var(--ink);font-weight:700}
+.box .bl{font:700 12px/1 "Space Mono",monospace;color:var(--plum);margin:0 0 6px;text-transform:uppercase}
+.box textarea{min-height:84px}
+.box .chk{font-size:13px;margin-top:6px}
+.dl{display:flex;flex-direction:column;gap:10px;margin:0 0 18px}
+.dl a{display:flex;gap:14px;align-items:center;border:1px solid var(--rule);border-radius:8px;padding:12px 14px;text-decoration:none;color:var(--ink);background:#fff}
+.dl a:hover{border-color:var(--plum);background:var(--tint)}
+.dl .ico{font:700 12px/1 "Space Mono",monospace;background:var(--ink);color:#fff;padding:8px 7px;border-radius:4px}
+.dl .t{font-weight:700}.dl .d{font-size:14px;color:var(--muted)}
+.pb{border:1px solid var(--rule);border-radius:8px;background:#f7f6f8;margin:0 0 16px;overflow:hidden}
+.pb .pbh{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 12px;border-bottom:1px solid var(--hair);background:#fff}
+.pb .pbt{font:700 12.5px/1.2 "Space Mono",ui-monospace,monospace;color:var(--plum);text-transform:uppercase;letter-spacing:.05em}
+.pb pre{margin:0;padding:12px 14px;white-space:pre-wrap;word-break:break-word;font:13.5px/1.55 "Space Mono",ui-monospace,monospace;color:var(--ink)}
+.pb .pbn{padding:0 14px 12px;font-size:13.5px;color:var(--muted);font-style:italic}
+.copy{font:600 13px/1 "Libre Franklin",system-ui,sans-serif;border:1.5px solid var(--plum);color:var(--plum);background:#fff;border-radius:999px;padding:7px 12px;cursor:pointer}
+.copy:hover{background:var(--tint)}.copy.done{background:var(--plum);color:#fff}
+.signoff{border-top:1px solid var(--hair);margin:28px 0 0;padding:14px 0 0;color:var(--muted);font-style:italic;font-size:14.5px}
+.foot{max-width:860px;margin:0 auto 40px;padding:0 16px;color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between}
+.rich b{color:var(--ink)}
+@media (max-width:700px){
+ .sheet{padding:22px 16px 28px;border-radius:0;margin:0 -16px 24px;border-left:0;border-right:0}
+ .cards,.flow{grid-template-columns:1fr}.box::after{display:none}
+ .checks{grid-template-columns:1fr}
+ .row .f{flex:1 1 100% !important}
+ table.grid thead{display:none}
+ table.grid,table.grid tbody,table.grid tr,table.grid td{display:block;width:100%}
+ table.grid tr{border:1px solid var(--rule);border-radius:8px;margin:0 0 10px;padding:6px}
+ table.grid td{border:0;padding:4px 4px}
+ table.grid td::before{content:attr(data-col);display:block;font-size:12px;font-weight:700;color:var(--muted);margin:0 0 3px}
+ table.grid td.rowlab::before{display:none}
+ .toolbar .status{width:100%}
+}
+@media print{
+ @page{size:letter;margin:.55in}
+ body{background:#fff;font-size:11pt}
+ .toolbar,.topband a.back,.noprint{display:none !important}
+ .topband{background:#000 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .sheet{border:0;box-shadow:none;margin:0;padding:0}
+ .section,.brief,.callout,.card,tr,.f,fieldset{break-inside:avoid}
+ th,.section .tag,.callout,.dl .ico{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ input[type=text],textarea{background:#fff;border-color:#888}
+ .wrap{max-width:none}
+ .foot{margin:12px 0 0}
+}
+</style></head>
+<body data-sheet="mission-ch07-adjusting-the-sails">
+<div class="topband"><span>Operation Neural Nexus // Mission file</span><span><a class="back" href="index.html">All worksheets</a> &nbsp;/&nbsp; Chapter 7</span></div>
+<div class="wrap"><main class="sheet">
+<p class="kicker">Chapter 7: Adjusting the Sails</p>
+<h1>Mission 7: Predict the Next Strike</h1>
+
+<hr class="titlerule">
+<div class="toolbar"><span class="status" id="status" aria-live="polite">Autosaves on this device</span>
+<button type="button" class="btn primary" id="download">Download my answers</button>
+<button type="button" class="btn" id="print">Print / Save PDF</button>
+<a class="btn ghost" href="pdf/DeepInsight_Mission_Ch07_Adjusting_the_Sails.pdf" download>PDF version</a>
+<button type="button" class="btn ghost" id="clear">Clear</button></div>
+<form id="ws" autocomplete="off" onsubmit="return false">
+<div class="brief"><span class="stamp">TLP:RED</span><div class="hdr">OPERATION NAME: NEURAL NEXUS<br>CLASSIFICATION: TLP RED<br>MISSION FILE: CHAPTER 7  //  ADJUSTING THE SAILS</div><p>Analysts:</p><p>The Phantom Group is highly likely to be escalating its campaign against critical infrastructure globally. Recent observations in activity suggest they are testing energy grids and logistics networks for vulnerabilities. Your task by the end of this chapter is to be comfortable deploying predictive analysis to anticipate where their next strike will occur.</p><p>1. Scope your analysis by sector, region, and time frame (next 7 to 10 days).  2. Collect a small dataset of 10 to 20 items: news articles, blog posts, or threat assessments.  3. Normalize your data.</p><div class="sig">Director of AI Intelligence Agency<br>Office of Intelligence</div></div><div class="section" data-h="Files: Practice reporting (optional)"><span class="tag">Files</span><h2>Practice reporting (optional)</h2><span class="line"></span></div><div class="dl"><a href="datasets/ch7_practice_reporting.csv" download><span class="ico">CSV</span><span><span class="t">Practice reporting set</span><br><span class="d">15 fictional items: historical incidents, current reporting, rumors, and one stale article.</span></span></a></div><div class="row"><div class="f" style="flex:0.45 1 0"><label class="lbl" for="q1">Analyst (that&#x27;s you)</label><input type="text" id="q1" name="analyst_that_s_you" data-q="Analyst (that&#x27;s you)"></div><div class="f" style="flex:0.25 1 0"><label class="lbl" for="q2">Date</label><input type="text" id="q2" name="date" data-q="Date"></div><div class="f" style="flex:0.3 1 0"><label class="lbl" for="q3">Tools used</label><input type="text" id="q3" name="tools_used" data-q="Tools used"></div></div><div class="section" data-h="Step 1: Scope"><span class="tag">Step 1</span><h2>Scope</h2><span class="line"></span></div><div class="grp">Sector</div><div class="checks" style="--cols:4"><label class="chk"><input type="checkbox" name="sector_energy" data-q="Energy"><span>Energy</span></label><label class="chk"><input type="checkbox" name="sector_transportation" data-q="Transportation"><span>Transportation</span></label><label class="chk"><input type="checkbox" name="sector_healthcare" data-q="Healthcare"><span>Healthcare</span></label><label class="chk"><input type="checkbox" name="sector_other" data-q="Other"><span>Other</span></label></div><div class="row"><div class="f" style="flex:0.6 1 0"><label class="lbl" for="q4">Region (country, city, town)</label><input type="text" id="q4" name="region_country_city_town" data-q="Region (country, city, town)"></div><div class="f" style="flex:0.4 1 0"><label class="lbl" for="q5">Time frame</label><input type="text" id="q5" name="time_frame" data-q="Time frame"></div></div><div class="section" data-h="Step 2: Collect"><span class="tag">Step 2</span><h2>Collect</h2><span class="line"></span></div><div class="tablewrap"><table class="grid"><thead><tr><th style="width:5.0%">#</th><th style="width:35.0%">Item</th><th style="width:18.0%">Source</th><th style="width:12.0%">Date</th><th style="width:15.0%">Historical / current</th><th style="width:15.0%">Reliability</th></tr></thead><tbody><tr><td class="rowlab" data-col="#">1</td><td data-col="Item"><textarea name="items_r1_c2" rows="1" aria-label="1 / Item" data-q="1 / Item"></textarea></td><td data-col="Source"><textarea name="items_r1_c3" rows="1" aria-label="1 / Source" data-q="1 / Source"></textarea></td><td data-col="Date"><textarea name="items_r1_c4" rows="1" aria-label="1 / Date" data-q="1 / Date"></textarea></td><td data-col="Historical / current"><textarea name="items_r1_c5" rows="1" aria-label="1 / Historical / current" data-q="1 / Historical / current"></textarea></td><td data-col="Reliability"><textarea name="items_r1_c6" rows="1" aria-label="1 / Reliability" data-q="1 / Reliability"></textarea></td></tr><tr><td class="rowlab" data-col="#">2</td><td data-col="Item"><textarea name="items_r2_c2" rows="1" aria-label="2 / Item" data-q="2 / Item"></textarea></td><td data-col="Source"><textarea name="items_r2_c3" rows="1" aria-label="2 / Source" data-q="2 / Source"></textarea></td><td data-col="Date"><textarea name="items_r2_c4" rows="1" aria-label="2 / Date" data-q="2 / Date"></textarea></td><td data-col="Historical / current"><textarea name="items_r2_c5" rows="1" aria-label="2 / Historical / current" data-q="2 / Historical / current"></textarea></td><td data-col="Reliability"><textarea name="items_r2_c6" rows="1" aria-label="2 / Reliability" data-q="2 / Reliability"></textarea></td></tr><tr><td class="rowlab" data-col="#">3</td><td data-col="Item"><textarea name="items_r3_c2" rows="1" aria-label="3 / Item" data-q="3 / Item"></textarea></td><td data-col="Source"><textarea name="items_r3_c3" rows="1" aria-label="3 / Source" data-q="3 / Source"></textarea></td><td data-col="Date"><textarea name="items_r3_c4" rows="1" aria-label="3 / Date" data-q="3 / Date"></textarea></td><td data-col="Historical / current"><textarea name="items_r3_c5" rows="1" aria-label="3 / Historical / current" data-q="3 / Historical / current"></textarea></td><td data-col="Reliability"><textarea name="items_r3_c6" rows="1" aria-label="3 / Reliability" data-q="3 / Reliability"></textarea></td></tr><tr><td class="rowlab" data-col="#">4</td><td data-col="Item"><textarea name="items_r4_c2" rows="1" aria-label="4 / Item" data-q="4 / Item"></textarea></td><td data-col="Source"><textarea name="items_r4_c3" rows="1" aria-label="4 / Source" data-q="4 / Source"></textarea></td><td data-col="Date"><textarea name="items_r4_c4" rows="1" aria-label="4 / Date" data-q="4 / Date"></textarea></td><td data-col="Historical / current"><textarea name="items_r4_c5" rows="1" aria-label="4 / Historical / current" data-q="4 / Historical / current"></textarea></td><td data-col="Reliability"><textarea name="items_r4_c6" rows="1" aria-label="4 / Reliability" data-q="4 / Reliability"></textarea></td></tr><tr><td class="rowlab" data-col="#">5</td><td data-col="Item"><textarea name="items_r5_c2" rows="1" aria-label="5 / Item" data-q="5 / Item"></textarea></td><td data-col="Source"><textarea name="items_r5_c3" rows="1" aria-label="5 / Source" data-q="5 / Source"></textarea></td><td data-col="Date"><textarea name="items_r5_c4" rows="1" aria-label="5 / Date" data-q="5 / Date"></textarea></td><td data-col="Historical / current"><textarea name="items_r5_c5" rows="1" aria-label="5 / Historical / current" data-q="5 / Historical / current"></textarea></td><td data-col="Reliability"><textarea name="items_r5_c6" rows="1" aria-label="5 / Reliability" data-q="5 / Reliability"></textarea></td></tr><tr><td class="rowlab" data-col="#">6</td><td data-col="Item"><textarea name="items_r6_c2" rows="1" aria-label="6 / Item" data-q="6 / Item"></textarea></td><td data-col="Source"><textarea name="items_r6_c3" rows="1" aria-label="6 / Source" data-q="6 / Source"></textarea></td><td data-col="Date"><textarea name="items_r6_c4" rows="1" aria-label="6 / Date" data-q="6 / Date"></textarea></td><td data-col="Historical / current"><textarea name="items_r6_c5" rows="1" aria-label="6 / Historical / current" data-q="6 / Historical / current"></textarea></td><td data-col="Reliability"><textarea name="items_r6_c6" rows="1" aria-label="6 / Reliability" data-q="6 / Reliability"></textarea></td></tr><tr><td class="rowlab" data-col="#">7</td><td data-col="Item"><textarea name="items_r7_c2" rows="1" aria-label="7 / Item" data-q="7 / Item"></textarea></td><td data-col="Source"><textarea name="items_r7_c3" rows="1" aria-label="7 / Source" data-q="7 / Source"></textarea></td><td data-col="Date"><textarea name="items_r7_c4" rows="1" aria-label="7 / Date" data-q="7 / Date"></textarea></td><td data-col="Historical / current"><textarea name="items_r7_c5" rows="1" aria-label="7 / Historical / current" data-q="7 / Historical / current"></textarea></td><td data-col="Reliability"><textarea name="items_r7_c6" rows="1" aria-label="7 / Reliability" data-q="7 / Reliability"></textarea></td></tr><tr><td class="rowlab" data-col="#">8</td><td data-col="Item"><textarea name="items_r8_c2" rows="1" aria-label="8 / Item" data-q="8 / Item"></textarea></td><td data-col="Source"><textarea name="items_r8_c3" rows="1" aria-label="8 / Source" data-q="8 / Source"></textarea></td><td data-col="Date"><textarea name="items_r8_c4" rows="1" aria-label="8 / Date" data-q="8 / Date"></textarea></td><td data-col="Historical / current"><textarea name="items_r8_c5" rows="1" aria-label="8 / Historical / current" data-q="8 / Historical / current"></textarea></td><td data-col="Reliability"><textarea name="items_r8_c6" rows="1" aria-label="8 / Reliability" data-q="8 / Reliability"></textarea></td></tr><tr><td class="rowlab" data-col="#">9</td><td data-col="Item"><textarea name="items_r9_c2" rows="1" aria-label="9 / Item" data-q="9 / Item"></textarea></td><td data-col="Source"><textarea name="items_r9_c3" rows="1" aria-label="9 / Source" data-q="9 / Source"></textarea></td><td data-col="Date"><textarea name="items_r9_c4" rows="1" aria-label="9 / Date" data-q="9 / Date"></textarea></td><td data-col="Historical / current"><textarea name="items_r9_c5" rows="1" aria-label="9 / Historical / current" data-q="9 / Historical / current"></textarea></td><td data-col="Reliability"><textarea name="items_r9_c6" rows="1" aria-label="9 / Reliability" data-q="9 / Reliability"></textarea></td></tr><tr><td class="rowlab" data-col="#">10</td><td data-col="Item"><textarea name="items_r10_c2" rows="1" aria-label="10 / Item" data-q="10 / Item"></textarea></td><td data-col="Source"><textarea name="items_r10_c3" rows="1" aria-label="10 / Source" data-q="10 / Source"></textarea></td><td data-col="Date"><textarea name="items_r10_c4" rows="1" aria-label="10 / Date" data-q="10 / Date"></textarea></td><td data-col="Historical / current"><textarea name="items_r10_c5" rows="1" aria-label="10 / Historical / current" data-q="10 / Historical / current"></textarea></td><td data-col="Reliability"><textarea name="items_r10_c6" rows="1" aria-label="10 / Reliability" data-q="10 / Reliability"></textarea></td></tr><tr><td class="rowlab" data-col="#">11</td><td data-col="Item"><textarea name="items_r11_c2" rows="1" aria-label="11 / Item" data-q="11 / Item"></textarea></td><td data-col="Source"><textarea name="items_r11_c3" rows="1" aria-label="11 / Source" data-q="11 / Source"></textarea></td><td data-col="Date"><textarea name="items_r11_c4" rows="1" aria-label="11 / Date" data-q="11 / Date"></textarea></td><td data-col="Historical / current"><textarea name="items_r11_c5" rows="1" aria-label="11 / Historical / current" data-q="11 / Historical / current"></textarea></td><td data-col="Reliability"><textarea name="items_r11_c6" rows="1" aria-label="11 / Reliability" data-q="11 / Reliability"></textarea></td></tr><tr><td class="rowlab" data-col="#">12</td><td data-col="Item"><textarea name="items_r12_c2" rows="1" aria-label="12 / Item" data-q="12 / Item"></textarea></td><td data-col="Source"><textarea name="items_r12_c3" rows="1" aria-label="12 / Source" data-q="12 / Source"></textarea></td><td data-col="Date"><textarea name="items_r12_c4" rows="1" aria-label="12 / Date" data-q="12 / Date"></textarea></td><td data-col="Historical / current"><textarea name="items_r12_c5" rows="1" aria-label="12 / Historical / current" data-q="12 / Historical / current"></textarea></td><td data-col="Reliability"><textarea name="items_r12_c6" rows="1" aria-label="12 / Reliability" data-q="12 / Reliability"></textarea></td></tr><tr><td class="rowlab" data-col="#">13</td><td data-col="Item"><textarea name="items_r13_c2" rows="1" aria-label="13 / Item" data-q="13 / Item"></textarea></td><td data-col="Source"><textarea name="items_r13_c3" rows="1" aria-label="13 / Source" data-q="13 / Source"></textarea></td><td data-col="Date"><textarea name="items_r13_c4" rows="1" aria-label="13 / Date" data-q="13 / Date"></textarea></td><td data-col="Historical / current"><textarea name="items_r13_c5" rows="1" aria-label="13 / Historical / current" data-q="13 / Historical / current"></textarea></td><td data-col="Reliability"><textarea name="items_r13_c6" rows="1" aria-label="13 / Reliability" data-q="13 / Reliability"></textarea></td></tr><tr><td class="rowlab" data-col="#">14</td><td data-col="Item"><textarea name="items_r14_c2" rows="1" aria-label="14 / Item" data-q="14 / Item"></textarea></td><td data-col="Source"><textarea name="items_r14_c3" rows="1" aria-label="14 / Source" data-q="14 / Source"></textarea></td><td data-col="Date"><textarea name="items_r14_c4" rows="1" aria-label="14 / Date" data-q="14 / Date"></textarea></td><td data-col="Historical / current"><textarea name="items_r14_c5" rows="1" aria-label="14 / Historical / current" data-q="14 / Historical / current"></textarea></td><td data-col="Reliability"><textarea name="items_r14_c6" rows="1" aria-label="14 / Reliability" data-q="14 / Reliability"></textarea></td></tr><tr><td class="rowlab" data-col="#">15</td><td data-col="Item"><textarea name="items_r15_c2" rows="1" aria-label="15 / Item" data-q="15 / Item"></textarea></td><td data-col="Source"><textarea name="items_r15_c3" rows="1" aria-label="15 / Source" data-q="15 / Source"></textarea></td><td data-col="Date"><textarea name="items_r15_c4" rows="1" aria-label="15 / Date" data-q="15 / Date"></textarea></td><td data-col="Historical / current"><textarea name="items_r15_c5" rows="1" aria-label="15 / Historical / current" data-q="15 / Historical / current"></textarea></td><td data-col="Reliability"><textarea name="items_r15_c6" rows="1" aria-label="15 / Reliability" data-q="15 / Reliability"></textarea></td></tr></tbody></table></div><div class="section" data-h="Step 3: Normalize"><span class="tag">Step 3</span><h2>Normalize</h2><span class="line"></span></div><div class="checks" style="--cols:2"><label class="chk"><input type="checkbox" name="norm_dates_standardized" data-q="Dates standardized"><span>Dates standardized</span></label><label class="chk"><input type="checkbox" name="norm_duplicates_and_re_s" data-q="Duplicates and re-shares flagged"><span>Duplicates and re-shares flagged</span></label><label class="chk"><input type="checkbox" name="norm_stale_items_labeled" data-q="Stale items labeled"><span>Stale items labeled</span></label><label class="chk"><input type="checkbox" name="norm_unverified_items_la" data-q="Unverified items labeled"><span>Unverified items labeled</span></label><label class="chk"><input type="checkbox" name="norm_source_types_tagged" data-q="Source types tagged"><span>Source types tagged</span></label><label class="chk"><input type="checkbox" name="norm_viewpoint_balance_c" data-q="Viewpoint balance checked"><span>Viewpoint balance checked</span></label></div><div class="section" data-h="AI-CHAMP: Before you trust the model"><span class="tag">AI-CHAMP</span><h2>Before you trust the model</h2><span class="line"></span></div><div class="checks" style="--cols:2"><label class="chk"><input type="checkbox" name="champ_context_first" data-q="Context first"><span>Context first</span></label><label class="chk"><input type="checkbox" name="champ_human_judgment_in_" data-q="Human judgment in the loop"><span>Human judgment in the loop</span></label><label class="chk"><input type="checkbox" name="champ_ask_structured_que" data-q="Ask structured questions"><span>Ask structured questions</span></label><label class="chk"><input type="checkbox" name="champ_model_for_a_range_" data-q="Model for a range, not a conclusion"><span>Model for a range, not a conclusion</span></label><label class="chk"><input type="checkbox" name="champ_probability_requir" data-q="Probability requires human revision"><span>Probability requires human revision</span></label></div><div class="f"><label class="lbl" for="q6">Prompt used</label><textarea id="q6" name="prompt" rows="3" data-q="Prompt used"></textarea></div><div class="section" data-h="Deliverable: Predictive analysis assessment"><span class="tag">Deliverable</span><h2>Predictive analysis assessment</h2><span class="line"></span></div><div class="f"><label class="lbl" for="q7">One plausible future scenario derived from the available evidence</label><textarea id="q7" name="scenario" rows="4" data-q="One plausible future scenario derived from the available evidence"></textarea></div><div class="f"><label class="lbl" for="q8">One early warning indicator that would suggest the scenario is developing</label><textarea id="q8" name="indicator" rows="2" data-q="One early warning indicator that would suggest the scenario is developing"></textarea></div><div class="f"><label class="lbl" for="q9">One sentence: how poor assumptions or unsupported AI-generated conclusions could distort operational decision-making</label><textarea id="q9" name="distort" rows="2" data-q="One sentence: how poor assumptions or unsupported AI-generated conclusions could distort operational decision-making"></textarea></div><fieldset class="radios"><legend>Likelihood:</legend><label class="rad"><input type="radio" name="likely" value="low" data-opt="Low" data-q="Likelihood:"><span>Low</span></label><label class="rad"><input type="radio" name="likely" value="moderate" data-opt="Moderate" data-q="Likelihood:"><span>Moderate</span></label><label class="rad"><input type="radio" name="likely" value="high" data-opt="High" data-q="Likelihood:"><span>High</span></label></fieldset><fieldset class="radios"><legend>Confidence:</legend><label class="rad"><input type="radio" name="conf" value="low" data-opt="Low" data-q="Confidence:"><span>Low</span></label><label class="rad"><input type="radio" name="conf" value="moderate" data-opt="Moderate" data-q="Confidence:"><span>Moderate</span></label><label class="rad"><input type="radio" name="conf" value="high" data-opt="High" data-q="Confidence:"><span>High</span></label></fieldset>
+</form>
+</main></div>
+<div class="foot"><span>Training exercise. All people, companies, vessels, and places are fictional.</span><span><a href="https://deepinsightbook.com">deepinsightbook.com</a></span></div>
+<script>
+(function(){
+ var KEY='deepinsight-ws:'+document.body.dataset.sheet;
+ var form=document.getElementById('ws');
+ var status=document.getElementById('status');
+ var store=null;
+ try{var t='__t';localStorage.setItem(t,t);localStorage.removeItem(t);store=localStorage;}catch(e){store=null;}
+ function grow(el){if(el.tagName==='TEXTAREA'){el.style.height='auto';el.style.height=(el.scrollHeight+2)+'px';}}
+ function collect(){var d={};form.querySelectorAll('input,textarea').forEach(function(el){
+   if(el.type==='checkbox'){d[el.name]=el.checked;}else if(el.type==='radio'){if(el.checked)d[el.name]=el.value;}
+   else{d[el.name]=el.value;}});return d;}
+ function restore(){if(!store)return;var raw;try{raw=store.getItem(KEY);}catch(e){return;}
+   if(!raw)return;var d;try{d=JSON.parse(raw);}catch(e){return;}
+   form.querySelectorAll('input,textarea').forEach(function(el){if(!(el.name in d))return;
+     if(el.type==='checkbox'){el.checked=!!d[el.name];}else if(el.type==='radio'){el.checked=(d[el.name]===el.value);}
+     else{el.value=d[el.name];grow(el);}});
+   setStatus('Restored your saved answers',true);}
+ var timer=null;
+ function setStatus(msg,ok){status.textContent=msg;status.classList.toggle('ok',!!ok);}
+ function save(){if(!store){setStatus('Autosave is off in this browser. Download your answers before leaving.');return;}
+   try{store.setItem(KEY,JSON.stringify(collect()));setStatus('Saved on this device ✓',true);}
+   catch(e){setStatus('Could not autosave. Download your answers before leaving.');}}
+ form.addEventListener('input',function(e){grow(e.target);clearTimeout(timer);setStatus('Saving...');timer=setTimeout(save,400);});
+ form.addEventListener('change',function(){clearTimeout(timer);timer=setTimeout(save,150);});
+ document.querySelectorAll('textarea').forEach(grow);
+ window.addEventListener('resize',function(){document.querySelectorAll('textarea').forEach(grow);});
+ if(store){setStatus('Autosaves on this device',false);}else{setStatus('Autosave is off in this browser. Download your answers before leaving.');}
+ restore();
+ document.getElementById('print').addEventListener('click',function(){document.querySelectorAll('textarea').forEach(grow);window.print();});
+ document.getElementById('clear').addEventListener('click',function(){
+   if(!confirm('Clear every answer on this worksheet? This cannot be undone.'))return;
+   form.reset();form.querySelectorAll('textarea,input[type=text]').forEach(function(el){el.value='';grow(el);});
+   try{store&&store.removeItem(KEY);}catch(e){}setStatus('Cleared',false);});
+ document.getElementById('download').addEventListener('click',function(){
+   var out=[];var title=document.querySelector('h1').textContent.trim();
+   out.push(title.toUpperCase());out.push(document.querySelector('.kicker').textContent.trim());
+   out.push('Exported '+new Date().toLocaleString());out.push('');
+   var seenRadio={};
+   form.querySelectorAll('[data-h],input,textarea').forEach(function(el){
+     if(el.dataset.h){out.push('');out.push('== '+el.dataset.h+' ==');return;}
+     var q=(el.dataset.q||el.getAttribute('aria-label')||el.name).replace(/[:\s]+$/,'');
+     if(el.type==='checkbox'){out.push((el.checked?'[x] ':'[ ] ')+q);return;}
+     if(el.type==='radio'){if(seenRadio[el.name])return;seenRadio[el.name]=1;
+       var c=form.querySelector('input[name="'+el.name+'"]:checked');
+       out.push(q+': '+(c?c.dataset.opt:'(no answer)'));return;}
+     var v=(el.value||'').trim();if(!v)return;
+     out.push(q+':');v.split('\n').forEach(function(l){out.push('    '+l);});});
+   var blob=new Blob([out.join('\r\n')],{type:'text/plain'});
+   var a=document.createElement('a');a.href=URL.createObjectURL(blob);
+   a.download=document.body.dataset.sheet+'-my-answers.txt';document.body.appendChild(a);a.click();
+   setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},500);});
+ document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
+   var t=b.closest('.pb').querySelector('pre').textContent;
+   function ok(){b.textContent='Copied';b.classList.add('done');setTimeout(function(){b.textContent='Copy prompt';b.classList.remove('done');},1600);}
+   function fallback(){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();
+     try{document.execCommand('copy');ok();}catch(e){b.textContent='Select and copy';}ta.remove();}
+   if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(ok,fallback);}else{fallback();}});});
+})();
+</script>
+</body></html>

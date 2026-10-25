@@ -1,0 +1,494 @@
+record_id,vessel_name,imo,mmsi,flag,vessel_type,operator,port,port_country,previous_port,arrival_utc,departure_utc,ais_gap_before_arrival_hours,declared_cargo
+PC-0001,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Ilmara,2026-06-01T01:00Z,2026-06-01T16:33Z,1.2,Agricultural machinery
+PC-0002,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Kestrel Harbor,Tessaly,Ilmara,2026-06-01T11:00Z,2026-06-02T18:21Z,0.2,Grain
+PC-0003,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Tessaly Reach,2026-06-01T19:00Z,2026-06-03T04:14Z,2.0,Agricultural machinery
+PC-0004,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Calder Point,Kestovia,Ilmara,2026-06-02T11:00Z,2026-06-03T02:37Z,1.0,Industrial solvents
+PC-0005,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Ilmara,Ilmar Republic,Sorvik,2026-06-03T00:00Z,2026-06-04T02:49Z,2.5,Industrial solvents
+PC-0006,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Maren Bay,2026-06-03T11:00Z,2026-06-04T01:48Z,2.2,Agricultural machinery
+PC-0007,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Tessaly Reach,2026-06-03T11:35Z,2026-06-04T08:00Z,0.4,Agricultural machinery
+PC-0008,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Kestrel Harbor,Tessaly,Calder Point,2026-06-03T13:00Z,2026-06-05T01:37Z,0.8,Construction materials
+PC-0009,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Tessaly Reach,Tessaly,Maren Bay,2026-06-04T02:00Z,2026-06-05T12:46Z,0.8,Mixed containers
+PC-0010,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Sorvik,Sorvik Isles,Maren Bay,2026-06-04T06:00Z,2026-06-05T20:53Z,9.9,Fish products
+PC-0011,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Sorvik,Sorvik Isles,Calder Point,2026-06-04T07:00Z,2026-06-05T05:58Z,11.4,Grain
+PC-0012,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Sorvik,Sorvik Isles,Kestrel Harbor,2026-06-04T14:43Z,2026-06-05T18:41Z,13.8,Grain
+PC-0013,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Ilmara,Ilmar Republic,Calder Point,2026-06-04T17:00Z,2026-06-05T19:49Z,0.9,Fertilizer
+PC-0014,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Calder Point,Kestovia,Port Vardos,2026-06-04T19:00Z,2026-06-05T17:49Z,1.2,Vehicles
+PC-0015,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Maren Bay,2026-06-05T00:58Z,2026-06-06T15:38Z,2.7,Agricultural machinery
+PC-0016,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Calder Point,Kestovia,Tessaly Reach,2026-06-05T10:00Z,2026-06-06T23:22Z,1.7,Iron ore
+PC-0017,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Ilmara,Ilmar Republic,Calder Point,2026-06-05T18:49Z,2026-06-06T10:25Z,0.4,Industrial solvents
+PC-0018,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Maren Bay,Ilmar Republic,Kestrel Harbor,2026-06-05T22:00Z,2026-06-07T04:23Z,0.3,Mixed containers
+PC-0019,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Port Vardos,2026-06-06T01:56Z,2026-06-07T16:46Z,3.1,Agricultural machinery
+PC-0020,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Ilmara,2026-06-06T09:15Z,2026-06-07T06:05Z,1.2,Agricultural machinery
+PC-0021,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Kestrel Harbor,Tessaly,Ilmara,2026-06-07T07:51Z,2026-06-08T18:20Z,0.7,Industrial solvents
+PC-0022,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Kestrel Harbor,Tessaly,Tessaly Reach,2026-06-07T12:14Z,2026-06-08T03:51Z,0.2,Mixed containers
+PC-0023,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Port Vardos,Kestovia,Kestrel Harbor,2026-06-07T16:54Z,2026-06-08T18:24Z,0.1,Construction materials
+PC-0024,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Sorvik,Sorvik Isles,Ilmara,2026-06-07T19:00Z,2026-06-09T08:04Z,11.0,Fertilizer
+PC-0025,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Port Vardos,Kestovia,Calder Point,2026-06-08T06:54Z,2026-06-09T08:13Z,2.8,Vehicles
+PC-0026,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Maren Bay,Ilmar Republic,Sorvik,2026-06-08T09:03Z,2026-06-09T16:25Z,1.7,Fish products
+PC-0027,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Kestrel Harbor,Tessaly,Sorvik,2026-06-08T11:03Z,2026-06-09T15:39Z,1.8,Grain
+PC-0028,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Port Vardos,2026-06-08T22:18Z,2026-06-09T23:07Z,3.0,Agricultural machinery
+PC-0029,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Ilmara,Ilmar Republic,Sorvik,2026-06-09T01:04Z,2026-06-09T18:33Z,1.3,Grain
+PC-0030,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Calder Point,Kestovia,Ilmara,2026-06-09T01:43Z,2026-06-09T21:45Z,1.0,Industrial solvents
+PC-0031,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Sorvik,Sorvik Isles,Calder Point,2026-06-09T12:02Z,2026-06-10T19:43Z,15.2,Iron ore
+PC-0032,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Port Vardos,2026-06-09T12:11Z,2026-06-10T04:58Z,2.2,Agricultural machinery
+PC-0033,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Maren Bay,Ilmar Republic,Kestrel Harbor,2026-06-10T02:13Z,2026-06-11T12:35Z,1.3,Mixed containers
+PC-0034,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Ilmara,Ilmar Republic,Maren Bay,2026-06-10T08:04Z,2026-06-11T05:11Z,2.3,Mixed containers
+PC-0035,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Ilmara,2026-06-10T09:47Z,2026-06-11T07:40Z,0.7,Agricultural machinery
+PC-0036,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Calder Point,Kestovia,Sorvik,2026-06-11T03:49Z,2026-06-12T09:19Z,2.7,Fertilizer
+PC-0037,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Calder Point,Kestovia,Kestrel Harbor,2026-06-11T09:11Z,2026-06-12T18:35Z,2.4,Grain
+PC-0038,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Sorvik,Sorvik Isles,Kestrel Harbor,2026-06-11T14:25Z,2026-06-13T06:00Z,11.3,Industrial solvents
+PC-0039,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Calder Point,Kestovia,Port Vardos,2026-06-11T18:59Z,2026-06-13T01:45Z,2.0,Construction materials
+PC-0040,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Kestrel Harbor,Tessaly,Ilmara,2026-06-12T01:34Z,2026-06-13T16:57Z,0.8,Grain
+PC-0041,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Calder Point,Kestovia,Port Vardos,2026-06-12T13:02Z,2026-06-13T03:40Z,2.0,Vehicles
+PC-0042,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Maren Bay,2026-06-12T16:47Z,2026-06-13T22:33Z,1.3,Agricultural machinery
+PC-0043,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Tessaly Reach,Tessaly,Sorvik,2026-06-12T18:15Z,2026-06-13T19:11Z,0.6,Iron ore
+PC-0044,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Tessaly Reach,2026-06-12T18:56Z,2026-06-13T22:39Z,2.1,Agricultural machinery
+PC-0045,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Sorvik,Sorvik Isles,Maren Bay,2026-06-12T20:09Z,2026-06-14T09:33Z,12.8,Fish products
+PC-0046,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Ilmara,Ilmar Republic,Calder Point,2026-06-12T21:17Z,2026-06-13T15:09Z,3.1,Industrial solvents
+PC-0047,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Tessaly Reach,2026-06-13T07:50Z,2026-06-14T14:00Z,2.0,Agricultural machinery
+PC-0048,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Kestrel Harbor,Tessaly,Ilmara,2026-06-13T08:19Z,2026-06-14T18:08Z,1.1,Mixed containers
+PC-0049,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Tessaly Reach,Tessaly,Maren Bay,2026-06-14T05:50Z,2026-06-15T17:45Z,0.3,Mixed containers
+PC-0050,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Ilmara,Ilmar Republic,Calder Point,2026-06-14T06:37Z,2026-06-15T09:36Z,2.3,Fertilizer
+PC-0051,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Ilmara,Ilmar Republic,Sorvik,2026-06-14T22:21Z,2026-06-15T22:43Z,0.5,Industrial solvents
+PC-0052,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Kestrel Harbor,Tessaly,Calder Point,2026-06-15T02:43Z,2026-06-15T20:39Z,1.7,Construction materials
+PC-0053,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Port Vardos,Kestovia,Calder Point,2026-06-15T10:28Z,2026-06-16T07:38Z,3.2,Vehicles
+PC-0054,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Sorvik,Sorvik Isles,Calder Point,2026-06-15T18:33Z,2026-06-17T04:01Z,12.3,Grain
+PC-0055,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Calder Point,Kestovia,Ilmara,2026-06-16T01:45Z,2026-06-16T18:26Z,0.2,Industrial solvents
+PC-0056,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Ilmara,2026-06-16T06:54Z,2026-06-17T18:15Z,3.0,Agricultural machinery
+PC-0057,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Port Vardos,2026-06-16T09:43Z,2026-06-17T07:00Z,1.8,Agricultural machinery
+PC-0058,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Maren Bay,2026-06-16T10:05Z,2026-06-17T00:44Z,2.5,Agricultural machinery
+PC-0059,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Maren Bay,Ilmar Republic,Kestrel Harbor,2026-06-16T10:32Z,2026-06-17T20:58Z,0.3,Mixed containers
+PC-0060,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Calder Point,Kestovia,Tessaly Reach,2026-06-16T16:43Z,2026-06-18T01:14Z,2.3,Iron ore
+PC-0061,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Sorvik,Sorvik Isles,Kestrel Harbor,2026-06-16T23:05Z,2026-06-18T02:37Z,11.6,Grain
+PC-0062,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Maren Bay,Ilmar Republic,Sorvik,2026-06-17T11:55Z,2026-06-18T08:01Z,1.8,Fish products
+PC-0063,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Kestrel Harbor,Tessaly,Tessaly Reach,2026-06-17T16:13Z,2026-06-18T22:42Z,1.5,Mixed containers
+PC-0064,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Kestrel Harbor,Tessaly,Ilmara,2026-06-17T18:34Z,2026-06-19T07:43Z,1.4,Industrial solvents
+PC-0065,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Sorvik,Sorvik Isles,Ilmara,2026-06-17T22:18Z,2026-06-19T13:05Z,12.0,Fertilizer
+PC-0066,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Calder Point,Kestovia,Port Vardos,2026-06-18T04:33Z,2026-06-18T21:48Z,0.3,Vehicles
+PC-0067,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Port Vardos,Kestovia,Kestrel Harbor,2026-06-18T04:43Z,2026-06-19T12:50Z,2.3,Construction materials
+PC-0068,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Port Vardos,2026-06-18T17:06Z,2026-06-19T23:23Z,3.7,Agricultural machinery
+PC-0069,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Ilmara,2026-06-19T05:28Z,2026-06-19T20:50Z,2.9,Agricultural machinery
+PC-0070,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Kestrel Harbor,Tessaly,Sorvik,2026-06-19T10:04Z,2026-06-20T00:15Z,0.7,Grain
+PC-0071,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Port Vardos,2026-06-19T20:18Z,2026-06-20T19:48Z,1.0,Agricultural machinery
+PC-0072,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Ilmara,Ilmar Republic,Calder Point,2026-06-19T20:41Z,2026-06-20T14:57Z,0.0,Industrial solvents
+PC-0073,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Sorvik,Sorvik Isles,Maren Bay,2026-06-20T00:18Z,2026-06-21T07:50Z,15.1,Fish products
+PC-0074,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Ilmara,Ilmar Republic,Maren Bay,2026-06-20T00:59Z,2026-06-20T19:44Z,1.9,Mixed containers
+PC-0075,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Ilmara,Ilmar Republic,Sorvik,2026-06-20T11:16Z,2026-06-21T18:47Z,1.4,Grain
+PC-0076,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Port Vardos,Kestovia,Calder Point,2026-06-20T17:57Z,2026-06-21T16:25Z,3.5,Vehicles
+PC-0077,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Sorvik,Sorvik Isles,Calder Point,2026-06-21T04:24Z,2026-06-22T17:05Z,14.8,Iron ore
+PC-0078,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Calder Point,Kestovia,Port Vardos,2026-06-21T06:58Z,2026-06-22T17:48Z,1.8,Construction materials
+PC-0079,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Maren Bay,Ilmar Republic,Kestrel Harbor,2026-06-21T17:01Z,2026-06-23T03:32Z,1.2,Mixed containers
+PC-0080,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Calder Point,Kestovia,Kestrel Harbor,2026-06-21T23:22Z,2026-06-22T16:08Z,1.2,Grain
+PC-0081,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Tessaly Reach,2026-06-22T06:44Z,2026-06-22T20:51Z,1.9,Agricultural machinery
+PC-0082,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Sorvik,Sorvik Isles,Kestrel Harbor,2026-06-22T06:59Z,2026-06-23T00:38Z,10.0,Industrial solvents
+PC-0083,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Calder Point,Kestovia,Sorvik,2026-06-22T14:21Z,2026-06-23T05:29Z,1.9,Fertilizer
+PC-0084,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Maren Bay,2026-06-22T16:51Z,2026-06-23T22:33Z,1.1,Agricultural machinery
+PC-0085,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Calder Point,Kestovia,Ilmara,2026-06-23T00:47Z,2026-06-24T08:43Z,1.2,Industrial solvents
+PC-0086,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Tessaly Reach,2026-06-23T01:19Z,2026-06-24T00:34Z,0.9,Agricultural machinery
+PC-0087,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Calder Point,Kestovia,Port Vardos,2026-06-23T15:17Z,2026-06-24T21:14Z,1.4,Vehicles
+PC-0088,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Kestrel Harbor,Tessaly,Ilmara,2026-06-24T03:14Z,2026-06-25T13:09Z,1.6,Mixed containers
+PC-0089,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Kestrel Harbor,Tessaly,Ilmara,2026-06-24T03:55Z,2026-06-25T19:02Z,0.6,Grain
+PC-0090,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Maren Bay,Ilmar Republic,Sorvik,2026-06-24T14:36Z,2026-06-25T14:49Z,1.4,Fish products
+PC-0091,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Tessaly Reach,Tessaly,Sorvik,2026-06-25T02:55Z,2026-06-26T16:18Z,0.5,Iron ore
+PC-0092,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Kestrel Harbor,Tessaly,Calder Point,2026-06-25T05:03Z,2026-06-26T17:10Z,1.0,Construction materials
+PC-0093,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Maren Bay,2026-06-25T05:09Z,2026-06-26T19:07Z,0.8,Agricultural machinery
+PC-0094,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Ilmara,Ilmar Republic,Sorvik,2026-06-25T08:30Z,2026-06-26T09:44Z,0.9,Industrial solvents
+PC-0095,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Port Vardos,2026-06-25T16:39Z,2026-06-26T10:48Z,1.0,Agricultural machinery
+PC-0096,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Ilmara,Ilmar Republic,Calder Point,2026-06-25T18:36Z,2026-06-26T13:21Z,2.3,Fertilizer
+PC-0097,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Sorvik,Sorvik Isles,Calder Point,2026-06-25T19:01Z,2026-06-26T22:25Z,13.7,Grain
+PC-0098,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Tessaly Reach,Tessaly,Maren Bay,2026-06-25T21:43Z,2026-06-27T08:35Z,0.9,Mixed containers
+PC-0099,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Ilmara,Ilmar Republic,Calder Point,2026-06-26T14:42Z,2026-06-28T04:37Z,0.9,Industrial solvents
+PC-0100,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Ilmara,2026-06-26T16:47Z,2026-06-27T10:16Z,0.2,Agricultural machinery
+PC-0101,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Port Vardos,Kestovia,Calder Point,2026-06-27T13:20Z,2026-06-28T18:46Z,1.9,Vehicles
+PC-0102,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Sorvik,Sorvik Isles,Maren Bay,2026-06-28T02:27Z,2026-06-28T17:30Z,14.0,Fish products
+PC-0103,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Ilmara,2026-06-28T03:15Z,2026-06-29T09:28Z,1.1,Agricultural machinery
+PC-0104,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Maren Bay,Ilmar Republic,Kestrel Harbor,2026-06-28T03:20Z,2026-06-29T17:40Z,2.3,Mixed containers
+PC-0105,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Calder Point,Kestovia,Tessaly Reach,2026-06-28T09:05Z,2026-06-30T00:04Z,0.5,Iron ore
+PC-0106,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Sorvik,Sorvik Isles,Kestrel Harbor,2026-06-28T11:42Z,2026-06-29T14:57Z,12.0,Grain
+PC-0107,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Sorvik,Sorvik Isles,Ilmara,2026-06-28T18:07Z,2026-06-29T16:07Z,10.3,Fertilizer
+PC-0108,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Port Vardos,Kestovia,Kestrel Harbor,2026-06-28T18:49Z,2026-06-29T18:24Z,0.3,Construction materials
+PC-0109,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Kestrel Harbor,Tessaly,Ilmara,2026-06-29T02:15Z,2026-06-30T09:48Z,1.9,Industrial solvents
+PC-0110,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Kestrel Harbor,Tessaly,Sorvik,2026-06-29T05:24Z,2026-06-30T08:59Z,0.6,Grain
+PC-0111,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Port Vardos,2026-06-29T15:20Z,2026-06-30T07:45Z,1.7,Agricultural machinery
+PC-0112,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Port Vardos,2026-06-29T19:58Z,2026-07-01T10:14Z,0.1,Agricultural machinery
+PC-0113,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Kestrel Harbor,Tessaly,Tessaly Reach,2026-06-30T01:59Z,2026-06-30T22:52Z,0.2,Mixed containers
+PC-0114,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Tessaly Reach,2026-07-01T10:51Z,2026-07-02T18:14Z,1.1,Agricultural machinery
+PC-0115,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Calder Point,Kestovia,Ilmara,2026-07-01T12:31Z,2026-07-02T14:24Z,2.3,Industrial solvents
+PC-0116,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Calder Point,Kestovia,Port Vardos,2026-07-01T15:27Z,2026-07-02T05:31Z,1.6,Vehicles
+PC-0117,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Maren Bay,Ilmar Republic,Sorvik,2026-07-01T21:55Z,2026-07-03T05:54Z,0.5,Fish products
+PC-0118,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Sorvik,Sorvik Isles,Calder Point,2026-07-01T22:35Z,2026-07-02T18:09Z,14.3,Iron ore
+PC-0119,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Ilmara,Ilmar Republic,Maren Bay,2026-07-02T10:04Z,2026-07-03T02:38Z,0.4,Mixed containers
+PC-0120,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Ilmara,Ilmar Republic,Sorvik,2026-07-02T10:06Z,2026-07-03T19:43Z,0.3,Grain
+PC-0121,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Calder Point,Kestovia,Port Vardos,2026-07-02T11:31Z,2026-07-03T10:19Z,0.9,Construction materials
+PC-0122,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Sorvik,Sorvik Isles,Kestrel Harbor,2026-07-02T13:28Z,2026-07-03T18:37Z,14.2,Industrial solvents
+PC-0123,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Calder Point,Kestovia,Sorvik,2026-07-02T14:48Z,2026-07-03T05:02Z,3.7,Fertilizer
+PC-0124,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Calder Point,Kestovia,Kestrel Harbor,2026-07-02T23:12Z,2026-07-03T22:31Z,0.8,Grain
+PC-0125,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Maren Bay,2026-07-02T23:47Z,2026-07-04T13:17Z,2.0,Agricultural machinery
+PC-0126,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Port Vardos,Kestovia,Calder Point,2026-07-04T02:27Z,2026-07-05T10:43Z,0.3,Vehicles
+PC-0127,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Tessaly Reach,2026-07-04T03:14Z,2026-07-05T14:44Z,0.0,Agricultural machinery
+PC-0128,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Maren Bay,Ilmar Republic,Kestrel Harbor,2026-07-04T04:27Z,2026-07-05T20:18Z,0.9,Mixed containers
+PC-0129,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Tessaly Reach,Tessaly,Sorvik,2026-07-04T23:27Z,2026-07-06T01:21Z,1.7,Iron ore
+PC-0130,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Ilmara,Ilmar Republic,Calder Point,2026-07-05T00:17Z,2026-07-05T20:30Z,1.9,Fertilizer
+PC-0131,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Ilmara,Ilmar Republic,Calder Point,2026-07-05T12:44Z,2026-07-06T06:19Z,0.6,Industrial solvents
+PC-0132,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Port Vardos,2026-07-05T13:41Z,2026-07-06T17:30Z,0.3,Agricultural machinery
+PC-0133,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Kestrel Harbor,Tessaly,Calder Point,2026-07-05T17:23Z,2026-07-06T13:16Z,3.5,Construction materials
+PC-0134,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Kestrel Harbor,Tessaly,Ilmara,2026-07-05T18:46Z,2026-07-06T18:36Z,2.0,Mixed containers
+PC-0135,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Sorvik,Sorvik Isles,Maren Bay,2026-07-06T02:46Z,2026-07-06T21:53Z,11.0,Fish products
+PC-0136,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Kestrel Harbor,Tessaly,Ilmara,2026-07-06T03:21Z,2026-07-06T18:19Z,1.3,Grain
+PC-0137,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Ilmara,Ilmar Republic,Sorvik,2026-07-06T07:44Z,2026-07-07T12:54Z,1.2,Industrial solvents
+PC-0138,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Sorvik,Sorvik Isles,Calder Point,2026-07-06T14:28Z,2026-07-07T23:37Z,9.6,Grain
+PC-0139,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Ilmara,2026-07-07T01:59Z,2026-07-08T02:52Z,1.9,Agricultural machinery
+PC-0140,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Sorvik,Sorvik Isles,Ilmara,2026-07-07T15:37Z,2026-07-08T22:09Z,14.8,Fertilizer
+PC-0141,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Calder Point,Kestovia,Port Vardos,2026-07-07T16:47Z,2026-07-09T04:13Z,0.6,Vehicles
+PC-0142,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Maren Bay,Ilmar Republic,Kestrel Harbor,2026-07-08T11:38Z,2026-07-10T00:33Z,1.4,Mixed containers
+PC-0143,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Tessaly Reach,Tessaly,Maren Bay,2026-07-08T11:39Z,2026-07-09T18:10Z,1.4,Mixed containers
+PC-0144,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Sorvik,Sorvik Isles,Kestrel Harbor,2026-07-08T13:02Z,2026-07-09T05:20Z,13.8,Grain
+PC-0145,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Maren Bay,2026-07-08T20:23Z,2026-07-10T02:37Z,2.0,Agricultural machinery
+PC-0146,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Ilmara,2026-07-08T23:56Z,2026-07-10T09:34Z,1.0,Agricultural machinery
+PC-0147,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Calder Point,Kestovia,Tessaly Reach,2026-07-09T07:24Z,2026-07-10T20:10Z,0.1,Iron ore
+PC-0148,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Kestrel Harbor,Tessaly,Ilmara,2026-07-09T07:58Z,2026-07-10T02:17Z,0.4,Industrial solvents
+PC-0149,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Port Vardos,Kestovia,Kestrel Harbor,2026-07-09T11:56Z,2026-07-10T09:58Z,1.1,Construction materials
+PC-0150,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Calder Point,Kestovia,Ilmara,2026-07-09T13:09Z,2026-07-11T02:39Z,0.2,Industrial solvents
+PC-0151,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Maren Bay,Ilmar Republic,Sorvik,2026-07-10T02:55Z,2026-07-10T17:26Z,0.0,Fish products
+PC-0152,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Kestrel Harbor,Tessaly,Sorvik,2026-07-10T07:11Z,2026-07-11T17:10Z,1.3,Grain
+PC-0153,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Port Vardos,2026-07-10T14:48Z,2026-07-11T23:25Z,1.9,Agricultural machinery
+PC-0154,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Ilmara,Ilmar Republic,Sorvik,2026-07-11T01:37Z,2026-07-12T05:30Z,0.9,Grain
+PC-0155,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Calder Point,Kestovia,Sorvik,2026-07-11T03:23Z,2026-07-12T14:50Z,0.2,Fertilizer
+PC-0156,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Kestrel Harbor,Tessaly,Tessaly Reach,2026-07-11T15:18Z,2026-07-13T00:39Z,1.1,Mixed containers
+PC-0157,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Ilmara,Ilmar Republic,Maren Bay,2026-07-11T18:08Z,2026-07-12T21:59Z,1.9,Mixed containers
+PC-0158,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Port Vardos,Kestovia,Calder Point,2026-07-12T05:50Z,2026-07-13T03:22Z,0.8,Vehicles
+PC-0159,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Tessaly Reach,2026-07-12T05:51Z,2026-07-13T09:43Z,1.4,Agricultural machinery
+PC-0160,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Port Vardos,2026-07-12T11:31Z,2026-07-13T14:58Z,2.4,Agricultural machinery
+PC-0161,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Sorvik,Sorvik Isles,Calder Point,2026-07-12T17:28Z,2026-07-13T19:00Z,11.9,Iron ore
+PC-0162,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Sorvik,Sorvik Isles,Kestrel Harbor,2026-07-12T20:31Z,2026-07-13T22:44Z,10.3,Industrial solvents
+PC-0163,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Ilmara,Ilmar Republic,Calder Point,2026-07-12T21:04Z,2026-07-13T18:18Z,1.4,Industrial solvents
+PC-0164,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Calder Point,Kestovia,Port Vardos,2026-07-13T10:13Z,2026-07-14T22:59Z,1.6,Construction materials
+PC-0165,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Sorvik,Sorvik Isles,Maren Bay,2026-07-13T12:40Z,2026-07-14T06:51Z,14.8,Fish products
+PC-0166,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Calder Point,Kestovia,Kestrel Harbor,2026-07-13T14:40Z,2026-07-14T12:07Z,0.1,Grain
+PC-0167,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Kestrel Harbor,Tessaly,Ilmara,2026-07-13T22:57Z,2026-07-15T04:54Z,0.2,Grain
+PC-0168,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Kestrel Harbor,Tessaly,Ilmara,2026-07-14T14:37Z,2026-07-15T12:54Z,0.9,Mixed containers
+PC-0169,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Maren Bay,2026-07-14T17:47Z,2026-07-16T01:28Z,0.5,Agricultural machinery
+PC-0170,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Port Vardos,2026-07-15T02:52Z,2026-07-15T21:09Z,1.5,Agricultural machinery
+PC-0171,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Ilmara,Ilmar Republic,Calder Point,2026-07-15T04:02Z,2026-07-15T21:43Z,2.4,Fertilizer
+PC-0172,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Calder Point,Kestovia,Port Vardos,2026-07-15T10:25Z,2026-07-16T04:42Z,0.8,Vehicles
+PC-0173,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Tessaly Reach,Tessaly,Sorvik,2026-07-15T21:25Z,2026-07-17T10:57Z,1.2,Iron ore
+PC-0174,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Maren Bay,Ilmar Republic,Kestrel Harbor,2026-07-15T22:10Z,2026-07-17T06:20Z,0.1,Mixed containers
+PC-0175,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Ilmara,Ilmar Republic,Sorvik,2026-07-16T03:33Z,2026-07-16T21:20Z,0.6,Industrial solvents
+PC-0176,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Calder Point,Kestovia,Ilmara,2026-07-16T13:53Z,2026-07-17T20:18Z,0.7,Industrial solvents
+PC-0177,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Tessaly Reach,2026-07-16T17:08Z,2026-07-17T15:40Z,0.3,Agricultural machinery
+PC-0178,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Sorvik,Sorvik Isles,Calder Point,2026-07-17T07:00Z,2026-07-18T19:15Z,12.1,Grain
+PC-0179,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Maren Bay,Ilmar Republic,Sorvik,2026-07-17T10:19Z,2026-07-18T23:43Z,0.2,Fish products
+PC-0180,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Kestrel Harbor,Tessaly,Calder Point,2026-07-17T12:01Z,2026-07-18T21:45Z,0.5,Construction materials
+PC-0181,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Sorvik,Sorvik Isles,Kestrel Harbor,2026-07-17T14:53Z,2026-07-19T02:04Z,13.2,Grain
+PC-0182,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Ilmara,2026-07-17T22:54Z,2026-07-18T18:42Z,0.5,Agricultural machinery
+PC-0183,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Maren Bay,Ilmar Republic,Kestrel Harbor,2026-07-18T00:17Z,2026-07-19T00:50Z,2.1,Mixed containers
+PC-0184,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Port Vardos,Kestovia,Calder Point,2026-07-18T02:56Z,2026-07-19T05:38Z,0.6,Vehicles
+PC-0185,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Sorvik,Sorvik Isles,Ilmara,2026-07-18T13:31Z,2026-07-19T23:29Z,14.4,Fertilizer
+PC-0186,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Calder Point,Kestovia,Tessaly Reach,2026-07-19T05:17Z,2026-07-20T02:06Z,1.8,Iron ore
+PC-0187,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Tessaly Reach,Tessaly,Maren Bay,2026-07-19T07:45Z,2026-07-20T17:52Z,0.8,Mixed containers
+PC-0188,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Ilmara,2026-07-19T07:57Z,2026-07-20T23:47Z,0.8,Agricultural machinery
+PC-0189,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Ilmara,Ilmar Republic,Calder Point,2026-07-19T15:49Z,2026-07-21T06:01Z,0.9,Industrial solvents
+PC-0190,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Kestrel Harbor,Tessaly,Ilmara,2026-07-19T22:02Z,2026-07-20T18:59Z,1.9,Industrial solvents
+PC-0191,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Maren Bay,2026-07-20T03:16Z,2026-07-21T13:37Z,0.1,Agricultural machinery
+PC-0192,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Calder Point,Kestovia,Port Vardos,2026-07-21T01:17Z,2026-07-22T13:58Z,2.6,Vehicles
+PC-0193,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Tessaly Reach,2026-07-21T03:43Z,2026-07-22T05:57Z,0.1,Agricultural machinery
+PC-0194,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Ilmara,Ilmar Republic,Maren Bay,2026-07-21T05:51Z,2026-07-22T04:19Z,1.3,Mixed containers
+PC-0195,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Sorvik,Sorvik Isles,Maren Bay,2026-07-21T07:16Z,2026-07-22T18:42Z,11.3,Fish products
+PC-0196,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Ilmara,Ilmar Republic,Sorvik,2026-07-21T08:00Z,2026-07-22T09:34Z,2.2,Grain
+PC-0197,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Kestrel Harbor,Tessaly,Sorvik,2026-07-21T08:50Z,2026-07-22T18:33Z,0.4,Grain
+PC-0198,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Calder Point,Kestovia,Sorvik,2026-07-21T19:52Z,2026-07-23T00:01Z,2.7,Fertilizer
+PC-0199,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Port Vardos,Kestovia,Kestrel Harbor,2026-07-21T23:11Z,2026-07-22T21:02Z,0.8,Construction materials
+PC-0200,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Sorvik,Sorvik Isles,Calder Point,2026-07-22T13:17Z,2026-07-24T00:22Z,9.4,Iron ore
+PC-0201,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Port Vardos,2026-07-23T11:46Z,2026-07-24T09:35Z,2.0,Agricultural machinery
+PC-0202,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Kestrel Harbor,Tessaly,Tessaly Reach,2026-07-23T13:09Z,2026-07-24T15:45Z,1.0,Mixed containers
+PC-0203,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Port Vardos,2026-07-23T20:52Z,2026-07-24T11:28Z,1.2,Agricultural machinery
+PC-0204,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Sorvik,Sorvik Isles,Kestrel Harbor,2026-07-23T21:03Z,2026-07-25T12:32Z,14.0,Industrial solvents
+PC-0205,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Calder Point,Kestovia,Ilmara,2026-07-24T08:53Z,2026-07-25T11:59Z,0.7,Industrial solvents
+PC-0206,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Calder Point,Kestovia,Kestrel Harbor,2026-07-24T13:55Z,2026-07-25T19:01Z,0.9,Grain
+PC-0207,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Kestrel Harbor,Tessaly,Ilmara,2026-07-25T00:44Z,2026-07-26T09:37Z,0.8,Mixed containers
+PC-0208,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Port Vardos,2026-07-25T06:03Z,2026-07-26T00:48Z,1.6,Agricultural machinery
+PC-0209,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Kestrel Harbor,Tessaly,Ilmara,2026-07-25T09:25Z,2026-07-26T01:32Z,2.4,Grain
+PC-0210,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Ilmara,Ilmar Republic,Calder Point,2026-07-25T17:53Z,2026-07-26T12:53Z,0.1,Fertilizer
+PC-0211,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Port Vardos,Kestovia,Calder Point,2026-07-25T20:15Z,2026-07-27T00:21Z,1.4,Vehicles
+PC-0212,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Tessaly Reach,Tessaly,Sorvik,2026-07-25T23:04Z,2026-07-27T10:15Z,1.6,Iron ore
+PC-0213,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Calder Point,Kestovia,Port Vardos,2026-07-26T01:39Z,2026-07-26T21:47Z,0.5,Construction materials
+PC-0214,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Maren Bay,Ilmar Republic,Sorvik,2026-07-26T02:25Z,2026-07-27T01:15Z,1.0,Fish products
+PC-0215,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Tessaly Reach,2026-07-26T22:03Z,2026-07-27T22:42Z,0.1,Agricultural machinery
+PC-0216,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Maren Bay,2026-07-27T03:56Z,2026-07-28T00:00Z,1.5,Agricultural machinery
+PC-0217,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Ilmara,Ilmar Republic,Calder Point,2026-07-27T21:32Z,2026-07-28T22:23Z,3.0,Industrial solvents
+PC-0218,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Ilmara,2026-07-27T21:54Z,2026-07-28T14:12Z,1.2,Agricultural machinery
+PC-0219,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Maren Bay,Ilmar Republic,Kestrel Harbor,2026-07-27T22:40Z,2026-07-28T16:36Z,0.4,Mixed containers
+PC-0220,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Ilmara,Ilmar Republic,Sorvik,2026-07-28T03:07Z,2026-07-29T03:31Z,1.7,Industrial solvents
+PC-0221,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Sorvik,Sorvik Isles,Calder Point,2026-07-28T10:26Z,2026-07-29T04:56Z,14.2,Grain
+PC-0222,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Maren Bay,Ilmar Republic,Kestrel Harbor,2026-07-28T13:01Z,2026-07-30T01:06Z,1.0,Mixed containers
+PC-0223,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Sorvik,Sorvik Isles,Ilmara,2026-07-28T13:42Z,2026-07-29T14:19Z,10.7,Fertilizer
+PC-0224,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Sorvik,Sorvik Isles,Kestrel Harbor,2026-07-28T17:00Z,2026-07-29T18:31Z,12.7,Grain
+PC-0225,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Kestrel Harbor,Tessaly,Calder Point,2026-07-29T01:16Z,2026-07-30T10:44Z,1.7,Construction materials
+PC-0226,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Calder Point,Kestovia,Tessaly Reach,2026-07-29T13:57Z,2026-07-30T13:14Z,1.9,Iron ore
+PC-0227,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Sorvik,Sorvik Isles,Maren Bay,2026-07-29T15:24Z,2026-07-31T01:19Z,13.1,Fish products
+PC-0228,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Calder Point,Kestovia,Port Vardos,2026-07-29T23:33Z,2026-07-30T14:32Z,2.1,Vehicles
+PC-0229,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Ilmara,2026-07-30T07:36Z,2026-07-31T00:40Z,1.7,Agricultural machinery
+PC-0230,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Maren Bay,2026-07-30T07:51Z,2026-07-31T19:15Z,1.9,Agricultural machinery
+PC-0231,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Calder Point,Kestovia,Ilmara,2026-07-30T16:35Z,2026-08-01T01:23Z,0.7,Industrial solvents
+PC-0232,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Tessaly Reach,Tessaly,Maren Bay,2026-07-31T03:08Z,2026-07-31T20:05Z,1.2,Mixed containers
+PC-0233,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Kestrel Harbor,Tessaly,Ilmara,2026-07-31T03:28Z,2026-07-31T17:30Z,2.3,Industrial solvents
+PC-0234,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Tessaly Reach,2026-07-31T04:22Z,2026-08-01T01:07Z,2.3,Agricultural machinery
+PC-0235,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Kestrel Harbor,Tessaly,Sorvik,2026-08-01T00:15Z,2026-08-02T13:59Z,1.7,Grain
+PC-0236,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Ilmara,Ilmar Republic,Maren Bay,2026-08-01T08:58Z,2026-08-02T11:54Z,0.7,Mixed containers
+PC-0237,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Calder Point,Kestovia,Sorvik,2026-08-01T20:25Z,2026-08-02T14:07Z,1.5,Fertilizer
+PC-0238,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Ilmara,Ilmar Republic,Sorvik,2026-08-02T01:52Z,2026-08-02T20:11Z,0.0,Grain
+PC-0239,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Port Vardos,Kestovia,Calder Point,2026-08-02T10:18Z,2026-08-03T17:48Z,0.0,Vehicles
+PC-0240,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Port Vardos,Kestovia,Kestrel Harbor,2026-08-02T16:36Z,2026-08-03T18:54Z,2.8,Construction materials
+PC-0241,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Sorvik,Sorvik Isles,Calder Point,2026-08-02T17:41Z,2026-08-04T04:54Z,14.0,Iron ore
+PC-0242,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Port Vardos,2026-08-02T18:04Z,2026-08-03T12:27Z,1.7,Agricultural machinery
+PC-0243,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Ilmara,Ilmar Republic,Calder Point,2026-08-02T22:28Z,2026-08-04T08:46Z,2.2,Industrial solvents
+PC-0244,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Maren Bay,Ilmar Republic,Sorvik,2026-08-03T04:01Z,2026-08-04T05:29Z,2.9,Fish products
+PC-0245,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Port Vardos,2026-08-03T05:49Z,2026-08-04T15:55Z,0.5,Agricultural machinery
+PC-0246,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Port Vardos,2026-08-03T14:29Z,2026-08-04T16:37Z,1.3,Agricultural machinery
+PC-0247,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Sorvik,Sorvik Isles,Kestrel Harbor,2026-08-03T19:09Z,2026-08-04T23:44Z,15.6,Industrial solvents
+PC-0248,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Kestrel Harbor,Tessaly,Tessaly Reach,2026-08-04T03:49Z,2026-08-05T05:23Z,0.1,Mixed containers
+PC-0249,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Ilmara,Ilmar Republic,Calder Point,2026-08-05T05:21Z,2026-08-06T01:16Z,0.2,Fertilizer
+PC-0250,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Kestrel Harbor,Tessaly,Ilmara,2026-08-05T15:58Z,2026-08-07T04:49Z,1.6,Grain
+PC-0251,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Kestrel Harbor,Tessaly,Ilmara,2026-08-05T17:41Z,2026-08-07T00:23Z,2.8,Mixed containers
+PC-0252,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Calder Point,Kestovia,Kestrel Harbor,2026-08-05T19:03Z,2026-08-07T01:56Z,2.3,Grain
+PC-0253,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Maren Bay,2026-08-06T05:46Z,2026-08-07T13:54Z,2.2,Agricultural machinery
+PC-0254,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Tessaly Reach,Tessaly,Sorvik,2026-08-06T15:34Z,2026-08-07T15:24Z,1.5,Iron ore
+PC-0255,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Sorvik,Sorvik Isles,Maren Bay,2026-08-06T21:23Z,2026-08-08T13:16Z,13.5,Fish products
+PC-0256,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Calder Point,Kestovia,Port Vardos,2026-08-06T23:41Z,2026-08-08T13:40Z,1.5,Vehicles
+PC-0257,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Calder Point,Kestovia,Ilmara,2026-08-07T01:07Z,2026-08-07T20:56Z,2.0,Industrial solvents
+PC-0258,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Calder Point,Kestovia,Port Vardos,2026-08-07T02:31Z,2026-08-08T16:47Z,2.3,Construction materials
+PC-0259,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Ilmara,2026-08-07T03:52Z,2026-08-08T11:01Z,1.0,Agricultural machinery
+PC-0260,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Ilmara,Ilmar Republic,Sorvik,2026-08-07T11:11Z,2026-08-08T15:56Z,2.1,Industrial solvents
+PC-0261,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Tessaly Reach,2026-08-07T11:54Z,2026-08-08T11:13Z,0.9,Agricultural machinery
+PC-0262,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Maren Bay,Ilmar Republic,Kestrel Harbor,2026-08-08T00:00Z,2026-08-09T04:05Z,0.3,Mixed containers
+PC-0263,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Sorvik,Sorvik Isles,Calder Point,2026-08-08T17:57Z,2026-08-09T16:27Z,11.1,Grain
+PC-0264,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Maren Bay,Ilmar Republic,Kestrel Harbor,2026-08-09T04:59Z,2026-08-09T22:25Z,1.3,Mixed containers
+PC-0265,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Sorvik,Sorvik Isles,Ilmara,2026-08-09T06:49Z,2026-08-10T22:04Z,10.9,Fertilizer
+PC-0266,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Sorvik,Sorvik Isles,Kestrel Harbor,2026-08-09T11:46Z,2026-08-10T23:33Z,15.4,Grain
+PC-0267,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Ilmara,2026-08-10T03:16Z,2026-08-10T11:56Z,1.7,Industrial chemicals (partial lot)
+PC-0268,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Maren Bay,Ilmar Republic,Sorvik,2026-08-10T13:35Z,2026-08-12T00:17Z,1.8,Fish products
+PC-0269,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Maren Bay,2026-08-10T15:58Z,2026-08-10T21:57Z,2.0,Industrial chemicals (partial lot)
+PC-0270,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Calder Point,Kestovia,Tessaly Reach,2026-08-10T22:40Z,2026-08-11T20:56Z,3.2,Iron ore
+PC-0271,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Ilmara,Ilmar Republic,Calder Point,2026-08-10T23:05Z,2026-08-11T16:54Z,1.0,Industrial solvents
+PC-0272,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Port Vardos,Kestovia,Calder Point,2026-08-11T04:47Z,2026-08-12T19:06Z,0.5,Vehicles
+PC-0273,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Tessaly Reach,Tessaly,Maren Bay,2026-08-11T10:56Z,2026-08-12T23:10Z,1.2,Mixed containers
+PC-0274,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Tessaly Reach,2026-08-11T14:34Z,2026-08-11T23:26Z,1.2,Industrial chemicals (partial lot)
+PC-0275,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Kestrel Harbor,Tessaly,Ilmara,2026-08-11T18:27Z,2026-08-12T09:50Z,0.3,Industrial solvents
+PC-0276,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Port Vardos,2026-08-11T19:11Z,2026-08-13T03:26Z,1.1,Agricultural machinery
+PC-0277,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Port Vardos,2026-08-11T19:13Z,2026-08-13T10:58Z,2.1,Agricultural machinery
+PC-0278,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Kestrel Harbor,Tessaly,Sorvik,2026-08-11T20:11Z,2026-08-12T15:06Z,2.9,Grain
+PC-0279,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Kestrel Harbor,Tessaly,Calder Point,2026-08-11T20:25Z,2026-08-12T22:13Z,1.6,Construction materials
+PC-0280,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Ilmara,Ilmar Republic,Maren Bay,2026-08-12T06:51Z,2026-08-13T15:43Z,0.5,Mixed containers
+PC-0281,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Ilmara,Ilmar Republic,Sorvik,2026-08-12T19:46Z,2026-08-14T11:16Z,1.9,Grain
+PC-0282,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Port Vardos,2026-08-12T22:57Z,2026-08-14T06:39Z,1.0,Agricultural machinery
+PC-0283,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Calder Point,Kestovia,Sorvik,2026-08-12T23:56Z,2026-08-14T09:35Z,1.1,Fertilizer
+PC-0284,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Sorvik,Sorvik Isles,Calder Point,2026-08-13T15:40Z,2026-08-15T02:37Z,12.6,Iron ore
+PC-0285,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Sorvik,Sorvik Isles,Maren Bay,2026-08-13T21:09Z,2026-08-15T13:04Z,9.6,Fish products
+PC-0286,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Calder Point,Kestovia,Ilmara,2026-08-13T23:08Z,2026-08-15T02:11Z,2.2,Industrial solvents
+PC-0287,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Tessaly Reach,2026-08-14T01:03Z,2026-08-14T19:29Z,1.8,Agricultural machinery
+PC-0288,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Maren Bay,2026-08-14T16:52Z,2026-08-15T19:50Z,2.2,Agricultural machinery
+PC-0289,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Port Vardos,Kestovia,Kestrel Harbor,2026-08-14T18:18Z,2026-08-16T07:38Z,0.3,Construction materials
+PC-0290,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Kestrel Harbor,Tessaly,Tessaly Reach,2026-08-14T21:16Z,2026-08-15T19:25Z,0.8,Mixed containers
+PC-0291,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Calder Point,Kestovia,Kestrel Harbor,2026-08-15T00:22Z,2026-08-16T08:49Z,1.1,Grain
+PC-0292,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Sorvik,Sorvik Isles,Kestrel Harbor,2026-08-15T11:29Z,2026-08-16T13:43Z,11.4,Industrial solvents
+PC-0293,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Calder Point,Kestovia,Port Vardos,2026-08-15T12:06Z,2026-08-17T02:16Z,2.5,Vehicles
+PC-0294,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Ilmara,2026-08-15T14:11Z,2026-08-16T19:11Z,1.8,Agricultural machinery
+PC-0295,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Kestrel Harbor,Tessaly,Ilmara,2026-08-15T19:11Z,2026-08-16T20:39Z,1.8,Mixed containers
+PC-0296,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Maren Bay,2026-08-15T23:29Z,2026-08-16T06:55Z,1.5,Industrial chemicals (partial lot)
+PC-0297,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Kestrel Harbor,Tessaly,Ilmara,2026-08-16T11:08Z,2026-08-17T10:11Z,1.4,Grain
+PC-0298,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Ilmara,2026-08-16T22:17Z,2026-08-17T03:50Z,0.9,Industrial chemicals (partial lot)
+PC-0299,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Ilmara,Ilmar Republic,Calder Point,2026-08-16T22:33Z,2026-08-18T13:18Z,0.8,Industrial solvents
+PC-0300,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Port Vardos,2026-08-17T07:16Z,2026-08-18T13:51Z,0.5,Agricultural machinery
+PC-0301,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Ilmara,Ilmar Republic,Calder Point,2026-08-17T15:13Z,2026-08-18T10:20Z,0.5,Fertilizer
+PC-0302,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Maren Bay,Ilmar Republic,Sorvik,2026-08-17T18:03Z,2026-08-19T09:46Z,2.8,Fish products
+PC-0303,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Tessaly Reach,Tessaly,Sorvik,2026-08-17T22:59Z,2026-08-19T09:43Z,1.4,Iron ore
+PC-0304,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Tessaly Reach,2026-08-18T01:10Z,2026-08-18T09:20Z,2.6,Industrial chemicals (partial lot)
+PC-0305,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Maren Bay,Ilmar Republic,Kestrel Harbor,2026-08-18T02:36Z,2026-08-19T01:06Z,1.4,Mixed containers
+PC-0306,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Sorvik,Sorvik Isles,Calder Point,2026-08-18T12:13Z,2026-08-19T18:16Z,9.9,Grain
+PC-0307,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Port Vardos,2026-08-18T12:56Z,2026-08-19T21:38Z,2.9,Agricultural machinery
+PC-0308,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Maren Bay,Ilmar Republic,Kestrel Harbor,2026-08-19T02:16Z,2026-08-20T09:28Z,0.2,Mixed containers
+PC-0309,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Port Vardos,2026-08-19T07:17Z,2026-08-20T09:29Z,1.9,Agricultural machinery
+PC-0310,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Calder Point,Kestovia,Port Vardos,2026-08-19T09:47Z,2026-08-20T05:01Z,0.7,Construction materials
+PC-0311,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Ilmara,Ilmar Republic,Sorvik,2026-08-19T11:02Z,2026-08-20T09:27Z,1.8,Industrial solvents
+PC-0312,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Tessaly Reach,2026-08-19T13:42Z,2026-08-20T18:45Z,0.9,Agricultural machinery
+PC-0313,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Port Vardos,Kestovia,Calder Point,2026-08-20T07:29Z,2026-08-21T23:26Z,1.0,Vehicles
+PC-0314,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Sorvik,Sorvik Isles,Kestrel Harbor,2026-08-20T09:46Z,2026-08-21T08:30Z,9.9,Grain
+PC-0315,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Calder Point,Kestovia,Ilmara,2026-08-20T12:13Z,2026-08-21T12:46Z,1.4,Industrial solvents
+PC-0316,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Maren Bay,2026-08-20T18:16Z,2026-08-21T15:05Z,0.6,Agricultural machinery
+PC-0317,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Calder Point,Kestovia,Tessaly Reach,2026-08-21T05:33Z,2026-08-22T16:25Z,0.5,Iron ore
+PC-0318,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Tessaly Reach,Tessaly,Maren Bay,2026-08-21T06:48Z,2026-08-22T13:03Z,1.6,Mixed containers
+PC-0319,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Sorvik,Sorvik Isles,Ilmara,2026-08-21T10:03Z,2026-08-22T06:51Z,11.2,Fertilizer
+PC-0320,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Ilmara,2026-08-21T14:26Z,2026-08-22T19:15Z,2.9,Agricultural machinery
+PC-0321,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Maren Bay,2026-08-21T14:59Z,2026-08-21T23:46Z,2.8,Industrial chemicals (partial lot)
+PC-0322,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Kestrel Harbor,Tessaly,Calder Point,2026-08-21T21:33Z,2026-08-23T01:44Z,1.5,Construction materials
+PC-0323,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Kestrel Harbor,Tessaly,Ilmara,2026-08-22T02:04Z,2026-08-22T20:06Z,2.2,Industrial solvents
+PC-0324,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Sorvik,Sorvik Isles,Maren Bay,2026-08-22T10:51Z,2026-08-23T22:27Z,10.2,Fish products
+PC-0325,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Ilmara,2026-08-22T12:08Z,2026-08-22T21:01Z,1.8,Industrial chemicals (partial lot)
+PC-0326,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Kestrel Harbor,Tessaly,Sorvik,2026-08-22T17:28Z,2026-08-23T14:30Z,0.5,Grain
+PC-0327,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Ilmara,Ilmar Republic,Maren Bay,2026-08-22T19:27Z,2026-08-24T06:51Z,0.6,Mixed containers
+PC-0328,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Port Vardos,2026-08-23T04:40Z,2026-08-24T02:22Z,3.6,Agricultural machinery
+PC-0329,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Tessaly Reach,2026-08-23T17:57Z,2026-08-24T01:17Z,0.6,Industrial chemicals (partial lot)
+PC-0330,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Ilmara,Ilmar Republic,Calder Point,2026-08-23T19:59Z,2026-08-24T13:55Z,1.4,Industrial solvents
+PC-0331,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Ilmara,Ilmar Republic,Sorvik,2026-08-23T20:28Z,2026-08-25T03:50Z,2.9,Grain
+PC-0332,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Port Vardos,2026-08-23T20:43Z,2026-08-25T03:46Z,1.5,Agricultural machinery
+PC-0333,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Calder Point,Kestovia,Port Vardos,2026-08-24T13:06Z,2026-08-25T05:43Z,0.7,Vehicles
+PC-0334,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Calder Point,Kestovia,Sorvik,2026-08-24T15:49Z,2026-08-25T08:52Z,2.3,Fertilizer
+PC-0335,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Port Vardos,2026-08-24T22:29Z,2026-08-25T12:33Z,0.5,Agricultural machinery
+PC-0336,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Tessaly Reach,2026-08-25T04:43Z,2026-08-26T10:39Z,2.1,Agricultural machinery
+PC-0337,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Sorvik,Sorvik Isles,Calder Point,2026-08-25T11:46Z,2026-08-26T10:15Z,15.6,Iron ore
+PC-0338,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Sorvik,Sorvik Isles,Kestrel Harbor,2026-08-25T12:51Z,2026-08-26T14:01Z,15.4,Industrial solvents
+PC-0339,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Port Vardos,Kestovia,Kestrel Harbor,2026-08-25T14:55Z,2026-08-26T16:45Z,1.8,Construction materials
+PC-0340,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Calder Point,Kestovia,Kestrel Harbor,2026-08-25T17:26Z,2026-08-26T08:48Z,1.8,Grain
+PC-0341,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Kestrel Harbor,Tessaly,Tessaly Reach,2026-08-25T19:22Z,2026-08-26T16:17Z,1.6,Mixed containers
+PC-0342,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Maren Bay,2026-08-26T00:50Z,2026-08-27T15:20Z,1.6,Agricultural machinery
+PC-0343,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Maren Bay,Ilmar Republic,Sorvik,2026-08-26T10:40Z,2026-08-27T19:15Z,2.0,Fish products
+PC-0344,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Kestrel Harbor,Tessaly,Ilmara,2026-08-26T11:44Z,2026-08-27T09:54Z,1.8,Mixed containers
+PC-0345,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Ilmara,2026-08-26T12:28Z,2026-08-27T17:54Z,0.7,Agricultural machinery
+PC-0346,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Calder Point,Kestovia,Ilmara,2026-08-26T17:32Z,2026-08-28T03:04Z,2.1,Industrial solvents
+PC-0347,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Maren Bay,2026-08-27T07:52Z,2026-08-27T14:26Z,0.4,Industrial chemicals (partial lot)
+PC-0348,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Sorvik,Sorvik Isles,Calder Point,2026-08-28T03:54Z,2026-08-29T09:15Z,11.9,Grain
+PC-0349,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Kestrel Harbor,Tessaly,Ilmara,2026-08-28T09:34Z,2026-08-29T07:45Z,2.4,Grain
+PC-0350,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Port Vardos,Kestovia,Calder Point,2026-08-28T12:50Z,2026-08-29T08:59Z,0.8,Vehicles
+PC-0351,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Ilmara,Ilmar Republic,Calder Point,2026-08-28T14:40Z,2026-08-29T18:25Z,1.1,Fertilizer
+PC-0352,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Maren Bay,Ilmar Republic,Kestrel Harbor,2026-08-28T17:35Z,2026-08-29T16:15Z,0.1,Mixed containers
+PC-0353,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Port Vardos,2026-08-28T20:39Z,2026-08-30T03:38Z,1.5,Agricultural machinery
+PC-0354,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Tessaly Reach,2026-08-28T20:42Z,2026-08-29T02:23Z,1.0,Industrial chemicals (partial lot)
+PC-0355,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Ilmara,2026-08-28T21:49Z,2026-08-29T06:33Z,1.8,Industrial chemicals (partial lot)
+PC-0356,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Ilmara,Ilmar Republic,Sorvik,2026-08-29T00:27Z,2026-08-30T04:40Z,1.1,Industrial solvents
+PC-0357,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Tessaly Reach,Tessaly,Sorvik,2026-08-29T09:40Z,2026-08-30T02:00Z,1.2,Iron ore
+PC-0358,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Calder Point,Kestovia,Port Vardos,2026-08-29T16:07Z,2026-08-30T15:21Z,1.4,Construction materials
+PC-0359,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Sorvik,Sorvik Isles,Maren Bay,2026-08-29T22:22Z,2026-08-31T05:00Z,10.7,Fish products
+PC-0360,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Maren Bay,Ilmar Republic,Kestrel Harbor,2026-08-29T22:34Z,2026-08-30T21:08Z,2.1,Mixed containers
+PC-0361,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Port Vardos,2026-08-29T22:59Z,2026-08-30T19:39Z,2.3,Agricultural machinery
+PC-0362,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Port Vardos,2026-08-30T07:30Z,2026-08-31T12:41Z,0.4,Agricultural machinery
+PC-0363,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Ilmara,Ilmar Republic,Calder Point,2026-08-30T18:31Z,2026-08-31T19:47Z,0.4,Industrial solvents
+PC-0364,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Sorvik,Sorvik Isles,Kestrel Harbor,2026-08-31T01:17Z,2026-09-01T16:22Z,13.4,Grain
+PC-0365,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Kestrel Harbor,Tessaly,Sorvik,2026-08-31T06:09Z,2026-09-01T14:31Z,3.3,Grain
+PC-0366,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Tessaly Reach,2026-08-31T09:08Z,2026-09-01T12:07Z,1.5,Agricultural machinery
+PC-0367,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Tessaly Reach,Tessaly,Maren Bay,2026-08-31T11:30Z,2026-09-01T18:21Z,1.7,Mixed containers
+PC-0368,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Sorvik,Sorvik Isles,Ilmara,2026-08-31T16:44Z,2026-09-02T00:57Z,11.4,Fertilizer
+PC-0369,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Calder Point,Kestovia,Port Vardos,2026-08-31T21:50Z,2026-09-02T03:04Z,1.3,Vehicles
+PC-0370,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Ilmara,2026-09-01T04:20Z,2026-09-02T16:54Z,0.8,Agricultural machinery
+PC-0371,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Calder Point,Kestovia,Tessaly Reach,2026-09-01T12:17Z,2026-09-02T21:17Z,2.3,Iron ore
+PC-0372,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Kestrel Harbor,Tessaly,Ilmara,2026-09-01T17:32Z,2026-09-02T13:01Z,3.9,Industrial solvents
+PC-0373,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Maren Bay,2026-09-01T21:44Z,2026-09-03T06:01Z,1.7,Agricultural machinery
+PC-0374,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Kestrel Harbor,Tessaly,Calder Point,2026-09-01T22:17Z,2026-09-02T22:17Z,2.0,Construction materials
+PC-0375,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Kestrel Harbor,Tessaly,Tessaly Reach,2026-09-01T23:44Z,2026-09-02T10:44Z,8.8,Agricultural machinery
+PC-0376,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Maren Bay,2026-09-02T14:58Z,2026-09-02T22:39Z,2.4,Industrial chemicals (partial lot)
+PC-0377,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Maren Bay,Ilmar Republic,Sorvik,2026-09-02T15:52Z,2026-09-03T19:24Z,0.4,Fish products
+PC-0378,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Ilmara,Ilmar Republic,Maren Bay,2026-09-03T04:07Z,2026-09-03T20:49Z,2.3,Mixed containers
+PC-0379,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Calder Point,Kestovia,Ilmara,2026-09-03T07:40Z,2026-09-04T22:30Z,0.6,Industrial solvents
+PC-0380,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Tessaly Reach,2026-09-03T18:28Z,2026-09-04T02:06Z,1.7,Industrial chemicals (partial lot)
+PC-0381,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Port Vardos,2026-09-03T21:47Z,2026-09-04T16:35Z,0.4,Agricultural machinery
+PC-0382,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Ilmara,2026-09-04T04:14Z,2026-09-04T11:12Z,1.0,Industrial chemicals (partial lot)
+PC-0383,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Tessaly Reach,2026-09-04T06:14Z,2026-09-04T17:14Z,6.2,Agricultural machinery
+PC-0384,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Calder Point,Kestovia,Kestrel Harbor,2026-09-04T15:57Z,2026-09-05T14:58Z,0.7,Grain
+PC-0385,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Port Vardos,Kestovia,Calder Point,2026-09-04T19:07Z,2026-09-05T17:34Z,0.4,Vehicles
+PC-0386,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Calder Point,Kestovia,Sorvik,2026-09-04T20:49Z,2026-09-06T09:22Z,1.1,Fertilizer
+PC-0387,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Kestrel Harbor,Tessaly,Tessaly Reach,2026-09-04T21:07Z,2026-09-06T01:29Z,0.6,Mixed containers
+PC-0388,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Ilmara,Ilmar Republic,Sorvik,2026-09-04T22:00Z,2026-09-05T13:06Z,1.2,Grain
+PC-0389,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Sorvik,Sorvik Isles,Calder Point,2026-09-05T00:05Z,2026-09-06T14:03Z,13.4,Iron ore
+PC-0390,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Port Vardos,Kestovia,Kestrel Harbor,2026-09-05T01:30Z,2026-09-06T17:11Z,1.4,Construction materials
+PC-0391,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Sorvik,Sorvik Isles,Kestrel Harbor,2026-09-05T02:29Z,2026-09-06T05:37Z,11.5,Industrial solvents
+PC-0392,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Port Vardos,2026-09-05T06:22Z,2026-09-05T21:16Z,0.2,Agricultural machinery
+PC-0393,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Port Vardos,2026-09-05T07:45Z,2026-09-06T07:06Z,0.5,Agricultural machinery
+PC-0394,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Kestrel Harbor,Tessaly,Tessaly Reach,2026-09-05T09:45Z,2026-09-05T20:45Z,10.1,Agricultural machinery
+PC-0395,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Tessaly Reach,2026-09-05T13:25Z,2026-09-06T08:07Z,1.0,Agricultural machinery
+PC-0396,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Sorvik,Sorvik Isles,Maren Bay,2026-09-06T01:32Z,2026-09-06T16:21Z,10.7,Fish products
+PC-0397,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Kestrel Harbor,Tessaly,Ilmara,2026-09-06T16:36Z,2026-09-07T16:06Z,0.9,Mixed containers
+PC-0398,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Ilmara,2026-09-07T01:33Z,2026-09-07T16:33Z,0.3,Agricultural machinery
+PC-0399,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Maren Bay,2026-09-07T15:16Z,2026-09-07T20:39Z,0.4,Industrial chemicals (partial lot)
+PC-0400,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Maren Bay,2026-09-07T15:39Z,2026-09-08T17:04Z,1.9,Agricultural machinery
+PC-0401,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Kestrel Harbor,Tessaly,Ilmara,2026-09-07T18:06Z,2026-09-09T04:41Z,0.2,Grain
+PC-0402,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Port Vardos,Kestovia,Calder Point,2026-09-07T20:09Z,2026-09-09T06:59Z,24.1,Industrial solvents
+PC-0403,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Sorvik,Sorvik Isles,Calder Point,2026-09-08T10:43Z,2026-09-10T00:33Z,13.6,Grain
+PC-0404,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Tessaly Reach,Tessaly,Sorvik,2026-09-08T17:20Z,2026-09-09T17:29Z,1.5,Iron ore
+PC-0405,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Port Vardos,2026-09-08T17:31Z,2026-09-09T13:04Z,1.1,Agricultural machinery
+PC-0406,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Maren Bay,Ilmar Republic,Sorvik,2026-09-08T21:18Z,2026-09-10T03:20Z,0.1,Fish products
+PC-0407,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Ilmara,Ilmar Republic,Sorvik,2026-09-08T22:11Z,2026-09-09T15:22Z,0.9,Industrial solvents
+PC-0408,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Calder Point,Kestovia,Port Vardos,2026-09-08T23:02Z,2026-09-09T15:40Z,3.2,Construction materials
+PC-0409,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Calder Point,Kestovia,Port Vardos,2026-09-08T23:30Z,2026-09-09T21:38Z,0.6,Vehicles
+PC-0410,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Ilmara,Ilmar Republic,Calder Point,2026-09-08T23:56Z,2026-09-10T02:57Z,0.2,Fertilizer
+PC-0411,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Tessaly Reach,2026-09-09T02:12Z,2026-09-09T07:19Z,0.2,Industrial chemicals (partial lot)
+PC-0412,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Maren Bay,Ilmar Republic,Kestrel Harbor,2026-09-09T02:57Z,2026-09-10T00:08Z,0.7,Mixed containers
+PC-0413,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Ilmara,2026-09-10T00:23Z,2026-09-10T07:53Z,2.0,Industrial chemicals (partial lot)
+PC-0414,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Maren Bay,Ilmar Republic,Kestrel Harbor,2026-09-10T04:12Z,2026-09-11T03:30Z,0.1,Mixed containers
+PC-0415,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Port Vardos,2026-09-10T12:59Z,2026-09-11T19:17Z,0.7,Agricultural machinery
+PC-0416,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Tessaly Reach,2026-09-10T18:55Z,2026-09-11T18:23Z,1.5,Agricultural machinery
+PC-0417,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Port Vardos,2026-09-11T06:05Z,2026-09-12T04:12Z,0.8,Agricultural machinery
+PC-0418,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Kestrel Harbor,Tessaly,Ilmara,2026-09-11T23:27Z,2026-09-13T14:29Z,1.3,Industrial solvents
+PC-0419,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Sorvik,Sorvik Isles,Maren Bay,2026-09-12T02:07Z,2026-09-13T02:00Z,10.7,Fish products
+PC-0420,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Port Vardos,Kestovia,Calder Point,2026-09-12T07:27Z,2026-09-12T23:46Z,1.2,Vehicles
+PC-0421,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Sorvik,Sorvik Isles,Kestrel Harbor,2026-09-12T09:31Z,2026-09-13T00:14Z,14.5,Grain
+PC-0422,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Calder Point,Kestovia,Ilmara,2026-09-12T10:59Z,2026-09-13T23:38Z,0.8,Industrial solvents
+PC-0423,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Kestrel Harbor,Tessaly,Calder Point,2026-09-12T14:47Z,2026-09-13T20:26Z,1.3,Construction materials
+PC-0424,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Kestrel Harbor,Tessaly,Sorvik,2026-09-12T15:07Z,2026-09-14T02:48Z,0.4,Grain
+PC-0425,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Maren Bay,2026-09-12T15:16Z,2026-09-12T20:42Z,0.8,Industrial chemicals (partial lot)
+PC-0426,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Ilmara,2026-09-12T18:33Z,2026-09-14T03:04Z,1.1,Agricultural machinery
+PC-0427,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Tessaly Reach,Tessaly,Maren Bay,2026-09-12T21:27Z,2026-09-14T06:01Z,0.7,Mixed containers
+PC-0428,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Calder Point,Kestovia,Tessaly Reach,2026-09-13T00:29Z,2026-09-13T21:27Z,2.0,Iron ore
+PC-0429,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Sorvik,Sorvik Isles,Ilmara,2026-09-13T03:24Z,2026-09-14T12:26Z,13.2,Fertilizer
+PC-0430,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Maren Bay,2026-09-13T09:25Z,2026-09-14T06:11Z,1.0,Agricultural machinery
+PC-0431,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Port Vardos,2026-09-14T03:06Z,2026-09-14T23:53Z,2.4,Agricultural machinery
+PC-0432,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Ilmara,Ilmar Republic,Maren Bay,2026-09-14T08:28Z,2026-09-14T23:15Z,0.6,Mixed containers
+PC-0433,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Calder Point,Kestovia,Port Vardos,2026-09-15T01:03Z,2026-09-16T09:32Z,0.5,Vehicles
+PC-0434,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Tessaly Reach,2026-09-15T02:00Z,2026-09-15T07:49Z,0.3,Industrial chemicals (partial lot)
+PC-0435,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Ilmara,Ilmar Republic,Sorvik,2026-09-15T05:41Z,2026-09-16T07:42Z,0.3,Grain
+PC-0436,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Ilmara,2026-09-15T06:00Z,2026-09-15T14:28Z,1.2,Industrial chemicals (partial lot)
+PC-0437,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Calder Point,Kestovia,Kestrel Harbor,2026-09-15T19:11Z,2026-09-16T10:45Z,1.4,Grain
+PC-0438,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Tessaly Reach,2026-09-15T21:41Z,2026-09-17T00:01Z,0.4,Agricultural machinery
+PC-0439,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Sorvik,Sorvik Isles,Calder Point,2026-09-15T22:06Z,2026-09-17T11:34Z,12.9,Iron ore
+PC-0440,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Sorvik,Sorvik Isles,Kestrel Harbor,2026-09-16T00:40Z,2026-09-17T06:46Z,11.3,Industrial solvents
+PC-0441,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Port Vardos,Kestovia,Kestrel Harbor,2026-09-16T01:04Z,2026-09-17T16:55Z,2.2,Construction materials
+PC-0442,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Port Vardos,Kestovia,Calder Point,2026-09-16T02:08Z,2026-09-17T04:44Z,32.2,Industrial solvents
+PC-0443,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Port Vardos,2026-09-16T07:01Z,2026-09-17T20:33Z,1.7,Agricultural machinery
+PC-0444,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Maren Bay,Ilmar Republic,Sorvik,2026-09-16T07:47Z,2026-09-17T20:21Z,1.6,Fish products
+PC-0445,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Kestrel Harbor,Tessaly,Tessaly Reach,2026-09-16T12:48Z,2026-09-17T21:45Z,2.4,Mixed containers
+PC-0446,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Port Vardos,2026-09-16T14:18Z,2026-09-17T07:31Z,0.6,Agricultural machinery
+PC-0447,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Calder Point,Kestovia,Sorvik,2026-09-16T18:19Z,2026-09-18T05:49Z,1.7,Fertilizer
+PC-0448,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Kestrel Harbor,Tessaly,Ilmara,2026-09-17T16:11Z,2026-09-18T12:05Z,2.2,Mixed containers
+PC-0449,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Maren Bay,2026-09-18T04:56Z,2026-09-19T01:02Z,0.9,Agricultural machinery
+PC-0450,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Maren Bay,2026-09-18T09:07Z,2026-09-18T16:01Z,0.5,Industrial chemicals (partial lot)
+PC-0451,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Ilmara,Ilmar Republic,Sorvik,2026-09-19T01:37Z,2026-09-20T02:35Z,3.2,Industrial solvents
+PC-0452,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Ilmara,2026-09-19T03:33Z,2026-09-19T21:46Z,2.7,Agricultural machinery
+PC-0453,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Sorvik,Sorvik Isles,Calder Point,2026-09-19T06:07Z,2026-09-20T09:09Z,13.3,Grain
+PC-0454,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Kestrel Harbor,Tessaly,Ilmara,2026-09-19T07:16Z,2026-09-20T21:26Z,1.5,Grain
+PC-0455,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Port Vardos,2026-09-19T15:35Z,2026-09-20T07:18Z,1.9,Agricultural machinery
+PC-0456,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Port Vardos,Kestovia,Calder Point,2026-09-19T17:24Z,2026-09-20T20:22Z,0.4,Vehicles
+PC-0457,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Ilmara,2026-09-19T22:25Z,2026-09-20T06:10Z,2.4,Industrial chemicals (partial lot)
+PC-0458,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Calder Point,Kestovia,Port Vardos,2026-09-19T23:54Z,2026-09-21T04:29Z,1.0,Construction materials
+PC-0459,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Sorvik,Sorvik Isles,Maren Bay,2026-09-20T04:39Z,2026-09-21T11:30Z,9.2,Fish products
+PC-0460,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Ilmara,Ilmar Republic,Calder Point,2026-09-20T05:07Z,2026-09-20T23:25Z,0.8,Fertilizer
+PC-0461,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Calder Point,Kestovia,Ilmara,2026-09-20T09:59Z,2026-09-21T06:40Z,2.3,Industrial solvents
+PC-0462,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Tessaly Reach,Tessaly,Sorvik,2026-09-20T15:11Z,2026-09-21T06:24Z,1.5,Iron ore
+PC-0463,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Maren Bay,Ilmar Republic,Kestrel Harbor,2026-09-20T19:06Z,2026-09-21T19:58Z,0.7,Mixed containers
+PC-0464,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Tessaly Reach,2026-09-21T04:22Z,2026-09-21T09:25Z,0.1,Industrial chemicals (partial lot)
+PC-0465,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Tessaly Reach,2026-09-21T07:36Z,2026-09-22T04:43Z,2.5,Agricultural machinery
+PC-0466,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Maren Bay,Ilmar Republic,Kestrel Harbor,2026-09-21T07:56Z,2026-09-22T19:28Z,0.1,Mixed containers
+PC-0467,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Port Vardos,2026-09-21T08:55Z,2026-09-22T20:23Z,0.3,Agricultural machinery
+PC-0468,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Kestrel Harbor,Tessaly,Ilmara,2026-09-22T08:33Z,2026-09-22T23:22Z,1.2,Industrial solvents
+PC-0469,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Port Vardos,2026-09-22T18:08Z,2026-09-24T09:19Z,0.6,Agricultural machinery
+PC-0470,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Sorvik,Sorvik Isles,Ilmara,2026-09-23T05:04Z,2026-09-24T19:39Z,13.8,Fertilizer
+PC-0471,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Kestrel Harbor,Tessaly,Sorvik,2026-09-23T07:03Z,2026-09-24T05:37Z,1.3,Grain
+PC-0472,BLUE MERIDIAN,5947943,900466596,Tessaly,General cargo,Meridian Freight,Kestrel Harbor,Tessaly,Calder Point,2026-09-23T07:38Z,2026-09-24T23:32Z,1.3,Construction materials
+PC-0473,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Calder Point,Kestovia,Tessaly Reach,2026-09-23T08:04Z,2026-09-24T04:21Z,1.8,Iron ore
+PC-0474,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Port Vardos,Kestovia,Calder Point,2026-09-23T10:50Z,2026-09-24T07:38Z,28.9,Industrial solvents
+PC-0475,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Maren Bay,2026-09-23T13:47Z,2026-09-23T21:00Z,0.9,Industrial chemicals (partial lot)
+PC-0476,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Ilmara,Ilmar Republic,Maren Bay,2026-09-23T18:49Z,2026-09-25T04:13Z,1.1,Agricultural machinery
+PC-0477,NORDA HERON,9716226,900785012,Ilmar Republic,Bulk carrier,Norda Shipping,Sorvik,Sorvik Isles,Kestrel Harbor,2026-09-23T23:21Z,2026-09-24T19:28Z,11.7,Grain
+PC-0478,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Maren Bay,Ilmar Republic,Sorvik,2026-09-24T00:35Z,2026-09-24T21:37Z,0.0,Fish products
+PC-0479,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Calder Point,Kestovia,Port Vardos,2026-09-24T02:25Z,2026-09-24T20:30Z,1.5,Vehicles
+PC-0480,TESSALY PIKE,1476369,900880530,Tessaly,Container,Lark Lines,Tessaly Reach,Tessaly,Maren Bay,2026-09-24T14:53Z,2026-09-26T03:31Z,1.1,Mixed containers
+PC-0481,MAREN LARK,2102549,900141978,Ilmar Republic,Container,Lark Lines,Ilmara,Ilmar Republic,Maren Bay,2026-09-24T22:03Z,2026-09-26T01:26Z,1.1,Mixed containers
+PC-0482,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Port Vardos,2026-09-25T01:49Z,2026-09-26T00:36Z,0.9,Agricultural machinery
+PC-0483,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Tessaly Reach,Tessaly,Ilmara,2026-09-25T10:01Z,2026-09-26T10:21Z,3.0,Agricultural machinery
+PC-0484,ILMAR GANNET,5909410,900148040,Ilmar Republic,Chemical tanker,Gannet Chemicals,Sorvik,Sorvik Isles,Kestrel Harbor,2026-09-25T21:27Z,2026-09-27T09:14Z,13.1,Industrial solvents
+PC-0485,KESTREL VANE,4804792,900858164,Kestovia,Chemical tanker,Vane Maritime,Calder Point,Kestovia,Ilmara,2026-09-26T08:38Z,2026-09-27T05:06Z,2.1,Industrial solvents
+PC-0486,NORDA WREN,6475742,900183839,Ilmar Republic,Bulk carrier,Norda Shipping,Calder Point,Kestovia,Kestrel Harbor,2026-09-26T09:54Z,2026-09-27T07:01Z,1.5,Grain
+PC-0487,ORIOLE STAR,3957822,900726527,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Ilmara,2026-09-26T13:29Z,2026-09-26T22:00Z,1.8,Industrial chemicals (partial lot)
+PC-0488,SILVER HALYARD,4850772,900506752,Kestovia,Bulk carrier,Halyard Bulk,Sorvik,Sorvik Isles,Calder Point,2026-09-26T16:17Z,2026-09-28T05:42Z,11.0,Iron ore
+PC-0489,ORIOLE DAWN,3850637,900940229,Sorvik Isles,General cargo,Oriole Nexus Ltd.,Maren Bay,Ilmar Republic,Tessaly Reach,2026-09-27T03:37Z,2026-09-28T18:00Z,0.6,Agricultural machinery
+PC-0490,SORVIK TERN,6992075,900794834,Sorvik Isles,Fishing support,Tern Fisheries,Sorvik,Sorvik Isles,Maren Bay,2026-09-27T15:34Z,2026-09-29T02:02Z,14.4,Fish products
+PC-0491,ORIOLE CREST,3410419,900950417,Tessaly,General cargo,Oriole Nexus Ltd.,Port Vardos,Kestovia,Tessaly Reach,2026-09-27T16:16Z,2026-09-27T22:47Z,2.4,Industrial chemicals (partial lot)
+PC-0492,HALVARD SKY,5201413,900106685,Ilmar Republic,Bulk carrier,Halyard Bulk,Calder Point,Kestovia,Sorvik,2026-09-27T16:17Z,2026-09-28T09:57Z,2.0,Fertilizer
+PC-0493,CALDER ROOK,6923666,900399848,Kestovia,Ro-ro,Rook Ferries,Port Vardos,Kestovia,Calder Point,2026-09-27T17:44Z,2026-09-28T22:37Z,0.4,Vehicles

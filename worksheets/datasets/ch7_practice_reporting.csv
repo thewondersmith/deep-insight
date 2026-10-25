@@ -1,0 +1,16 @@
+item_id,date,source_type,source,summary,region,sector,source_reliability_note
+PR-01,2025-03-02,Incident report (historical),Kestovia Grid Authority,"Unplanned outage, northern substation cluster; post-incident review found remote access from a contractor VPN account used 11 days earlier.",Kestovia,Energy,Official
+PR-02,2025-06-18,Incident report (historical),Ilmara Port Authority,Berth scheduling system offline 9 hours; preceded by a phishing wave impersonating a logistics software vendor two weeks prior.,Ilmar Republic,Transportation,Official
+PR-03,2025-11-07,Threat assessment (historical),Regional CERT,Phantom Group associated with reconnaissance against SCADA vendors 10 to 14 days before two disruptive incidents.,Regional,Energy,Official
+PR-04,2026-09-20,News article,Calder Daily,Grid operator schedules maintenance window on northern lines for the upcoming harvest holiday weekend.,Kestovia,Energy,Established outlet
+PR-05,2026-09-24,Vendor bulletin,SCADA vendor security notice,Customers report credential phishing using a fake firmware update notice. Indicators shared.,Regional,Energy,Vendor
+PR-06,2026-09-26,Blog post,Independent researcher,"Scanning spike against remote access gateways registered to Kestovian utilities, sourced from rotating cloud IP space.",Kestovia,Energy,Single researcher
+PR-07,2026-09-27,Forum post,Anonymous forum,Claims an insider at Port Vardos is selling berth schedules. No evidence attached.,Kestovia,Transportation,Unverified
+PR-08,2026-09-29,News article,Ilmar Business Wire,Logistics firm reports staff received fake invoices tied to port fees.,Ilmar Republic,Transportation,Established outlet
+PR-09,2026-09-30,Threat assessment,Partner agency summary,Moderate confidence Phantom Group resumed infrastructure targeting after summer lull.,Regional,Multiple,Official
+PR-10,2026-10-01,Social media,Microblog,Several accounts joke about 'lights out for the holiday'. Accounts are a week old.,Kestovia,Energy,Unverified
+PR-11,2026-10-02,News article,Tessaly Times,Hospital network in Tessaly upgrades backup generators after storm damage.,Tessaly,Healthcare,Established outlet
+PR-12,2024-05-12,News article (stale),Calder Daily,"Article about a 2024 outage blamed on squirrels, often re-shared as if new.",Kestovia,Energy,Established outlet
+PR-13,2026-10-03,Vendor bulletin,Port software vendor,Patch released for berth scheduling platform; exploitation not observed.,Regional,Transportation,Vendor
+PR-14,2026-10-04,Domain registrations,Analyst collection,"Seven lookalike 'Vardos cargo desk' domains registered within 35 minutes, shared TLS certificate.",Kestovia,Transportation,Analyst collected
+PR-15,2026-10-05,Social media,Microblog,Kestovia grid operator account warns customers about scam texts offering refunds.,Kestovia,Energy,Official

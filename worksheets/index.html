@@ -1,0 +1,148 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Field Kit | Deep Insight</title>
+<meta name="description" content="Interactive worksheets, Try This exercises, and Operation Neural Nexus mission files for Deep Insight: AI for the Intelligence Analyst by Rae Baker.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anton&family=Libre+Franklin:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"><style>
+:root{--ink:#121014;--body:#38323d;--muted:#6f6875;--rule:#cfc8d4;--hair:#e6e1ea;
+--plum:#5b2a6e;--plum-2:#7a3d91;--tint:#f1ebf4;--field:#faf8fb;--bg:#f4f1f6;--paper:#ffffff;
+--ok:#2f6b3a;--radius:6px}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--body);font:16px/1.55 "Libre Franklin",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--plum)}
+.topband{background:var(--ink);color:#fff;font:700 12px/1 "Space Mono",ui-monospace,monospace;letter-spacing:.08em;
+ text-transform:uppercase;padding:12px 16px;display:flex;justify-content:space-between;gap:12px;border-bottom:3px solid var(--plum)}
+.topband a{color:#fff;text-decoration:none;opacity:.85}.topband a:hover{opacity:1;text-decoration:underline}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+.sheet{background:var(--paper);margin:24px auto 40px;border:1px solid var(--hair);border-radius:10px;padding:36px 44px 44px;box-shadow:0 1px 2px rgba(30,10,40,.04),0 8px 30px rgba(30,10,40,.06)}
+.kicker{font:700 12px/1.3 "Space Mono",ui-monospace,monospace;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;margin:0 0 10px}
+h1{font-family:Anton,Impact,"Arial Narrow Bold",sans-serif;font-weight:400;color:var(--ink);font-size:clamp(34px,6vw,52px);line-height:1.02;letter-spacing:.01em;margin:0 0 10px;text-transform:uppercase}
+.subtitle{font-style:italic;color:var(--body);margin:0 0 18px;font-size:17px}
+.titlerule{border:0;border-top:2px solid var(--ink);margin:0 0 6px}
+.toolbar{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:8px;align-items:center;
+ padding:10px 0;margin:0 0 18px;border-bottom:1px solid var(--hair)}
+.toolbar .status{font:12px/1.2 "Space Mono",ui-monospace,monospace;color:var(--muted);margin-right:auto}
+.toolbar .status.ok{color:var(--ok)}
+.btn{font:600 14px/1 "Libre Franklin",system-ui,sans-serif;border:1.5px solid var(--ink);background:#fff;color:var(--ink);padding:9px 14px;border-radius:999px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.btn:hover{background:var(--tint)}
+.btn.primary{background:var(--plum);border-color:var(--plum);color:#fff}.btn.primary:hover{background:var(--plum-2)}
+.btn.ghost{border-color:var(--rule);color:var(--muted)}
+.btn:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #c9a6d8;outline-offset:2px}
+p{margin:0 0 12px}
+.hint{font-size:13px;color:var(--muted);font-style:italic;margin:-4px 0 12px}
+.small{font-size:14.5px}
+.section{display:flex;align-items:center;gap:12px;margin:34px 0 14px}
+.section .tag{background:var(--ink);color:#fff;font:700 12px/1 "Space Mono",ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;padding:6px 8px;border-radius:3px;white-space:nowrap}
+.section h2{font:700 20px/1.2 "Libre Franklin",system-ui,sans-serif;color:var(--ink);margin:0}
+.section .line{flex:1;border-top:1px solid var(--rule);min-width:20px}
+.lbl{display:block;font-weight:700;color:var(--ink);font-size:15px;margin:0 0 6px}
+.grp{font-weight:700;color:var(--ink);margin:14px 0 8px}
+.grp.accent{font-family:"Space Mono",ui-monospace,monospace;color:var(--plum);text-transform:uppercase;letter-spacing:.05em;font-size:13.5px}
+.f{margin:0 0 16px}
+input[type=text],textarea{width:100%;font:15px/1.45 "Libre Franklin",system-ui,sans-serif;color:var(--ink);background:var(--field);
+ border:1px solid var(--rule);border-radius:var(--radius);padding:9px 11px}
+textarea{resize:vertical;min-height:42px;overflow:hidden}
+input[type=text]:hover,textarea:hover{border-color:#b3a8bb}
+.row{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 16px}
+.row .f{margin:0;min-width:140px}
+.checks{display:grid;gap:8px 18px;margin:0 0 16px;grid-template-columns:repeat(var(--cols,1),minmax(0,1fr))}
+.chk,.rad{display:flex;gap:9px;align-items:flex-start;cursor:pointer;font-size:15px;line-height:1.4}
+.chk input,.rad input{width:18px;height:18px;margin:2px 0 0;accent-color:var(--plum);flex:none}
+fieldset.radios{border:0;padding:0;margin:0 0 16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px}
+fieldset.radios legend{font-weight:700;color:var(--ink);padding:0;margin:0 0 6px;width:100%;font-size:15px}
+.callout{background:var(--tint);border-left:4px solid var(--plum);padding:14px 18px;border-radius:0 var(--radius) var(--radius) 0;margin:6px 0 18px;color:var(--ink);font-size:15px}
+.callout .ct{font:700 12px/1.2 "Space Mono",ui-monospace,monospace;letter-spacing:.07em;color:var(--plum);text-transform:uppercase;margin:0 0 6px}
+.brief{border:1.5px solid var(--ink);border-top:6px solid var(--ink);border-radius:4px;padding:18px 22px;margin:4px 0 22px;background:#fff;position:relative}
+.brief .hdr{font:700 13px/1.6 "Space Mono",ui-monospace,monospace;color:var(--ink);border-bottom:1px solid var(--hair);padding:0 0 10px;margin:0 0 12px}
+.brief .stamp{position:absolute;top:14px;right:16px;font:700 11px/1 "Space Mono",ui-monospace,monospace;letter-spacing:.1em;color:#a1262b;border:2px solid #a1262b;padding:5px 7px;transform:rotate(3deg)}
+.brief p{color:var(--ink);font-size:15px}
+.brief .sig{font:13px/1.6 "Space Mono",ui-monospace,monospace;color:var(--body);margin-top:12px}
+ul.b,ol.n{margin:0 0 14px;padding-left:22px}ul.b li,ol.n li{margin:0 0 5px}ul.b li::marker{color:var(--plum)}ol.n li::marker{color:var(--plum);font-family:"Space Mono",monospace;font-weight:700}
+.tablewrap{overflow-x:auto;margin:0 0 18px}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th{background:var(--ink);color:#fff;text-align:left;font:700 12.5px/1.25 "Libre Franklin",system-ui,sans-serif;padding:8px 8px;vertical-align:bottom}
+td{border-bottom:1px solid var(--hair);padding:6px;vertical-align:top}
+tbody tr:nth-child(even) td{background:#fbfafc}
+td.rowlab{font-weight:700;color:var(--ink);padding-top:10px}
+td textarea{min-height:38px;padding:7px 8px;font-size:14px}
+table.static td{padding:8px}
+.cards{display:grid;gap:12px;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));margin:0 0 18px}
+.card{border:1px solid var(--rule);border-radius:8px;padding:14px}
+.card .ch{font:700 13px/1 "Space Mono",ui-monospace,monospace;color:var(--plum);letter-spacing:.06em;text-transform:uppercase;margin:0 0 12px}
+.card .f{margin-bottom:12px}.card .lbl{font-size:13.5px}
+.card fieldset.radios legend{font-size:13.5px}
+.card fieldset.radios{gap:6px 12px}
+.flow{display:grid;grid-template-columns:repeat(var(--cols,4),minmax(0,1fr));gap:22px;margin:0 0 18px;counter-reset:s}
+.box{position:relative}
+.box:not(:last-child)::after{content:"\2192";position:absolute;right:-18px;top:44px;color:var(--ink);font-weight:700}
+.box .bl{font:700 12px/1 "Space Mono",monospace;color:var(--plum);margin:0 0 6px;text-transform:uppercase}
+.box textarea{min-height:84px}
+.box .chk{font-size:13px;margin-top:6px}
+.dl{display:flex;flex-direction:column;gap:10px;margin:0 0 18px}
+.dl a{display:flex;gap:14px;align-items:center;border:1px solid var(--rule);border-radius:8px;padding:12px 14px;text-decoration:none;color:var(--ink);background:#fff}
+.dl a:hover{border-color:var(--plum);background:var(--tint)}
+.dl .ico{font:700 12px/1 "Space Mono",monospace;background:var(--ink);color:#fff;padding:8px 7px;border-radius:4px}
+.dl .t{font-weight:700}.dl .d{font-size:14px;color:var(--muted)}
+.pb{border:1px solid var(--rule);border-radius:8px;background:#f7f6f8;margin:0 0 16px;overflow:hidden}
+.pb .pbh{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 12px;border-bottom:1px solid var(--hair);background:#fff}
+.pb .pbt{font:700 12.5px/1.2 "Space Mono",ui-monospace,monospace;color:var(--plum);text-transform:uppercase;letter-spacing:.05em}
+.pb pre{margin:0;padding:12px 14px;white-space:pre-wrap;word-break:break-word;font:13.5px/1.55 "Space Mono",ui-monospace,monospace;color:var(--ink)}
+.pb .pbn{padding:0 14px 12px;font-size:13.5px;color:var(--muted);font-style:italic}
+.copy{font:600 13px/1 "Libre Franklin",system-ui,sans-serif;border:1.5px solid var(--plum);color:var(--plum);background:#fff;border-radius:999px;padding:7px 12px;cursor:pointer}
+.copy:hover{background:var(--tint)}.copy.done{background:var(--plum);color:#fff}
+.signoff{border-top:1px solid var(--hair);margin:28px 0 0;padding:14px 0 0;color:var(--muted);font-style:italic;font-size:14.5px}
+.foot{max-width:860px;margin:0 auto 40px;padding:0 16px;color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between}
+.rich b{color:var(--ink)}
+@media (max-width:700px){
+ .sheet{padding:22px 16px 28px;border-radius:0;margin:0 -16px 24px;border-left:0;border-right:0}
+ .cards,.flow{grid-template-columns:1fr}.box::after{display:none}
+ .checks{grid-template-columns:1fr}
+ .row .f{flex:1 1 100% !important}
+ table.grid thead{display:none}
+ table.grid,table.grid tbody,table.grid tr,table.grid td{display:block;width:100%}
+ table.grid tr{border:1px solid var(--rule);border-radius:8px;margin:0 0 10px;padding:6px}
+ table.grid td{border:0;padding:4px 4px}
+ table.grid td::before{content:attr(data-col);display:block;font-size:12px;font-weight:700;color:var(--muted);margin:0 0 3px}
+ table.grid td.rowlab::before{display:none}
+ .toolbar .status{width:100%}
+}
+@media print{
+ @page{size:letter;margin:.55in}
+ body{background:#fff;font-size:11pt}
+ .toolbar,.topband a.back,.noprint{display:none !important}
+ .topband{background:#000 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .sheet{border:0;box-shadow:none;margin:0;padding:0}
+ .section,.brief,.callout,.card,tr,.f,fieldset{break-inside:avoid}
+ th,.section .tag,.callout,.dl .ico{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ input[type=text],textarea{background:#fff;border-color:#888}
+ .wrap{max-width:none}
+ .foot{margin:12px 0 0}
+}
+
+.hero{padding:8px 0 4px}
+.hero p{max-width:640px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin:0 0 10px}
+.tile{border:1px solid var(--rule);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px;background:#fff}
+.tile:hover{border-color:var(--plum)}
+.tile .tg{font:700 11.5px/1 "Space Mono",monospace;color:var(--plum);letter-spacing:.06em;text-transform:uppercase}
+.tile h3{margin:0;font:700 17px/1.25 "Libre Franklin",system-ui,sans-serif;color:var(--ink)}
+.tile p{margin:0;font-size:14.5px;color:var(--body);flex:1}
+.tile .acts{display:flex;gap:8px;flex-wrap:wrap}
+.tile .btn{font-size:13px;padding:7px 12px}
+.howto{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:8px 0 6px}
+.howto div{background:var(--tint);border-radius:8px;padding:12px 14px;font-size:14.5px;color:var(--ink)}
+.howto b{display:block;font:700 12px/1.3 "Space Mono",monospace;color:var(--plum);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
+</style></head><body>
+<div class="topband"><span>Deep Insight // Field kit</span><span><a href="https://deepinsightbook.com">deepinsightbook.com</a></span></div>
+<div class="wrap"><main class="sheet">
+<div class="hero"><p class="kicker">Companion resources for Deep Insight: AI for the Intelligence Analyst</p>
+<h1>The Field Kit</h1>
+<p class="subtitle">Every worksheet, exercise, and mission file from the book. Fill them in right here or grab the PDF.</p>
+<hr class="titlerule">
+<div class="howto"><div><b>Fill it in</b>Type straight into the page. Answers autosave in your browser on this device.</div>
+<div><b>Keep it</b>Hit Download my answers for a text copy, or Print / Save PDF for a clean printout.</div>
+<div><b>Stay safe</b>Nothing you type is sent anywhere. Still, never put classified or sensitive case data into a web form.</div></div></div>
+<div class="section"><span class="tag">3</span><h2>Appendix worksheets</h2><span class="line"></span></div><div class="grid3"><div class="tile"><span class="tg">Appendix A</span><h3>Workflow Development Template</h3><p>Map your process, find the friction, plan a 30-day AI test.</p><div class="acts"><a class="btn primary" href="appendix-a-workflow-development-template.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_Appendix_A_Workflow_Development_Template.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Appendix B</span><h3>AI Tool Comparison Sheet</h3><p>Score up to three AI tools against your real data and real problem.</p><div class="acts"><a class="btn primary" href="appendix-b-ai-tool-comparison-sheet.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_Appendix_B_AI_Tool_Comparison_Sheet.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Appendix C</span><h3>SOP: AI Bias Mitigation</h3><p>A step-by-step SOP for catching bias before it reaches a report.</p><div class="acts"><a class="btn primary" href="appendix-c-sop-ai-bias-mitigation.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_Appendix_C_SOP_AI_Bias_Mitigation.pdf" download>PDF</a></div></div></div><div class="section"><span class="tag">13</span><h2>Try This exercises and toolkit</h2><span class="line"></span></div><div class="grid3"><div class="tile"><span class="tg">Introduction</span><h3>Before and After</h3><p>Time yourself on a messy source, solo and with AI.</p><div class="acts"><a class="btn primary" href="trythis-intro-before-and-after.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_TryThis_Intro_Before_and_After.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Introduction</span><h3>AI Is Everywhere: Two Warm-Ups</h3><p>Spot everyday AI, then map it onto the intelligence cycle.</p><div class="acts"><a class="btn primary" href="trythis-intro-warmups.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_TryThis_Intro_Warmups.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Chapter 1</span><h3>Draw Your Workflow</h3><p>Boxes, one time sink, one idea to cut it in half.</p><div class="acts"><a class="btn primary" href="trythis-ch01-draw-your-workflow.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_TryThis_Ch01_Draw_Your_Workflow.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Chapter 1</span><h3>AI-Augmented Analysis Documentation Record</h3><p>Document AI-assisted analysis so you can defend it later.</p><div class="acts"><a class="btn primary" href="trythis-ch01-ai-use-documentation-record.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_TryThis_Ch01_AI_Use_Documentation_Record.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Chapter 2</span><h3>Canary Test and Kill Switch Builder</h3><p>Build a canary set and a kill switch policy for any AI tool.</p><div class="acts"><a class="btn primary" href="trythis-ch02-canary-test-and-kill-switch.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_TryThis_Ch02_Canary_Test_and_Kill_Switch.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Chapter 3</span><h3>Know Your Data</h3><p>Find the baggage in your data, then spot-check its provenance.</p><div class="acts"><a class="btn primary" href="trythis-ch03-know-your-data.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_TryThis_Ch03_Know_Your_Data.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Chapter 5</span><h3>NLP Hands-On</h3><p>Run NLP on 20 to 50 real posts and check the machine&#x27;s work.</p><div class="acts"><a class="btn primary" href="trythis-ch05-nlp-hands-on.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_TryThis_Ch05_NLP_Hands_On.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Chapter 6</span><h3>Role Prompt Test</h3><p>Same facts, one added role. Watch the answer change.</p><div class="acts"><a class="btn primary" href="trythis-ch06-role-prompt-test.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_TryThis_Ch06_Role_Prompt_Test.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Chapter 6</span><h3>Prompt Lab: Vague to Mission Ready</h3><p>Walk one prompt from vague to mission ready.</p><div class="acts"><a class="btn primary" href="trythis-ch06-prompt-lab.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_TryThis_Ch06_Prompt_Lab.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Chapter 7</span><h3>Predictive Analysis and AI-CHAMP</h3><p>Seven steps, an early warning tracker, and the AI-CHAMP checklist.</p><div class="acts"><a class="btn primary" href="trythis-ch07-predictive-analysis-and-ai-champ.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_TryThis_Ch07_Predictive_Analysis_and_AI_CHAMP.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Chapter 8</span><h3>Argument Analysis</h3><p>The What, Why, Leap, and So-What. Then a misalignment check.</p><div class="acts"><a class="btn primary" href="trythis-ch08-argument-analysis.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_TryThis_Ch08_Argument_Analysis.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Chapter 8</span><h3>Audit Your AI Interactions</h3><p>Audit your last five AI queries for exposure and provenance risk.</p><div class="acts"><a class="btn primary" href="trythis-ch08-audit-your-ai-interactions.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_TryThis_Ch08_Audit_Your_AI_Interactions.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Chapter 12</span><h3>Plot Your Next Course</h3><p>Specialize, build, or get better. Set a six-month check-in.</p><div class="acts"><a class="btn primary" href="trythis-ch12-plot-your-next-course.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_TryThis_Ch12_Plot_Your_Next_Course.pdf" download>PDF</a></div></div></div><div class="section"><span class="tag">11</span><h2>Operation Neural Nexus mission files</h2><span class="line"></span></div><div class="grid3"><div class="tile"><span class="tg">Chapter 1</span><h3>Mission 1: Find the Friction</h3><p>Identify one operational challenge AI could address.</p><div class="acts"><a class="btn primary" href="mission-ch01-setting-sail.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_Mission_Ch01_Setting_Sail.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Chapter 2</span><h3>Mission 2: Capability Recon</h3><p>Recon three AI technologies and assess what fits, what is risky, and what is unsuitable.</p><div class="acts"><a class="btn primary" href="mission-ch02-mapping-the-depths.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_Mission_Ch02_Mapping_the_Depths.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Chapter 3</span><h3>Mission 3: Collection Plan</h3><p>Design a repeatable AI-enabled collection plan.</p><div class="acts"><a class="btn primary" href="mission-ch03-casting-the-nets.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_Mission_Ch03_Casting_the_Nets.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Chapter 4</span><h3>Mission 4: Pattern Detection</h3><p>Find the anomalies in fictional port call and domain data.</p><div class="acts"><a class="btn primary" href="mission-ch04-diving-beneath-the-surface.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_Mission_Ch04_Diving_Beneath_the_Surface.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Chapter 5</span><h3>Mission 5: Language Patterns</h3><p>Hunt coordinated phrasing in a multilingual text sample.</p><div class="acts"><a class="btn primary" href="mission-ch05-interpreting-the-sea.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_Mission_Ch05_Interpreting_the_Sea.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Chapter 6</span><h3>Mission 6: The Sandworm Brief</h3><p>Iterate an executive brief on Sandworm TTPs.</p><div class="acts"><a class="btn primary" href="mission-ch06-steering-the-ship.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_Mission_Ch06_Steering_the_Ship.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Chapter 7</span><h3>Mission 7: Predict the Next Strike</h3><p>Scope, collect, and forecast one plausible scenario with an early warning indicator.</p><div class="acts"><a class="btn primary" href="mission-ch07-adjusting-the-sails.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_Mission_Ch07_Adjusting_the_Sails.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Chapter 8</span><h3>Mission 8: Poisoned Summary</h3><p>Validate a poisoned AI summary and trace where provenance breaks.</p><div class="acts"><a class="btn primary" href="mission-ch08-staying-the-course.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_Mission_Ch08_Staying_the_Course.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Chapter 9</span><h3>Mission 9: Domain History Analyzer</h3><p>All five Chapter 9 prompts, copy ready, plus your results and pre-deployment checklist.</p><div class="acts"><a class="btn primary" href="mission-ch09-anchoring-down.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_Mission_Ch09_Anchoring_Down.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Chapter 10</span><h3>Mission 10: Five Doors</h3><p>Open five doors and map your skills onto each case.</p><div class="acts"><a class="btn primary" href="mission-ch10-captains-log.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_Mission_Ch10_Captains_Log.pdf" download>PDF</a></div></div><div class="tile"><span class="tg">Chapter 11</span><h3>Mission 11: Horizon Scan</h3><p>Scan five years out for capability shifts and indicators.</p><div class="acts"><a class="btn primary" href="mission-ch11-scanning-the-horizon.html">Open worksheet</a><a class="btn ghost" href="pdf/DeepInsight_Mission_Ch11_Scanning_the_Horizon.pdf" download>PDF</a></div></div></div><div class="section"><span class="tag">Data</span><h2>Mission datasets</h2><span class="line"></span></div><div class="dl"><a href="datasets/ch4_port_calls.csv" download><span class="ico">CSV</span><span><span class="t">Mission 4: Port calls</span><br><span class="d">ch4_port_calls.csv</span></span></a><a href="datasets/ch4_domain_registrations.csv" download><span class="ico">CSV</span><span><span class="t">Mission 4: Domain registrations</span><br><span class="d">ch4_domain_registrations.csv</span></span></a><a href="datasets/ch5_open_source_text_sample.csv" download><span class="ico">CSV</span><span><span class="t">Mission 5: Open source text sample</span><br><span class="d">ch5_open_source_text_sample.csv</span></span></a><a href="datasets/ch7_practice_reporting.csv" download><span class="ico">CSV</span><span><span class="t">Mission 7: Practice reporting set</span><br><span class="d">ch7_practice_reporting.csv</span></span></a></div><p class="hint">Every person, company, vessel, domain, and place in these files is fictional. Domains use the reserved .example name, IPs come from documentation ranges, and vessel IMO numbers deliberately fail the checksum, so nothing resolves to anything real.</p>
+</main></div>
+<div class="foot"><span>Deep Insight: AI for the Intelligence Analyst by Rae Baker. Wiley, 2026.</span><span><a href="https://raebaker.net">raebaker.net</a></span></div>
+</body></html>

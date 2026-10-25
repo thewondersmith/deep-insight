@@ -1,0 +1,55 @@
+record_id,domain,registered_utc,registrar,hosting_asn,ip_address,tls_cert_sha1,nameserver,registrant_country
+DR-001,ilmara-auto-hub.example,2026-08-01T01:48Z,Tessaly Domains,AS64502,198.51.100.238,100dee9ede6aa7d91618846466a08780395f0a43,ns2.northgate-dns.example,Kestovia
+DR-002,calder-legal.example,2026-08-03T05:18Z,Ilmar NIC Services,AS64498,192.0.2.111,daf07cb62eeef77fc09992087b0b59650302841f,ns2.bluequay-dns.example,Ilmar Republic
+DR-003,maren-photo-hub.example,2026-08-05T23:00Z,Ilmar NIC Services,AS64508,192.0.2.92,2074fd0c00eb4a42dd2d4cbc8343e581cee9ae6c,ns3.openharbor-dns.example,Tessaly
+DR-004,sorvik-pottery.example,2026-08-10T08:20Z,OpenHarbor DNS,AS64508,192.0.2.44,d07c2438e74d804a3240b7e2b4cdb366e4798c28,ns2.northgate-dns.example,Ilmar Republic
+DR-005,kestrel-auto-co.example,2026-08-10T13:02Z,Tessaly Domains,AS64509,192.0.2.178,059757695aed7405a4b4fcaa90ae81741b9dbccb,ns2.northgate-dns.example,Ilmar Republic
+DR-006,kestrel-legal.example,2026-08-10T23:39Z,OpenHarbor DNS,AS64503,192.0.2.238,2364134b6833764ff0e6da91ddfc7935dc1a8ae9,ns3.northgate-dns.example,Sorvik Isles
+DR-007,sorvik-bakery-co.example,2026-08-14T00:54Z,Tessaly Domains,AS64499,203.0.113.130,a969e5970af07ce8ba463419271860a28d598a3c,ns3.northgate-dns.example,Tessaly
+DR-008,kestrel-realty.example,2026-08-14T01:21Z,Tessaly Domains,AS64503,203.0.113.72,759861451918b6dbebf581f4f77bc952fb9af8be,ns3.northgate-dns.example,Tessaly
+DR-009,ilmara-auto-co.example,2026-08-17T06:12Z,Tessaly Domains,AS64509,198.51.100.118,28c5de9ada079594b79b690ba3cd6a3b8c28293d,ns3.northgate-dns.example,Kestovia
+DR-010,kestrel-yoga-hub.example,2026-08-18T06:27Z,Bluequay Names,AS64510,192.0.2.209,58f983e043629e33f3d3efaa707ec1f86cd9ba4e,ns1.bluequay-dns.example,Sorvik Isles
+DR-011,vardos-bakery.example,2026-08-20T15:40Z,Tessaly Domains,AS64503,203.0.113.77,b849545dbeed4c319152a3822a018750319e0ad9,ns2.openharbor-dns.example,Kestovia
+DR-012,maren-solar-hub.example,2026-08-20T16:49Z,Northgate Registry,AS64496,192.0.2.158,b2fe49b7ce79b1d6c711e59fa86fd792ea94410c,ns3.bluequay-dns.example,Tessaly
+DR-013,tessaly-wedding-shop.example,2026-08-20T23:14Z,Ilmar NIC Services,AS64496,192.0.2.233,3131c72b83da7bf8110132d150179a6962d359fb,ns1.openharbor-dns.example,Kestovia
+DR-014,tessaly-yoga-co.example,2026-08-21T16:16Z,OpenHarbor DNS,AS64508,203.0.113.135,9c3d0a73e1fb34bdf5092ca4ad1d2b96dcce682c,ns2.openharbor-dns.example,Sorvik Isles
+DR-015,tessaly-travel.example,2026-08-21T21:50Z,Tessaly Domains,AS64505,192.0.2.103,11a94b275e880ed30af18e2b4461356d4c967e9e,ns3.openharbor-dns.example,Sorvik Isles
+DR-016,tessaly-garden-hub.example,2026-08-22T08:16Z,OpenHarbor DNS,AS64509,198.51.100.217,d67e8daf076f3b7ab7b4182d136944de5bcc38b6,ns2.openharbor-dns.example,Ilmar Republic
+DR-017,maren-bakery-hub.example,2026-08-23T00:54Z,Tessaly Domains,AS64504,192.0.2.127,8cf9b6cbc8588aa67bf7971bca108d205a314364,ns1.bluequay-dns.example,Sorvik Isles
+DR-018,calder-pottery.example,2026-08-27T05:32Z,Bluequay Names,AS64509,198.51.100.126,81d4a742c6fcf96f4e1d45fbba1c1652f2e17468,ns3.bluequay-dns.example,Kestovia
+DR-019,tessaly-wedding.example,2026-08-27T14:20Z,Ilmar NIC Services,AS64499,203.0.113.242,a9c144ed6a2f559999ed36861e489126d4c474a0,ns1.bluequay-dns.example,Ilmar Republic
+DR-020,kestrel-tutoring.example,2026-08-27T16:38Z,OpenHarbor DNS,AS64496,203.0.113.201,34f11e08c6ae9a0c38d0095ba6ef0bd326f9d83d,ns1.bluequay-dns.example,Ilmar Republic
+DR-021,calder-garden-shop.example,2026-08-28T00:21Z,Tessaly Domains,AS64504,203.0.113.243,bf8cf590823b6760509c2c9aa67271718b3b17fe,ns2.northgate-dns.example,Ilmar Republic
+DR-022,tessaly-music-hub.example,2026-08-29T03:31Z,Bluequay Names,AS64503,198.51.100.205,66cb2e7c2df9afeeab969fc604b70a019e0c14b1,ns2.openharbor-dns.example,Kestovia
+DR-023,maren-travel-co.example,2026-08-30T17:12Z,Tessaly Domains,AS64507,203.0.113.33,cc972766fc1d3167bf6eae4191c39d9de9f6ae40,ns2.bluequay-dns.example,Ilmar Republic
+DR-024,calder-fitness.example,2026-08-30T23:14Z,Bluequay Names,AS64508,198.51.100.249,3842afad744881e659446eb89a5b2b6bab38f91d,ns1.bluequay-dns.example,Sorvik Isles
+DR-025,ilmara-bakery-shop.example,2026-08-31T06:40Z,Bluequay Names,AS64509,198.51.100.237,70e581735c77800cc6be7d41c3f9ad7dd641e966,ns3.bluequay-dns.example,Tessaly
+DR-026,tessaly-pottery.example,2026-08-31T12:32Z,Northgate Registry,AS64500,203.0.113.238,cc04ee8c8f7a4761e3502eb59849a0f3e4b58f3b,ns2.northgate-dns.example,Ilmar Republic
+DR-027,sorvik-solar.example,2026-09-02T00:11Z,Bluequay Names,AS64501,192.0.2.51,77a2797bef5f42b40b5f8222f3d4a5138b130d4c,ns2.openharbor-dns.example,Tessaly
+DR-028,tessaly-solar-hub.example,2026-09-03T19:53Z,OpenHarbor DNS,AS64510,192.0.2.252,17fb4dbe8a28d3557b09afb9fc0fda28eb1edec9,ns2.bluequay-dns.example,Ilmar Republic
+DR-029,maren-cycling.example,2026-09-03T23:25Z,Ilmar NIC Services,AS64501,192.0.2.136,b860dbd8045492894844be3055f01a9945d83faa,ns2.northgate-dns.example,Tessaly
+DR-030,maren-dental-co.example,2026-09-04T05:37Z,OpenHarbor DNS,AS64508,192.0.2.86,6a16474dcda8fef18bfb37bb0838fa01ef0e9510,ns2.openharbor-dns.example,Sorvik Isles
+DR-031,ilmara-plumbing-hub.example,2026-09-05T13:15Z,OpenHarbor DNS,AS64496,192.0.2.166,749bc081a56b4887477677a592d889eecc814f18,ns1.openharbor-dns.example,Tessaly
+DR-032,maren-pets-hub.example,2026-09-08T00:10Z,Bluequay Names,AS64497,203.0.113.205,a44851f3d4cec3f2414d58a69875c376446560a7,ns3.openharbor-dns.example,Kestovia
+DR-033,tessaly-coffee.example,2026-09-08T22:38Z,Ilmar NIC Services,AS64510,203.0.113.228,080d34047e0799db083c2ab83115a8968ed748b0,ns2.bluequay-dns.example,Ilmar Republic
+DR-034,sorvik-auto-co.example,2026-09-11T16:22Z,OpenHarbor DNS,AS64497,203.0.113.232,adfcfb6345dbb3ebc708ef56cc0012a0e5407e9a,ns2.northgate-dns.example,Tessaly
+DR-035,calder-tutoring.example,2026-09-11T18:57Z,Northgate Registry,AS64501,203.0.113.156,55a79501a3e1d87e0e68fe4128bd2c11d667718e,ns2.openharbor-dns.example,Kestovia
+DR-036,tessaly-bakery-co.example,2026-09-11T22:18Z,Bluequay Names,AS64501,192.0.2.7,f2d1809c62b967726fdc1e3c97f36e000c17555d,ns2.bluequay-dns.example,Sorvik Isles
+DR-037,tessaly-music-co.example,2026-09-12T06:29Z,Ilmar NIC Services,AS64505,198.51.100.117,f167b96e6a35dc272d379af7aeabc79b630128d5,ns1.openharbor-dns.example,Ilmar Republic
+DR-038,maren-music.example,2026-09-12T17:17Z,OpenHarbor DNS,AS64498,192.0.2.207,0ff16144c0ceb426101b7ce88ebf86daad1e85b7,ns1.northgate-dns.example,Ilmar Republic
+DR-039,vardos-cargo-desk.example,2026-09-14T02:09Z,Northgate Registry,AS64496,192.0.2.36,6b7d6348fdd8d5fc72110b0ff293e498f9084d4b,ns1.bluequay-dns.example,Kestovia
+DR-040,vardos-manifest-portal.example,2026-09-14T02:15Z,Bluequay Names,AS64498,198.51.100.52,6b7d6348fdd8d5fc72110b0ff293e498f9084d4b,ns2.northgate-dns.example,Ilmar Republic
+DR-041,vardosfreight-desk.example,2026-09-14T02:20Z,Ilmar NIC Services,AS64500,203.0.113.26,6b7d6348fdd8d5fc72110b0ff293e498f9084d4b,ns3.openharbor-dns.example,Tessaly
+DR-042,cargo-desk-vardos.example,2026-09-14T02:24Z,Tessaly Domains,AS64502,192.0.2.174,6b7d6348fdd8d5fc72110b0ff293e498f9084d4b,ns1.bluequay-dns.example,Kestovia
+DR-043,vardos-manifest-check.example,2026-09-14T02:30Z,OpenHarbor DNS,AS64504,198.51.100.202,6b7d6348fdd8d5fc72110b0ff293e498f9084d4b,ns2.northgate-dns.example,Ilmar Republic
+DR-044,manifest-desk-vardos.example,2026-09-14T02:34Z,Northgate Registry,AS64506,203.0.113.184,6b7d6348fdd8d5fc72110b0ff293e498f9084d4b,ns3.openharbor-dns.example,Tessaly
+DR-045,vardos-portcall-desk.example,2026-09-14T02:40Z,Bluequay Names,AS64508,192.0.2.143,6b7d6348fdd8d5fc72110b0ff293e498f9084d4b,ns1.bluequay-dns.example,Kestovia
+DR-046,ilmara-plumbing-shop.example,2026-09-14T04:50Z,Tessaly Domains,AS64505,192.0.2.128,10bf56822efdd524548a1fc7fcf5f57b768d9553,ns2.northgate-dns.example,Tessaly
+DR-047,calder-bakery-hub.example,2026-09-14T05:03Z,Tessaly Domains,AS64506,198.51.100.208,a6c523e2056288a72a6216821ba68a7f9cf437cb,ns2.northgate-dns.example,Sorvik Isles
+DR-048,tessaly-bakery-hub.example,2026-09-16T16:48Z,Northgate Registry,AS64498,198.51.100.56,632c9b764544747767b3252755aa7b7945ca0a60,ns2.northgate-dns.example,Tessaly
+DR-049,kestrel-wedding.example,2026-09-17T21:19Z,Ilmar NIC Services,AS64501,192.0.2.177,a82c2b7652083964f76efe0cf024692022fbcb5d,ns1.openharbor-dns.example,Kestovia
+DR-050,kestrel-solar-co.example,2026-09-20T08:14Z,Northgate Registry,AS64509,203.0.113.203,9670a8a40ba4fdd2b3d4a814a698cba716306efb,ns2.openharbor-dns.example,Ilmar Republic
+DR-051,ilmara-garden.example,2026-09-20T10:31Z,Ilmar NIC Services,AS64506,198.51.100.190,395e11dcada12e776ac98f7da4b410a5d1797349,ns3.northgate-dns.example,Sorvik Isles
+DR-052,maren-wedding-shop.example,2026-09-23T13:16Z,Ilmar NIC Services,AS64508,203.0.113.61,171e72c58faef05ff7738924cfa53103dd7ad282,ns1.bluequay-dns.example,Ilmar Republic
+DR-053,calder-auto.example,2026-09-25T15:30Z,Northgate Registry,AS64509,203.0.113.169,2fedf0e24485ee4b48a6c14e9f414380b2b0cbee,ns1.northgate-dns.example,Ilmar Republic
+DR-054,kestrel-dental.example,2026-09-27T23:21Z,Northgate Registry,AS64502,203.0.113.227,3dca7592b2a598741368435870f0e5c2a6961400,ns2.bluequay-dns.example,Ilmar Republic
